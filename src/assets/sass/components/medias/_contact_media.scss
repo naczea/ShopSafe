@@ -1,0 +1,68 @@
+:root {
+    @media all and (min-width: 960px) and (max-width: 1200px) {
+        --illustration_p_size: 19px;
+        --form_title_size: 30px;
+        --form_label_size: 15px;
+        --form_input_size: 14px;
+        --form_submit_size: 18px;
+        /*-----------------*/
+    }
+    @media all and (min-width: 768px) and (max-width: 959px) {
+        --illustration_p_size: 20px;
+        --form_title_size: 25px;
+        --form_submit_size: 15px;
+        /*-----------------*/
+    }
+    @media all and (min-width: 600px) and (max-width: 767px) {
+        --illustration_p_size: 19px;
+        --form_title_size: 25px;
+        --form_label_size: 13px;
+        --form_input_size: 12px;
+        --form_submit_size: 15px;
+        /*-----------------*/
+    }
+}
+
+@media all and (max-width: 600px) {
+    .contact {
+        flex-direction: column;
+        .contact__illustration {
+            width: 100%;
+            p {
+                margin-bottom: 8%;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 30px;
+                letter-spacing: 0px;
+                padding: 0 0%;
+            }
+            img {
+                margin-top: 10%;
+                width: 85%;
+                height: auto;
+            }
+        }
+        .contact__form {
+            width: 100%;
+            h2 {
+                margin-top: 5%;
+                font-size: 30px;
+            }
+            form {
+                label {
+                    font-size: 13px;
+                }
+                textarea,
+                input[type="text"] {
+                    border-radius: 20px;
+                    font-size: 15px;
+                }
+                input[type="submit"] {
+                    font-size: 17px;
+                    border-radius: 40px;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}

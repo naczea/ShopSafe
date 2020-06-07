@@ -1,0 +1,150 @@
+:root {
+    @media all and (min-width: 1200px) and (max-width: 1400px) {
+        --datap-title-size: 17px;
+        --datap-items-size: 13px;
+        --datacv-title-size: 18px;
+        --datacv-p-size: 12.5px;
+        /*-----------------*/
+        --aboutme-width: 80%;
+        /*-----------------*/
+        --photo-width: 178px;
+        /*-----------------*/
+        --datacv-padding-right: 6%;
+    }
+    @media all and (min-width: 960px) and (max-width: 1199px) {
+        --datap-title-size: 15px;
+        --datap-items-size: 13px;
+        --datacv-title-size: 15px;
+        --datacv-p-size: 11px;
+        /*-----------------*/
+        --aboutme-margin: 50px;
+        --aboutme-width: 85%;
+        /*-----------------*/
+        --photo-width: 180px;
+        /*-----------------*/
+        --datacv-padding-left: 15%;
+        --datacv-padding-right: 4%;
+    }
+    @media all and (min-width: 768px) and (max-width: 959px) {
+        --datap-title-size: 15px;
+        --datap-items-size: 12px;
+        --datacv-title-size: 15px;
+        --datacv-p-size: 12px;
+        /*-----------------*/
+        --aboutme-margin: 45px;
+        --aboutme-width: 90%;
+        /*-----------------*/
+        --photo-width: 175px;
+        /*-----------------*/
+        --datacv-padding-right: 4.5%;
+        /*-----------------*/
+        --datacv-p-lineheight: 30px;
+    }
+    @media all and (min-width: 600px) and (max-width: 767px) {
+        --datap-title-size: 13px;
+        --datap-items-size: 11px;
+        --datacv-title-size: 13px;
+        --datacv-p-size: 11px;
+        /*-----------------*/
+        --aboutme-margin: 35px;
+        --aboutme-width: 95%;
+        /*-----------------*/
+        --photo-width: 170px;
+        /*-----------------*/
+        --datacv-padding-left: 17%;
+        --datacv-padding-right: 3.5%;
+        /*-----------------*/
+        --datacv-p-lineheight: 25px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .aboutme {
+        width: 82.5%;
+        height: auto;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background-color: #a5bec4;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 8px 30px 10px rgba($color: #000000, $alpha: 0.6);
+        border-radius: 70px;
+    }
+    .datap {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .datap__title {
+            margin-top: 8%;
+            margin-bottom: 5%;
+            align-self: center;
+            color: white;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 18px;
+        }
+        .datap__items {
+            margin-left: 15px;
+            color: $blue1;
+            line-height: 20px;
+            font-size: 13.5px;
+            font-weight: 500;
+        }
+        .datap__photo {
+            margin-top: 5%;
+            width: 170px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            align-self: center;
+            img {
+                width: 170px;
+                height: auto;
+            }
+        }
+    }
+    .datacv {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background-image: none;
+        background-color: $blue2;
+        padding-left: 12%;
+        padding-right: 12%;
+        margin-top: -35px;
+        border-radius: 70px;
+        box-shadow: 0 -15px 30px 2.5px rgba($color: #000000, $alpha: 0.3);
+        .datacv__title {
+            margin-top: 18%;
+            margin-bottom: 20px;
+            align-self: center;
+            color: white;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 5px;
+        }
+        .datacv__p {
+            margin-top: 3%;
+            align-self: center;
+            color: white;
+            font-size: 12px;
+            text-align: justify;
+            line-height: 22.5px;
+            font-weight: normal;
+        }
+        .datacv_buttons {
+            margin-top: 8%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+:root {
+    --datap-title-size: 20px;
+    --datap-items-size: 15px;
+    --datacv-title-size: 20px;
+    --datacv-p-size: 14px;
+    /*-----------------*/
+    --aboutme-margin: 70px;
+    --aboutme-width: 77.5%;
+    /*-----------------*/
+    --photo-width: 180px;
+    /*-----------------*/
+    --datacv-padding-left: 15%;
+    --datacv-padding-right: 8%;
+    /*-----------------*/
+    --datacv-p-lineheight: 35px;
+}
+
+.aboutme {
+    width: var(--aboutme-width);
+    height: auto;
+    margin: auto;
+    margin-top: var(--aboutme-margin);
+    margin-bottom: var(--aboutme-margin);
+    background-color: #a5bec4;
+    display: flex;
+    box-shadow: 0 8px 32px rgba($color: #000000, $alpha: 0.8);
+}
+
+.datap {
+    width: 40%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .datap__title {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        align-self: center;
+        color: white;
+        font-weight: bold;
+        font-size: var(--datap-title-size);
+    }
+    .datap__items {
+        margin-left: 30px;
+        color: $blue1;
+        line-height: 28px;
+        font-size: var(--datap-items-size);
+        font-weight: 500;
+    }
+    .datap__photo {
+        margin-top: 10%;
+        width: var(--photo-width);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        align-self: center;
+        img {
+            width: var(--photo-width);
+            height: auto;
+        }
+    }
+}
+
+.datacv {
+    width: 60%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../../img/naczea_design.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 100% 100%;
+    padding-left: var(--datacv-padding-left);
+    padding-right: var(--datacv-padding-right);
+    .datacv__title {
+        margin-top: 18%;
+        margin-bottom: 25px;
+        align-self: center;
+        color: white;
+        font-weight: bold;
+        font-size: var(--datacv-title-size);
+    }
+    .datacv__p {
+        margin-top: 4%;
+        align-self: center;
+        color: white;
+        font-size: var(--datacv-p-size);
+        text-align: justify;
+        line-height: var(--datacv-p-lineheight);
+        font-weight: normal;
+    }
+    .datacv_buttons {
+        margin-top: 12%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}

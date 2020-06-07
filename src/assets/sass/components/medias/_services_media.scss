@@ -1,0 +1,28 @@
+:root {
+    @media all and (min-width: 600px) and (max-width: 1200px) {
+        --port_title_size: 45px;
+        /*-----------------*/
+        --port_height: 130px;
+        /*-----------------*/
+        --port_title_spacing: 15px;
+    }
+    @media all and (max-width: 599px) {
+        --port_title_size: 40px;
+        --cont_li_size: 13px;
+        /*-----------------*/
+        --port_height: 130px;
+        --cont_width: 320px;
+        /*-----------------*/
+        --port_title_spacing: 15px;
+    }
+}
+
+@media all and (min-width: 600px) and (max-width: 1200px) {
+    .services {
+        .services__port {
+            .port__bg {
+                background-position: 50% 50%;
+            }
+        }
+    }
+}

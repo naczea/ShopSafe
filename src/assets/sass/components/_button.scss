@@ -1,0 +1,99 @@
+.ghost {
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 7px 20px;
+    text-align: center;
+}
+
+.conthead__button {
+    border-color: $blue1;
+    color: $blue1;
+    font-size: 12.5px;
+    font-weight: 500;
+    box-shadow: 0 8px 20px 5px rgba($blue1, $alpha: 0.8);
+    transition: background-color .5s ease-in;
+    transition: color .5s ease-in;
+}
+
+.conthead__button:hover {
+    color: white;
+    background-color: rgba($green, $alpha: 0.6)
+}
+
+
+/************************************************************************/
+
+.ghost2 {
+    border: 1.1px solid;
+    border-radius: 20px;
+    padding: 8px 25px;
+    text-align: center;
+}
+
+.datacv__button {
+    border-color: white;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 20px;
+    box-shadow: 0 8px 32px 10px rgba($blue1, $alpha: 1);
+    transition: background-color .5s ease-in;
+}
+
+.datacv__button:hover {
+    background-color: rgba($blue1, $alpha: 1);
+}
+
+
+/**************************************************************************/
+
+@media all and (max-height: 700px) {
+    .conthead__button {
+        background-color: white;
+    }
+    .ghost {
+        border: 1.3px solid;
+    }
+}
+
+@media all and (min-width: 1200px) and (max-width: 1400px) {
+    .datacv__button {
+        font-size: 13.5px;
+    }
+}
+
+@media all and (min-width: 960px) and (max-width: 1200px) {
+    .datacv__button {
+        font-size: 12px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 960px) {
+    .datacv__button {
+        font-size: 13px;
+        border-radius: 35px;
+        margin-left: 15px;
+        padding: 12px 15px;
+        font-weight: 600;
+    }
+}
+
+@media all and (min-width: 600px) and (max-width: 768px) {
+    .datacv__button {
+        font-size: 12px;
+        border-radius: 40px;
+        margin-left: 10px;
+        padding: 12px 10px;
+        font-weight: 600;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .datacv__button {
+        font-size: 14px;
+        border-radius: 60px;
+        padding: 12px 10px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+}

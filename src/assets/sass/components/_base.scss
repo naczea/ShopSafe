@@ -1,0 +1,27 @@
+$blue1: #aed7f5;
+$blue2: #4A70D6;
+$blue3: #2C4482;
+$pink1: #FF7192;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    overflow-x: hidden;
+    font-family: 'Baloo Chettan 2', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+:focus {
+    outline: none;
+}

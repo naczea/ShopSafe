@@ -1,0 +1,120 @@
+:root {
+    @media all and (max-height: 600px) {
+        --logo-width: 160px;
+        --machine-top: 2%;
+        --logo-top: 3%;
+        --nav-size: 13px;
+    }
+    @media all and (min-width: 960px) and (max-width: 1200px) {
+        --logo-width: 180px;
+        --machine-size: 14px;
+        --machine-width: 25%;
+        --machine-left: 7%;
+        --logo-top: 6%;
+    }
+    @media all and (min-width: 768px) and (max-width: 960px) {
+        --logo-top: 7.5%;
+        --logo-width: 165px;
+        --machine-size: 14px;
+        --machine-width: 32%;
+        --machine-left: 6%;
+        --nav-size: 13px;
+    }
+    @media all and (min-width: 600px) and (max-width: 768px) {
+        --nav-size: 12.5px;
+        --machine-size: 14.5px;
+        --nets-size: 16px;
+        --nets-size-hover: 20px;
+        /*-----------------*/
+        --nav-height: 50px;
+        /*-----------------*/
+        --logo-width: 165px;
+        --machine-width: 40%;
+        /*-----------------*/
+        --machine-bottom: 40px;
+        --machine-left: 7.5%;
+        /*-----------------*/
+        --nav-margin: 25px;
+        --content-top: 15px;
+        /*-----------------*/
+        --nets-top: 15%;
+        --logo-top: 11%;
+    }
+    @media only screen and (min-width: 480px) and (max-width: 600px) {
+        --logo-width: 185px;
+        --machine-width: 100%;
+        --machine-left: 0%;
+        --machine-bottom: 65px;
+        --machine-top: 12%;
+        --logo-top: 16%;
+        --machine-size: 18.5px;
+    }
+    @media only screen and (max-width: 480px) {
+        --logo-top: 18%;
+        --machine-bottom: 65px;
+        --machine-top: 12%;
+        --logo-width: 180px;
+        --machine-size: 18.5px;
+        --machine-width: 100%;
+        --machine-left: 0%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .nets {
+        display: none;
+    }
+    .navbar {
+        height: 50px;
+        position: static;
+        display: flex;
+        justify-content: flex-start;
+        .navbar__list {
+            position: fixed;
+            background: #4ECDC4;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #556270, #4ECDC4);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #556270, #4ECDC4);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            clip-path: circle(0% at 0 0);
+            transition: ease-in-out 0.5s;
+            li a {
+                color: $white2;
+                font-size: 30px;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+        }
+        .menu2 {
+            -webkit-clip-path: circle(140.9% at 0 0);
+            clip-path: circle(140.9% at 0 0);
+        }
+        .navbar__hamburger {
+            padding-top: 55px;
+            display: block;
+            margin-left: 30px;
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            #icon2 {
+                display: none;
+            }
+        }
+    }
+    .conthead {
+        .conthead__machine {
+            text-align: center;
+            font-family: consolasty;
+            font-weight: 800;
+        }
+    }
+}

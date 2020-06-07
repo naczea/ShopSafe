@@ -1,0 +1,116 @@
+:root {
+    --logo_span_size: 25px;
+    --sections_a_size: 15px;
+    --sections_span_size: 17px;
+    --data_icon_size: 20px;
+    --data_txt_size: 14px;
+    --data_c_size: 12px;
+    --nets_span_size: 18px;
+    --nets_icon_size: 25px;
+    /*-----------------*/
+    --logo_img-width: 50px;
+}
+
+footer {
+    background-color: #c9c9c6;
+    padding: 10px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .footer__logo {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 2px solid white;
+        img {
+            width: var(--logo_img-width);
+            height: auto;
+        }
+        span {
+            color: white;
+            margin-left: 10px;
+            font-size: var(--logo_span_size);
+        }
+    }
+    .footer__sections {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-right: 2px solid white;
+        a {
+            color: $blue1;
+            margin-bottom: 5px;
+            font-size: var(--sections_a_size);
+        }
+        a:hover {
+            font-weight: 500;
+        }
+        span {
+            color: white;
+            font-size: var(--sections_span_size);
+            margin-bottom: 7px;
+            font-weight: 500;
+        }
+    }
+    .footer__datas {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-right: 2px solid white;
+        div {
+            display: flex;
+            .datas__icon {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 10px;
+                i {
+                    color: $blue1;
+                    font-size: var(--data_icon_size);
+                    margin-bottom: 10px;
+                }
+            }
+            .datas__txt {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin-left: 10px;
+                margin-bottom: 10px;
+                span {
+                    color: white;
+                    font-size: var(--data_txt_size);
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        span {
+            color: black;
+            font-size: var(--data_c_size);
+        }
+    }
+    .footer__nets {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span {
+            color: white;
+            font-size: var(--nets_span_size);
+            margin-bottom: 13px;
+        }
+        div {
+            a i {
+                color: $blue1;
+                font-size: var(--nets_icon_size);
+                margin: 0 5px;
+            }
+        }
+    }
+}

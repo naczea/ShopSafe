@@ -1,9 +1,7 @@
-function ocultar() {
-    document.getElementById('ch').style.display = 'none';
+function ocultar(id) {
+    document.getElementById(id).style.display = 'none';
 }
 
-function mostrar() {
-    document.getElementById('ch').style.display = 'flex';
-    console.log("SI VALE");
-
+function mostrar(id) {
+    document.getElementById(id).style.display = 'flex';
 }

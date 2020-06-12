@@ -25,9 +25,27 @@
 </head>
 
 <body>
+    <div class="login" id="lg">
+        <div class="log__cont">
+            <span>Bienvenido</span>
+            <form>
+                <label for="name">Usuario: </label>
+                <input type="text" id="name" name="namef" placeholder="Cedula o correo" required>
+
+                <label for="pass">Contraseña:</label>
+                <input type="password" id="number" name="numberf" placeholder="Mínimo 8 caracteres" required>
+
+                <input type="submit" class="neu3" value="ENTRAR" id="btnSend" name="sendf">
+            </form>
+            <a href="#">¿Olvidaste la contraseña?</a>
+            <div class="ch__bord"></div>
+            <a href="#">Registrarse</a>
+            <a href="#" onclick="ocultar('lg')">Cerrar</a>
+        </div>
+    </div>
     <div class="checkin" id="ch">
         <div class="checkin__cont">
-            <span>Registro de usuarios</span>
+            <span>Registro</span>
             <form>
                 <label for="name">Nombres: </label>
                 <input type="text" id="name" name="namef" placeholder="Ingrese su nombre" required>
@@ -35,8 +53,8 @@
                 <label for="second">Apellidos: </label>
                 <input type="text" id="second" name="secondf" placeholder="Ingrese su Apellido" required>
 
-                <label for="ci">Cedula: </label>
-                <input type="number" id="ci" name="cif" placeholder="Ingrese su Apellido" required>
+                <label for="ci">Cédula: </label>
+                <input type="number" id="ci" name="cif" placeholder="Numero de cedula o pasaporte" required>
 
 
                 <label for="email">Mail:</label>
@@ -45,9 +63,14 @@
                 <label for="number">Celular:</label>
                 <input type="number" id="number" name="numberf" placeholder="Ingrese su numero celular" required>
 
-                <input type="submit" value="REGISTRARSE" id="btnSend" name="sendf">
-                <button onclick="ocultar()">Cerrar</button>
+                <label for="pass">Contraseña:</label>
+                <input type="password" id="number" name="numberf" placeholder="Mínimo 8 caracteres" required>
+
+                <input type="submit" class="neu3" value="REGISTRARSE" id="btnSend" name="sendf">
             </form>
+            <div class="ch__bord"></div>
+            <a href="#">Iniciar sesion</a>
+            <a href="#" onclick="ocultar('ch')">Cerrar</a>
         </div>
     </div>
 
@@ -62,7 +85,7 @@
                     <li><a href="#">Incio</a></li>
                     <li><a href="#">Información</a></li>
                     <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Iniciar Sesión</a></li>
+                    <li><a href="#" onclick="mostrar('lg')"><span>Iniciar Sesión</span></a></li>
                 </ul>
             </div>
         </nav>
@@ -70,24 +93,111 @@
             <div class="cont__text">
                 <div class="text__text">
                     <span>Cuidemos de los<br> nuestros</span>
-                    <p>Realiza las compras desde casa <br> y solo retura tus productos.</p>
-                    <p>No te expongas, no hagas fila. <br>Saca un turno.</p>
-                    <p>Accede a varios servicios <br> disponibles para ti</p>
+                    <div class="text__exp">
+                        <p>Realiza las compras desde casa <br> y solo retura tus productos.</p>
+                        <p>No te expongas, no hagas fila. <br>Saca un turno.</p>
+                        <p>Accede a varios servicios <br> disponibles para ti</p>
+                    </div>
                 </div>
                 <div class="text__button">
-                    <a href="#" onclick="mostrar()">Registrate</a>
-                    <a href="#">Descubre</a>
+                    <a href="#" class="neu" onclick="mostrar('ch')">Registrate</a>
+                    <a href="#" class="neu">Descubre</a>
                 </div>
             </div>
             <div class="cont__illus">
                 <img src="../img/illus1.svg" alt="shop illustration" class="illus">
             </div>
-
+            <div class="cont__nets">
+                <div class="nets__insta">
+                    <a href="https://www.instagram.com/naczea/" target="_blank"><i class="fab fa-instagram neu2" data-aos="zoom-in-right" data-aos-duration="1200"></i></a>
+                </div>
+                <div class="nets__git">
+                    <a href="https://github.com/naczea" target="_blank"><i class="fab fa-github neu2" data-aos="zoom-in-right" data-aos-duration="1500"></i></a>
+                </div>
+                <div class="nets__wp">
+                    <a href="https://api.whatsapp.com/send?phone=593987635011" target="_blank"><i class="fab fa-whatsapp neu2" data-aos="zoom-in-right" data-aos-duration="1800"></i>
+                    </a>
+                </div>
+                <div class="nets__mail">
+                    <a href="mailto:shopsafe_uio@gmail.com" target="_blank"><i class="fas fa-envelope neu2" data-aos="zoom-in-right" data-aos-duration="2100"></i></a>
+                </div>
+            </div>
         </section>
     </header>
 
     <main>
+        <section class="turn">
+            <div>
+                <h2>Anticipate a la fila <br> Saca un turno</h2>
+                <p>Registrate en ShopSafe y saca un turno para ir a tu supermercado. <br>Tu eliges el dia y la hora, ahorra tiempo y cuida a tu familia.</p>
+                <ul>
+                    <li>Evitaba hacer largas filas fuera de los supermercados.</li>
+                    <li>Saca un turno a la medida de tu tiempo.</li>
+                    <li>Evita exponer tu salud a contagios.</li>
+                </ul>
+                <a href="">Sacar un <br> turno</a>
+            </div>
+            <div>
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="shop">
+            <div>
+                <h2>Compra en casa <br> y solo retira</h2>
+                <p>ShopSafe se unio con tus supermercados y markets de confianza para darte la posibilidad de comprar desde casa.</p>
+                <p>Al registrarte puedes seleccionar el establecimiento, comprar desde tu celular o cualquier dispositivo y solo pasar a recogerlos.</p>
+                <ul>
+                    <li>Elije el establecimiento</li>
+                    <li>Seleciona los productos y cantidad</li>
+                    <li>Confirma el precio y reserva tu canasta.</li>
+                    <li>Establece una fecha y hora de entrega</li>
+                    <li>Pasa a recoger tu canasta ya lista.</li>
+                </ul>
+                <a href="#">Comprar</a>
+            </div>
+            <div>
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="others">
+            <div>
+                <h2>Diferentes servicios <br> en un solo lugar</h2>
+                <p>ShopSafe no solo esta vinculado a supermercados y markets.</p>
+                <p>Te brindamos la oportunidad de sacar turnos en diferentes servicios comunes.</p>
+                <p>Sacando un turno promovemos el distanciamiento social y protegemos a nuestros usuarios.</p>
+                <p>Reserva en peluquerias, restaurantes y mecanicas viculadas</p>
+                <a href="#">Unirte a ShopSafe</a>
+            </div>
+            <div>
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="contact" id="contactsec">
+            <div class="contact__form">
+                <h2>CONTACTO</h2>
+                <form method="POST" data-netlify="true">
+                    <label for="name">Nombre: </label>
+                    <input type="text" id="name" name="namef" placeholder="Ingrese su nombre" required>
 
+                    <label for="affair">Asunto:</label>
+                    <input type="text" id="affair" name="affairf" placeholder="¿De qué trata su proyecto?" required>
+
+                    <label for="email">Mail:</label>
+                    <input type="text" id="email" name="mailf" placeholder="Ingrese su correo" required>
+
+                    <label for="mesaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mesaje" name="messagef" required rows="10"></textarea>
+                    <input type="submit" value="ENVIAR" id="btnSend" name="sendf">
+                </form>
+            </div>
+            <div class="contact__illustration">
+                <img src="" alt="Ilustacion svg de desarrollo de software">
+                <p>
+                    ¿Estás pensando en hacer un proyecto? <br> Escríbeme
+                </p>
+            </div>
+
+        </section>
     </main>
     <footer>
         <div class="footer__logo">
@@ -108,7 +218,7 @@
 
                 </div>
                 <div class="datas__txt">
-                    <span>shopsafe_uio@outlook.com</span>
+                    <span>shopsafe_uio@gmail.com</span>
                     <span>0987635011</span>
                 </div>
             </div>

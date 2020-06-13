@@ -7,12 +7,12 @@
     color: white;
     font-size: 18px;
     border-radius: 40px;
+    background-color: rgba($pink1, $alpha: 0.7);
     box-shadow: -2px -2px 8px rgba(#cee5f5, 1), -2px -2px 12px rgba(255, 255, 255, 0.4), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
-    transition: 0.5s;
 }
 
 .neu:hover {
-    background-color: rgba($pink1, $alpha: 0.4);
+    background-color: rgba($blue2, 0.5);
 }
 
 .neu2 {
@@ -32,4 +32,21 @@
 .neu2:hover {
     padding: 13px 13px;
     font-size: 25px;
+}
+
+.neu3 {
+    padding: 10px 30px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgba($blue2, $alpha: 0.8);
+    font-size: 18px;
+    border-radius: 40px;
+    box-shadow: -2px -2px 8px rgba(#cee5f5, 1), -2px -2px 12px rgba(255, 255, 255, 0.4), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.neu3:hover {
+    background-color: rgba($pink1, $alpha: 0.3);
 }

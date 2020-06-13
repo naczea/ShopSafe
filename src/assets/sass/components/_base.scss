@@ -1,7 +1,11 @@
 $blue1: #aed7f5;
 $blue2: #4A70D6;
 $blue3: #2C4482;
+$blue4: #5a84a2;
 $pink1: #FF7192;
+$pink2: #f895ac;
+$pink3: #FDBECE;
+$white1: #dde1e7;
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +13,7 @@ $pink1: #FF7192;
 }
 
 body {
-    background: #fff;
+    background: white;
     overflow-x: hidden;
     font-family: 'Baloo Chettan 2', sans-serif;
 }

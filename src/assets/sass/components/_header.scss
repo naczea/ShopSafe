@@ -32,9 +32,11 @@
     top: 0;
     left: 0;
     .log__cont {
-        height: 80%;
+        height: auto;
+        padding-top: 3%;
+        padding-bottom: 3%;
         width: 30%;
-        background-color: $pink1;
+        background-color: $white1;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -42,33 +44,37 @@
         border-radius: 50px;
         span {
             text-transform: uppercase;
-            color: white;
-            letter-spacing: 2px;
-            font-size: 30px;
+            color: $blue4;
+            letter-spacing: 3px;
+            font-size: 32px;
             font-weight: 500;
             margin-bottom: 30px;
         }
         .ch__bord {
             width: 60%;
-            border-bottom: 1px solid white;
+            border-bottom: 2px solid white;
             margin-top: 10px;
             margin-bottom: 10px;
         }
         a {
-            color: white;
-            font-size: 16px;
+            color: $blue4;
+            font-size: 15px;
             margin-top: 8px;
             transition: 0.1s;
         }
         a:hover {
             font-weight: 500;
         }
+        .pass {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
         form {
             display: flex;
             flex-direction: column;
             width: 80%;
             label {
-                color: white;
+                color: $blue4;
                 margin-bottom: 8px;
                 font-size: var(--form_label_size);
             }
@@ -79,16 +85,16 @@
                 margin-bottom: 15px;
                 border: none;
                 border-radius: 10px;
-                color: white;
                 font-size: var(--form_input_size);
                 font-weight: 400;
-                background-color: rgba(white, 0.3);
+                background-color: #dde1e7;
+                box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1), inset -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15);
             }
             input:focus {
                 background-color: rgba($blue1, $alpha: 0.6);
             }
             input::-webkit-input-placeholder {
-                color: rgba(255, 255, 255, 0.68);
+                color: rgba($blue4, $alpha: 0.5)
             }
             textarea {
                 max-width: 100%;
@@ -97,22 +103,19 @@
             }
             input[type="submit"] {
                 width: 60%;
-                background-color: inherit;
                 font-weight: 500;
                 font-size: var(--form_submit_size);
                 align-self: center;
-                border: 1.1px solid;
                 border-radius: 20px;
-                color: white;
-                border-color: white;
-                letter-spacing: 3px;
+                color: $blue4;
+                letter-spacing: 2px;
                 margin: 10px auto;
                 padding: 10px;
+                box-shadow: -2px -2px 8px rgba(255, 255, 255, 1), -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
                 transition: background-color .3s ease-in;
             }
             input[type="submit"]:hover {
-                background-color: rgba(white, $alpha: 0.6);
-                color: $pink1;
+                color: rgba($pink1, $alpha: 0.6);
             }
         }
     }
@@ -132,7 +135,7 @@
     .checkin__cont {
         height: 90%;
         width: 30%;
-        background-color: $pink1;
+        background-color: $pink2;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -262,10 +265,10 @@ header {
             font-size: var(--nav-size);
             font-weight: 400;
             span {
-                color: $pink1;
+                color: rgba($pink1, $alpha: 0.85);
                 border: 1px solid;
                 border-radius: 20px;
-                padding: 4px 15px;
+                padding: 3px 14px;
                 transition: 0.4s;
             }
             span:hover {
@@ -316,14 +319,19 @@ header {
                 font-size: 60px;
                 text-transform: uppercase;
             }
-            div {
+            .text__exp {
                 margin-left: 20px;
                 margin-top: 30px;
                 margin-bottom: 15px;
                 color: white;
                 font-size: 17px;
-                p {
-                    margin-top: 15px;
+                ul li {
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 10px;
+                    p {
+                        margin-left: 10px;
+                    }
                 }
             }
         }

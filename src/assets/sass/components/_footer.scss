@@ -1,5 +1,5 @@
 :root {
-    --logo_span_size: 25px;
+    --logo_span_size: 27px;
     --sections_a_size: 15px;
     --sections_span_size: 17px;
     --data_icon_size: 20px;
@@ -8,11 +8,11 @@
     --nets_span_size: 18px;
     --nets_icon_size: 25px;
     /*-----------------*/
-    --logo_img-width: 50px;
+    --logo_img-width: 35px;
 }
 
 footer {
-    background-color: #c9c9c6;
+    background-color: rgba($white1, $alpha: 0.85);
     padding: 10px 0;
     overflow: hidden;
     display: flex;
@@ -23,13 +23,14 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-right: 2px solid white;
+        border-right: 2px solid $blue3;
         img {
             width: var(--logo_img-width);
             height: auto;
         }
         span {
-            color: white;
+            font-weight: bolder;
+            color: $blue2;
             margin-left: 10px;
             font-size: var(--logo_span_size);
         }
@@ -40,9 +41,9 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-right: 2px solid white;
+        border-right: 2px solid $blue3;
         a {
-            color: $blue1;
+            color: $pink1;
             margin-bottom: 5px;
             font-size: var(--sections_a_size);
         }
@@ -50,7 +51,7 @@ footer {
             font-weight: 500;
         }
         span {
-            color: white;
+            color: $blue3;
             font-size: var(--sections_span_size);
             margin-bottom: 7px;
             font-weight: 500;
@@ -62,7 +63,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-right: 2px solid white;
+        border-right: 2px solid $blue3;
         div {
             display: flex;
             .datas__icon {
@@ -70,7 +71,7 @@ footer {
                 flex-direction: column;
                 margin-bottom: 10px;
                 i {
-                    color: $blue1;
+                    color: $pink1;
                     font-size: var(--data_icon_size);
                     margin-bottom: 10px;
                 }
@@ -83,7 +84,7 @@ footer {
                 margin-left: 10px;
                 margin-bottom: 10px;
                 span {
-                    color: white;
+                    color: $blue3;
                     font-size: var(--data_txt_size);
                     margin-bottom: 10px;
                 }
@@ -101,13 +102,13 @@ footer {
         justify-content: center;
         align-items: center;
         span {
-            color: white;
+            color: $blue3;
             font-size: var(--nets_span_size);
             margin-bottom: 13px;
         }
         div {
             a i {
-                color: $blue1;
+                color: $pink1;
                 font-size: var(--nets_icon_size);
                 margin: 0 5px;
             }

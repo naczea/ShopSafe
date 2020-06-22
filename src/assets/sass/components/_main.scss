@@ -1,11 +1,12 @@
     .turn {
-        background-color: rgba($color: #EAEBF3, $alpha: 0.7);
+        background-color: rgba($color: #EAEBF3, $alpha: 0.95);
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100vh;
+        box-shadow: 0px 45px 18px rgba($color: #000000, $alpha: 0.2);
         .turn__illus {
             width: 60%;
             height: 100vh;
@@ -28,14 +29,15 @@
             padding-left: 3%;
             h2 {
                 color: rgba($pink1, $alpha: 0.8);
-                font-size: 50px;
+                font-size: 52.5px;
                 font-weight: bolder;
             }
             span {
                 color: $blue2;
-                margin-top: 15px;
+                margin-top: 25px;
                 margin-bottom: 10px;
                 font-size: 16px;
+                line-height: 25px;
             }
             .turn__list {
                 ul li {
@@ -55,28 +57,40 @@
     .shop {
         width: 100%;
         height: 100vh;
-        background-color: rgba($pink3, $alpha: 1.0);
+        background-color: rgba($pink2, $alpha: 0.67);
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        box-shadow: 0px 45px 15px rgba($color: #000000, $alpha: 1);
         .shop__cont {
             width: 45%;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            padding-left: 10%;
             h2 {
                 color: $blue2;
-                font-size: 50px;
+                font-size: 65px;
+                margin-bottom: 30px;
             }
             p {
-                align-self: center;
                 color: white;
+                margin-top: 8px;
+            }
+            ol {
+                margin-left: 5%;
+                margin-top: 20px;
             }
             ol li {
+                list-style-position: inside;
                 color: white;
+                margin-top: 5px;
+            }
+            a {
+                margin-left: 10%;
             }
         }
         .shop__illus {
@@ -88,6 +102,69 @@
             img {
                 width: 80%;
                 height: auto;
+            }
+        }
+    }
+    
+    .others {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba($color: #EAEBF3, $alpha: 0.9);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .others__illus1 {
+            width: 35%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 80%;
+                height: auto;
+            }
+        }
+        .others__illus2 {
+            width: 35%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 80%;
+                height: auto;
+            }
+        }
+        .others__content {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                font-size: 45px;
+                color: $blue3;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            ul {
+                width: 88%;
+                li {
+                    align-self: flex-start;
+                    color: rgba($blue3, $alpha: 0.8);
+                    padding-top: 10px;
+                    padding-left: 6%;
+                    list-style-type: disc;
+                    font-size: 17px;
+                }
+            }
+            a {
+                letter-spacing: 0;
+                color: $blue3;
+            }
+            a:hover {
+                color: $pink2;
             }
         }
     }

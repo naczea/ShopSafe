@@ -127,7 +127,7 @@ ul {
         color: rgba(255, 113, 146, 0.6); }
 
 .checkin {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -336,7 +336,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-right: 2px solid #2C4482; }
+    border-right: 2px solid #4A70D6; }
     footer .footer__logo img {
       width: var(--logo_img-width);
       height: auto; }
@@ -351,7 +351,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 2px solid #2C4482; }
+    border-right: 2px solid #4A70D6; }
     footer .footer__sections a {
       color: #FF7192;
       margin-bottom: 5px;
@@ -359,7 +359,7 @@ footer {
     footer .footer__sections a:hover {
       font-weight: 500; }
     footer .footer__sections span {
-      color: #2C4482;
+      color: #4A70D6;
       font-size: var(--sections_span_size);
       margin-bottom: 7px;
       font-weight: 500; }
@@ -369,7 +369,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 2px solid #2C4482; }
+    border-right: 2px solid #4A70D6; }
     footer .footer__datas div {
       display: flex; }
       footer .footer__datas div .datas__icon {
@@ -388,7 +388,7 @@ footer {
         margin-left: 10px;
         margin-bottom: 10px; }
         footer .footer__datas div .datas__txt span {
-          color: #2C4482;
+          color: #4A70D6;
           font-size: var(--data_txt_size);
           margin-bottom: 10px; }
     footer .footer__datas span {
@@ -401,7 +401,7 @@ footer {
     justify-content: center;
     align-items: center; }
     footer .footer__nets span {
-      color: #2C4482;
+      color: #4A70D6;
       font-size: var(--nets_span_size);
       margin-bottom: 13px; }
     footer .footer__nets div a i {

@@ -23,7 +23,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-right: 2px solid $blue3;
+        border-right: 2px solid $blue2;
         img {
             width: var(--logo_img-width);
             height: auto;
@@ -41,7 +41,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-right: 2px solid $blue3;
+        border-right: 2px solid $blue2;
         a {
             color: $pink1;
             margin-bottom: 5px;
@@ -51,7 +51,7 @@ footer {
             font-weight: 500;
         }
         span {
-            color: $blue3;
+            color: $blue2;
             font-size: var(--sections_span_size);
             margin-bottom: 7px;
             font-weight: 500;
@@ -63,7 +63,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-right: 2px solid $blue3;
+        border-right: 2px solid $blue2;
         div {
             display: flex;
             .datas__icon {
@@ -84,7 +84,7 @@ footer {
                 margin-left: 10px;
                 margin-bottom: 10px;
                 span {
-                    color: $blue3;
+                    color: $blue2;
                     font-size: var(--data_txt_size);
                     margin-bottom: 10px;
                 }
@@ -102,7 +102,7 @@ footer {
         justify-content: center;
         align-items: center;
         span {
-            color: $blue3;
+            color: $blue2;
             font-size: var(--nets_span_size);
             margin-bottom: 13px;
         }

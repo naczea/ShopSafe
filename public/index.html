@@ -72,7 +72,7 @@
         </div>
     </div>
 
-    <header id="home">
+    <header id="shome">
         <nav class="navbar">
             <div class="navbar__logo">
                 <img src="../img/logo.png" alt="logo" class="logoshop">
@@ -80,9 +80,9 @@
             </div>
             <div class="navbar__list">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Información</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#shome">Inicio</a></li>
+                    <li><a href="#sshop">Información</a></li>
+                    <li><a href="#scontact">Contacto</a></li>
                     <li><a href="#" onclick="mostrar('lg')"><span>Iniciar Sesión</span></a></li>
                 </ul>
             </div>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="text__button">
                     <a href="#" class="neu" onclick="mostrar('ch')">Registrate</a>
-                    <a href="#" class="neu">Descubre</a>
+                    <a href="#sshop" class="neu">Descubre</a>
                 </div>
             </div>
             <div class="cont__illus">
@@ -163,7 +163,7 @@
                 </div>
             </div>
         </section>
-        <section class="MSHOP">
+        <section class="MSHOP" id="sshop">
             <div class="shop">
                 <div class="shop__cont">
                     <h2>Compra en casa <br> y solo retira</h2>
@@ -201,7 +201,7 @@
                 <img src="../img/hair.svg" alt="hairdressing illustration">
             </div>
         </section>
-        <section class="contact" id="contactsec">
+        <section class="contact" id="scontact">
             <div class="contact__form">
                 <h2>CONTACTO</h2>
                 <form method="POST" data-netlify="true">
@@ -228,9 +228,9 @@
         </div>
         <div class="footer__sections">
             <span>Secciones</span>
-            <a href="#">Inicio</a>
-            <a href="#">Información</a>
-            <a href="#">Registrarse</a>
+            <a href="#shome">Inicio</a>
+            <a href="#sshop">Información</a>
+            <a href="#" onclick="mostrar('ch')">Registrarse</a>
         </div>
         <div class="footer__datas">
             <div>

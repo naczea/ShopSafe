@@ -26,7 +26,7 @@
         <div class="log__cont">
             <span>Bienvenido</span>
             <div class="ch__bord"></div>
-            <form>
+            <form action="login.php" method="POST">
                 <label for="name">Usuario: </label>
                 <input type="text" id="name" name="namef" placeholder="Cédula o correo" required>
 
@@ -44,7 +44,7 @@
     <div class="checkin" id="ch">
         <div class="checkin__cont">
             <span>Registro</span>
-            <form>
+            <form action="reg.php" method="POST">
                 <label for="name">Nombres: </label>
                 <input type="text" id="name" name="namef" placeholder="Ingrese su nombre" required>
 
@@ -62,7 +62,7 @@
                 <input type="number" id="number" name="numberf" placeholder="Ingrese su número celular" required>
 
                 <label for="pass">Contraseña:</label>
-                <input type="password" id="number" name="numberf" placeholder="Mínimo 8 caracteres" required>
+                <input type="password" id="number" name="passwf" placeholder="Mínimo 8 caracteres" required>
 
                 <input type="submit" class="neu3" value="REGISTRARSE" id="btnSend" name="sendf">
             </form>

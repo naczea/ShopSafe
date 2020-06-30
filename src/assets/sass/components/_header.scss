@@ -27,14 +27,14 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     top: 0;
     left: 0;
     .log__cont {
         height: auto;
-        padding-top: 3%;
-        padding-bottom: 3%;
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
         width: 30%;
         background-color: $white1;
         display: flex;
@@ -139,7 +139,7 @@
         width: 30%;
         padding-top: 2%;
         padding-bottom: 1%;
-        background-color: #faadc0;
+        background-color: $white1;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -147,7 +147,7 @@
         border-radius: 50px;
         span {
             text-transform: uppercase;
-            color: white;
+            color: $blue4;
             letter-spacing: 4px;
             font-size: 35px;
             font-weight: 600;
@@ -156,12 +156,12 @@
         }
         .ch__bord {
             width: 60%;
-            border-bottom: 1px solid white;
+            border-bottom: 2px solid white;
             margin-top: 10px;
             margin-bottom: 10px;
         }
         a {
-            color: white;
+            color: $blue4;
             font-size: 15px;
             margin-top: 8px;
             transition: 0.1s;
@@ -175,7 +175,7 @@
             width: 80%;
             label {
                 padding-left: 5%;
-                color: white;
+                color: $blue4;
                 margin-bottom: 8px;
                 margin-top: 15px;
                 font-size: var(--form_label_size);
@@ -186,19 +186,19 @@
                 align-self: center;
                 width: 95%;
                 padding: 8px 0px 5px 20px;
-                color: white;
+                color: rgba($blue4, $alpha: 0.8);
                 border: none;
                 border-radius: 10px;
                 font-size: var(--form_input_size);
                 font-weight: 400;
-                background-color: inherit;
-                box-shadow: inset -2px -2px 8px rgba(#fcc5d3, 0.8), inset -2px -2px 12px rgba($pink3, 0.5), inset 2px 2px 4px rgba($pink3, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+                background-color: #dde1e7;
+                box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1), inset -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15);
             }
             input:focus {
-                background-color: rgba($blue1, $alpha: 0.2);
+                background-color: rgba($blue1, $alpha: 0.6);
             }
             input::-webkit-input-placeholder {
-                color: rgba(255, 255, 255, 0.68);
+                color: rgba($blue4, $alpha: 0.8)
             }
             textarea {
                 max-width: 100%;
@@ -206,11 +206,22 @@
                 min-width: 100%;
             }
             input[type="submit"] {
-                border: none;
                 width: 60%;
+                font-weight: 500;
+                font-size: var(--form_submit_size);
                 align-self: center;
-                color: white;
+                border-radius: 20px;
+                border: none;
+                color: $blue4;
+                letter-spacing: 2px;
+                margin-top: 6%;
                 margin-bottom: 4%;
+                padding: 10px;
+                box-shadow: -2px -2px 8px rgba(255, 255, 255, 1), -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+                transition: background-color .3s ease-in;
+            }
+            input[type="submit"]:hover {
+                color: rgba($pink1, $alpha: 0.6);
             }
         }
     }
@@ -297,7 +308,7 @@ header {
         width: 50.5%;
         height: 100%;
         .illus {
-            width: 68%;
+            width: 65%;
             height: auto;
         }
     }

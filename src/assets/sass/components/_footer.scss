@@ -18,44 +18,62 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    width: 100%;
+    height: auto;
     .footer__logo {
-        width: 25%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-right: 2px solid $blue2;
-        img {
-            width: var(--logo_img-width);
-            height: auto;
-        }
-        span {
-            font-weight: bolder;
-            color: $blue2;
-            margin-left: 10px;
-            font-size: var(--logo_span_size);
-        }
-    }
-    .footer__sections {
         width: 25%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-right: 2px solid $blue2;
-        a {
-            color: $pink1;
-            margin-bottom: 5px;
-            font-size: var(--sections_a_size);
+        border-right: 2px solid white;
+        .logo1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1.5px solid white;
+            img {
+                width: var(--logo_img-width);
+                height: auto;
+            }
+            span {
+                font-weight: bolder;
+                color: $blue2;
+                margin-left: 12px;
+                font-size: var(--logo_span_size);
+            }
         }
-        a:hover {
-            font-weight: 500;
+        .logo2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 8px;
+            img {
+                width: 25px;
+                height: auto;
+            }
+            span {
+                font-weight: bolder;
+                color: #7697a0;;
+                margin-left: 5px;
+                font-size: 17px;
+            }
         }
-        span {
+
+    }
+    .footer__terms {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-right: 2px solid white;
+        a{
+            font-size: 13px;
             color: $blue2;
-            font-size: var(--sections_span_size);
-            margin-bottom: 7px;
-            font-weight: 500;
         }
+        
     }
     .footer__datas {
         width: 25%;
@@ -63,7 +81,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-right: 2px solid $blue2;
+        border-right: 2px solid white;
         div {
             display: flex;
             .datas__icon {

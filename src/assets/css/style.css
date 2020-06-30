@@ -45,14 +45,14 @@ ul {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0; }
   .login .log__cont {
     height: auto;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
     width: 30%;
     background-color: #dde1e7;
     display: flex;
@@ -142,7 +142,7 @@ ul {
     width: 30%;
     padding-top: 2%;
     padding-bottom: 1%;
-    background-color: #faadc0;
+    background-color: #dde1e7;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,7 +150,7 @@ ul {
     border-radius: 50px; }
     .checkin .checkin__cont span {
       text-transform: uppercase;
-      color: white;
+      color: #5a84a2;
       letter-spacing: 4px;
       font-size: 35px;
       font-weight: 600;
@@ -158,11 +158,11 @@ ul {
       padding: 0; }
     .checkin .checkin__cont .ch__bord {
       width: 60%;
-      border-bottom: 1px solid white;
+      border-bottom: 2px solid white;
       margin-top: 10px;
       margin-bottom: 10px; }
     .checkin .checkin__cont a {
-      color: white;
+      color: #5a84a2;
       font-size: 15px;
       margin-top: 8px;
       transition: 0.1s; }
@@ -174,7 +174,7 @@ ul {
       width: 80%; }
       .checkin .checkin__cont form label {
         padding-left: 5%;
-        color: white;
+        color: #5a84a2;
         margin-bottom: 8px;
         margin-top: 15px;
         font-size: var(--form_label_size); }
@@ -184,27 +184,37 @@ ul {
         align-self: center;
         width: 95%;
         padding: 8px 0px 5px 20px;
-        color: white;
+        color: rgba(90, 132, 162, 0.8);
         border: none;
         border-radius: 10px;
         font-size: var(--form_input_size);
         font-weight: 400;
-        background-color: inherit;
-        box-shadow: inset -2px -2px 8px rgba(252, 197, 211, 0.8), inset -2px -2px 12px rgba(253, 190, 206, 0.5), inset 2px 2px 4px rgba(253, 190, 206, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15); }
+        background-color: #dde1e7;
+        box-shadow: inset -2px -2px 8px white, inset -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15); }
       .checkin .checkin__cont form input:focus {
-        background-color: rgba(174, 215, 245, 0.2); }
+        background-color: rgba(174, 215, 245, 0.6); }
       .checkin .checkin__cont form input::-webkit-input-placeholder {
-        color: rgba(255, 255, 255, 0.68); }
+        color: rgba(90, 132, 162, 0.8); }
       .checkin .checkin__cont form textarea {
         max-width: 100%;
         max-height: 100px;
         min-width: 100%; }
       .checkin .checkin__cont form input[type="submit"] {
-        border: none;
         width: 60%;
+        font-weight: 500;
+        font-size: var(--form_submit_size);
         align-self: center;
-        color: white;
-        margin-bottom: 4%; }
+        border-radius: 20px;
+        border: none;
+        color: #5a84a2;
+        letter-spacing: 2px;
+        margin-top: 6%;
+        margin-bottom: 4%;
+        padding: 10px;
+        box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+        transition: background-color .3s ease-in; }
+      .checkin .checkin__cont form input[type="submit"]:hover {
+        color: rgba(255, 113, 146, 0.6); }
 
 header {
   background-color: #aed7f5;
@@ -272,7 +282,7 @@ header {
     width: 50.5%;
     height: 100%; }
     .cont .cont__illus .illus {
-      width: 68%;
+      width: 65%;
       height: auto; }
   .cont .cont__text {
     width: 43%;
@@ -330,46 +340,60 @@ footer {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto; }
   footer .footer__logo {
-    width: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-right: 2px solid #4A70D6; }
-    footer .footer__logo img {
-      width: var(--logo_img-width);
-      height: auto; }
-    footer .footer__logo span {
-      font-weight: bolder;
-      color: #4A70D6;
-      margin-left: 10px;
-      font-size: var(--logo_span_size); }
-  footer .footer__sections {
     width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 2px solid #4A70D6; }
-    footer .footer__sections a {
-      color: #FF7192;
-      margin-bottom: 5px;
-      font-size: var(--sections_a_size); }
-    footer .footer__sections a:hover {
-      font-weight: 500; }
-    footer .footer__sections span {
-      color: #4A70D6;
-      font-size: var(--sections_span_size);
-      margin-bottom: 7px;
-      font-weight: 500; }
+    border-right: 2px solid white; }
+    footer .footer__logo .logo1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid white; }
+      footer .footer__logo .logo1 img {
+        width: var(--logo_img-width);
+        height: auto; }
+      footer .footer__logo .logo1 span {
+        font-weight: bolder;
+        color: #4A70D6;
+        margin-left: 12px;
+        font-size: var(--logo_span_size); }
+    footer .footer__logo .logo2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 8px; }
+      footer .footer__logo .logo2 img {
+        width: 25px;
+        height: auto; }
+      footer .footer__logo .logo2 span {
+        font-weight: bolder;
+        color: #7697a0;
+        margin-left: 5px;
+        font-size: 17px; }
+  footer .footer__terms {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid white; }
+    footer .footer__terms a {
+      font-size: 13px;
+      color: #4A70D6; }
   footer .footer__datas {
     width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 2px solid #4A70D6; }
+    border-right: 2px solid white; }
     footer .footer__datas div {
       display: flex; }
       footer .footer__datas div .datas__icon {

@@ -386,7 +386,8 @@ footer {
     border-right: 2px solid white; }
     footer .footer__terms a {
       font-size: 13px;
-      color: #4A70D6; }
+      color: #4A70D6;
+      padding-bottom: 5px; }
   footer .footer__datas {
     width: 25%;
     display: flex;

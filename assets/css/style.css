@@ -216,7 +216,7 @@ ul {
       .checkin .checkin__cont form input[type="submit"]:hover {
         color: rgba(255, 113, 146, 0.6); }
 
-header {
+#shome {
   background-color: #aed7f5;
   width: 100%;
   height: 100vh;
@@ -370,13 +370,13 @@ footer {
       align-items: center;
       margin-top: 8px; }
       footer .footer__logo .logo2 img {
-        width: 25px;
+        width: 20px;
         height: auto; }
       footer .footer__logo .logo2 span {
-        font-weight: bolder;
+        font-weight: bold;
         color: #7697a0;
         margin-left: 5px;
-        font-size: 17px; }
+        font-size: 15px; }
   footer .footer__terms {
     width: 25%;
     display: flex;
@@ -507,17 +507,17 @@ footer {
   height: 100vh;
   box-shadow: 0px 45px 18px rgba(0, 0, 0, 0.2); }
   .turn .turn__illus {
-    width: 60%;
+    width: 55%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center; }
     .turn .turn__illus img {
       padding-left: 5%;
-      width: 90%;
+      width: 85%;
       height: auto; }
   .turn .turn__cont {
-    width: 40%;
+    width: 45%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -526,7 +526,7 @@ footer {
     padding-left: 3%; }
     .turn .turn__cont h2 {
       color: rgba(255, 113, 146, 0.8);
-      font-size: 52.5px;
+      font-size: 50px;
       font-weight: bolder; }
     .turn .turn__cont span {
       color: #4A70D6;
@@ -575,7 +575,8 @@ footer {
       color: white;
       margin-top: 5px; }
     .shop .shop__cont a {
-      margin-left: 10%; }
+      margin-top: 10%;
+      margin-left: 18%; }
   .shop .shop__illus {
     width: 55%;
     height: 100vh;
@@ -753,5 +754,75 @@ footer {
     .modal_wrap .mesaje_modal #btnClose:hover {
       background-color: #b07aba;
       color: white; }
+
+#shome2 {
+  background-color: #aed7f5; }
+
+.navbar2 {
+  width: 100%;
+  height: 8vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .navbar2 .logoshop {
+    width: 35px;
+    height: auto; }
+  .navbar2 span {
+    margin-left: 8px;
+    color: #4A70D6;
+    font-size: 28px;
+    font-weight: bold; }
+
+.actions {
+  width: 100%;
+  height: 92vh; }
+  .actions .info {
+    width: 100%;
+    height: 25%;
+    background-color: blue;
+    display: flex;
+    flex-direction: row; }
+    .actions .info .info__personal {
+      width: 50%;
+      height: auto;
+      background-color: yellow;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .actions .info .info__personal .personal__img img {
+        width: 80%;
+        height: auto; }
+    .actions .info .info__activities {
+      width: 50%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+  .actions .op {
+    width: 100%;
+    height: 75%;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: row; }
+    .actions .op .op__shop {
+      width: 50%;
+      height: auto;
+      background-color: tomato;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .actions .op .op__turn {
+      width: 50%;
+      height: auto;
+      background-color: green;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
 
 /*# sourceMappingURL=style.css.map */

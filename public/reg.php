@@ -1,6 +1,6 @@
 <?php
 
-    $conn = mysqli_connect("127.0.0.1","root","","usuario");
+    $conn = mysqli_connect("127.0.0.1","root","","shopsafe_db");
 
     $nombre = $_POST['namef'];
     $apellido = $_POST['secondf'];
@@ -10,7 +10,7 @@
     $contrasena = $_POST['passwf'];
     $passcod = password_hash($contrasena,PASSWORD_DEFAULT);
     
-    $result=mysqli_query($conn,"INSERT INTO registrados VALUES ('$nombre','$apellido',$cedula,'$correo',$telefono,'$passcod')");
+    $result=mysqli_query($conn,"INSERT INTO users VALUES ($cedula,'$nombre','$apellido','$correo',$telefono,'$passcod',true)");
 
     if(!$result){
         echo"No se registro";
@@ -20,5 +20,5 @@
 
     mysqli_close($conn);
     
-    header("Location: http://localhost/ShopSafe-master/public/index.html");
+    header("Location: http://localhost/ShopSafe/public/index.html");
 ?>

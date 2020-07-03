@@ -9,8 +9,8 @@
     $telefono = $_POST['numberf'];
     $contrasena = $_POST['passwf'];
     $passcod = password_hash($contrasena,PASSWORD_DEFAULT);
-    //echo $cedula;
-    $result=mysqli_query($conn,"INSERT INTO registrados VALUES ('','$nombre','$apellido',$cedula,'$correo',$telefono,'$passcod')");
+    
+    $result=mysqli_query($conn,"INSERT INTO registrados VALUES ('$nombre','$apellido',$cedula,'$correo',$telefono,'$passcod')");
 
     if(!$result){
         echo"No se registro";
@@ -20,5 +20,5 @@
 
     mysqli_close($conn);
     
-    //header("Location: http://localhost/ShopSafe-master/public/index.html");
+    header("Location: http://localhost/ShopSafe-master/public/index.html");
 ?>

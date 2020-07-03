@@ -8,19 +8,19 @@
         height: 100vh;
         box-shadow: 0px 45px 18px rgba($color: #000000, $alpha: 0.2);
         .turn__illus {
-            width: 60%;
+            width: 55%;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             img {
                 padding-left: 5%;
-                width: 90%;
+                width: 85%;
                 height: auto;
             }
         }
         .turn__cont {
-            width: 40%;
+            width: 45%;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -29,7 +29,7 @@
             padding-left: 3%;
             h2 {
                 color: rgba($pink1, $alpha: 0.8);
-                font-size: 52.5px;
+                font-size: 50px;
                 font-weight: bolder;
             }
             span {
@@ -90,7 +90,8 @@
                 margin-top: 5px;
             }
             a {
-                margin-left: 10%;
+                margin-top: 10%;
+                margin-left: 18%;
             }
         }
         .shop__illus {

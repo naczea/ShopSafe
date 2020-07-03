@@ -20,5 +20,5 @@
 
     mysqli_close($conn);
     
-    header("Location: http://localhost/ShopSafe/public/index.html");
+    header("Location: http://localhost/ShopSafe/index.html");
 ?>

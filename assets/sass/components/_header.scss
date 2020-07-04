@@ -149,16 +149,10 @@
             text-transform: uppercase;
             color: $blue4;
             letter-spacing: 4px;
-            font-size: 35px;
+            font-size: 30px;
             font-weight: 600;
-            margin-bottom: 5%;
+            margin-bottom: 2%;
             padding: 0;
-        }
-        .ch__bord {
-            width: 60%;
-            border-bottom: 2px solid white;
-            margin-top: 10px;
-            margin-bottom: 10px;
         }
         a {
             color: $blue4;
@@ -169,7 +163,31 @@
         a:hover {
             font-weight: 500;
         }
-        form {
+        .ch__bord {
+            width: 60%;
+            border-bottom: 2px solid white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .ch__coonf{
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 8%;
+            i{
+                font-size: 80px;
+                color: rgb(93, 186, 93);
+            }
+            span{
+                color:$blue4;
+                font-size: 25px;
+                text-transform: inherit;
+                letter-spacing: inherit;
+            }
+        }
+
+        .checkforms {
             display: flex;
             flex-direction: column;
             width: 80%;
@@ -178,7 +196,7 @@
                 color: $blue4;
                 margin-bottom: 8px;
                 margin-top: 15px;
-                font-size: var(--form_label_size);
+                font-size: 14px;
             }
             input[type="text"],
             input[type="number"],
@@ -189,7 +207,7 @@
                 color: rgba($blue4, $alpha: 0.8);
                 border: none;
                 border-radius: 10px;
-                font-size: var(--form_input_size);
+                font-size: 14px;
                 font-weight: 400;
                 background-color: #dde1e7;
                 box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1), inset -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15);
@@ -198,7 +216,8 @@
                 background-color: rgba($blue1, $alpha: 0.6);
             }
             input::-webkit-input-placeholder {
-                color: rgba($blue4, $alpha: 0.8)
+                color: rgba($blue4, $alpha: 0.8);
+                font-size: 14px;
             }
             textarea {
                 max-width: 100%;
@@ -208,7 +227,7 @@
             input[type="submit"] {
                 width: 60%;
                 font-weight: 500;
-                font-size: var(--form_submit_size);
+                font-size: 15px;
                 align-self: center;
                 border-radius: 20px;
                 border: none;

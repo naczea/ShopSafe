@@ -1,25 +1,27 @@
 <?php
-    $conn = mysqli_connect("127.0.0.1","root","","shopsafe_db");
+    include('database.php');
+    
+    if(isset($_GET['id_user'])) {
 
-    $nombre = $_POST['namef'];
-    $clave = $_POST['numberf'];
+        $id = $_GET['id_user'];
+        $pass = $_GET['pass_user'];
 
+        $query = "SELECT pass_user FROM users WHERE id_user = $id";
+        $result = mysqli_query($conn,$query);
+        $show = $result ->fetch_assoc();
 
-    $sql1 = "SELECT pass_user FROM users WHERE id_user = $nombre";
-    $resultado = mysqli_query($conn,$sql1);
-
-    $mostrar = $resultado ->fetch_assoc();
-    if($resultado ->num_rows === 0){
-        echo "Cedula incorrecta";
-    }else{
-        $calvecod = $mostrar['pass_user'];
-        $verificacion = password_verify($clave,$calvecod);
-        if($verificacion){
-            header("Location: http://localhost/ShopSafe/public/principal.html");
+        if($result ->num_rows === 0){
+            echo "Usuario o contraña incorrecta";
         }else{
-            echo "clave incorrecta";
+            $passcod = $show['pass_user'];
+            $verf = password_verify($pass,$passcod);
+            if($verf){
+                echo "Bienvenido";
+                //header("Location: http://localhost/ShopSafe/public/principal.html");
+            }else{
+                echo "Usuario o contraña incorrecta";
+            }
         }
     }
-
     mysqli_close($conn);
 ?>

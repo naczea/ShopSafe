@@ -26,9 +26,9 @@
         <div class="log__cont">
             <span>Bienvenido</span>
             <div class="ch__bord"></div>
-            <form action="backend/login.php" method="POST">
-                <label for="name">Usuario: </label>
-                <input type="text" id="namelg" name="namef" placeholder="Cédula o correo" required>
+            <form id="loginform">
+                <label for="ci">Usuario: </label>
+                <input type="number" id="cilg" name="ci" placeholder="Número de cédula o pasaporte" required>
 
                 <label for="pass">Contraseña:</label>
                 <input type="password" id="passlg" name="numberf" placeholder="Mínimo 8 caracteres" required>
@@ -44,7 +44,12 @@
     <div class="checkin" id="ch">
         <div class="checkin__cont">
             <span>Registro</span>
-            <form action="backend/reg.php" method="POST">
+            <div class="ch__bord"></div>
+            <div class="ch__coonf" id="ch__confirm">
+                <i class="far fa-check-circle"></i></br>
+                <span>Registrado con éxito</span>
+            </div>
+            <form id="checkform" class="checkforms">
                 <label for="name">Nombres: </label>
                 <input type="text" id="namech" name="namef" placeholder="Ingrese su nombre" required>
 

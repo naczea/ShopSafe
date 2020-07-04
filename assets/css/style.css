@@ -152,15 +152,10 @@ ul {
       text-transform: uppercase;
       color: #5a84a2;
       letter-spacing: 4px;
-      font-size: 35px;
+      font-size: 30px;
       font-weight: 600;
-      margin-bottom: 5%;
+      margin-bottom: 2%;
       padding: 0; }
-    .checkin .checkin__cont .ch__bord {
-      width: 60%;
-      border-bottom: 2px solid white;
-      margin-top: 10px;
-      margin-bottom: 10px; }
     .checkin .checkin__cont a {
       color: #5a84a2;
       font-size: 15px;
@@ -168,41 +163,61 @@ ul {
       transition: 0.1s; }
     .checkin .checkin__cont a:hover {
       font-weight: 500; }
-    .checkin .checkin__cont form {
+    .checkin .checkin__cont .ch__bord {
+      width: 60%;
+      border-bottom: 2px solid white;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    .checkin .checkin__cont .ch__coonf {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8%; }
+      .checkin .checkin__cont .ch__coonf i {
+        font-size: 80px;
+        color: #5dba5d; }
+      .checkin .checkin__cont .ch__coonf span {
+        color: #5a84a2;
+        font-size: 25px;
+        text-transform: inherit;
+        letter-spacing: inherit; }
+    .checkin .checkin__cont .checkforms {
       display: flex;
       flex-direction: column;
       width: 80%; }
-      .checkin .checkin__cont form label {
+      .checkin .checkin__cont .checkforms label {
         padding-left: 5%;
         color: #5a84a2;
         margin-bottom: 8px;
         margin-top: 15px;
-        font-size: var(--form_label_size); }
-      .checkin .checkin__cont form input[type="text"],
-      .checkin .checkin__cont form input[type="number"],
-      .checkin .checkin__cont form input[type="password"] {
+        font-size: 14px; }
+      .checkin .checkin__cont .checkforms input[type="text"],
+      .checkin .checkin__cont .checkforms input[type="number"],
+      .checkin .checkin__cont .checkforms input[type="password"] {
         align-self: center;
         width: 95%;
         padding: 8px 0px 5px 20px;
         color: rgba(90, 132, 162, 0.8);
         border: none;
         border-radius: 10px;
-        font-size: var(--form_input_size);
+        font-size: 14px;
         font-weight: 400;
         background-color: #dde1e7;
         box-shadow: inset -2px -2px 8px white, inset -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15); }
-      .checkin .checkin__cont form input:focus {
+      .checkin .checkin__cont .checkforms input:focus {
         background-color: rgba(174, 215, 245, 0.6); }
-      .checkin .checkin__cont form input::-webkit-input-placeholder {
-        color: rgba(90, 132, 162, 0.8); }
-      .checkin .checkin__cont form textarea {
+      .checkin .checkin__cont .checkforms input::-webkit-input-placeholder {
+        color: rgba(90, 132, 162, 0.8);
+        font-size: 14px; }
+      .checkin .checkin__cont .checkforms textarea {
         max-width: 100%;
         max-height: 100px;
         min-width: 100%; }
-      .checkin .checkin__cont form input[type="submit"] {
+      .checkin .checkin__cont .checkforms input[type="submit"] {
         width: 60%;
         font-weight: 500;
-        font-size: var(--form_submit_size);
+        font-size: 15px;
         align-self: center;
         border-radius: 20px;
         border: none;
@@ -213,7 +228,7 @@ ul {
         padding: 10px;
         box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
         transition: background-color .3s ease-in; }
-      .checkin .checkin__cont form input[type="submit"]:hover {
+      .checkin .checkin__cont .checkforms input[type="submit"]:hover {
         color: rgba(255, 113, 146, 0.6); }
 
 #shome {

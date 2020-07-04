@@ -1,24 +1,21 @@
 <?php
-
-    $conn = mysqli_connect("127.0.0.1","root","","shopsafe_db");
-
-    $nombre = $_POST['namef'];
-    $apellido = $_POST['secondf'];
-    $cedula = intval ($_POST['cif']);
-    $correo = $_POST['mailf'];
-    $telefono = $_POST['numberf'];
-    $contrasena = $_POST['passwf'];
-    $passcod = password_hash($contrasena,PASSWORD_DEFAULT);
+    include('database.php');
     
-    $result=mysqli_query($conn,"INSERT INTO users VALUES ($cedula,'$nombre','$apellido','$correo',$telefono,'$passcod',true)");
+    if(isset($_POST['id_user'])) {
+        
+        $id = $_POST['id_user'];
+        $name = $_POST['name_user'];
+        $last = $_POST['last_user'];
+        $mail = $_POST['mail_user'];
+        $phone = $_POST['phone_user'];
+        $pass = $_POST['pass_user'];
+        $pass_cod = password_hash($pass,PASSWORD_DEFAULT);
 
-    if(!$result){
-        echo"No se registro";
-    }else{
-        echo "Se registro excitosamente";
+        $query="INSERT INTO users VALUES ($id,'$name','$last','$mail',$phone,'$pass_cod',true)";
+        $result=mysqli_query($conn,$query);
+        if(!$result){
+            die('Query Failed.');
+        }
+        echo 'Usuario Registrado';
     }
-
-    mysqli_close($conn);
-    
-    header("Location: http://localhost/ShopSafe/index.html");
 ?>

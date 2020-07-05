@@ -11,15 +11,14 @@
         $show = $result ->fetch_assoc();
 
         if($result ->num_rows === 0){
-            echo "Usuario o contraña incorrecta";
+            echo false;
         }else{
             $passcod = $show['pass_user'];
             $verf = password_verify($pass,$passcod);
             if($verf){
-                echo "Bienvenido";
-                //header("Location: http://localhost/ShopSafe/public/principal.html");
+                echo true;
             }else{
-                echo "Usuario o contraña incorrecta";
+                echo false;
             }
         }
     }

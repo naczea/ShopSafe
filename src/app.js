@@ -24,7 +24,12 @@ $(document).ready(function() {
 
         $.get('backend/login.php', lgdata, function (response) {
             $('#loginform').trigger('reset');
-            alert(response);
+            if(!response){
+                alert('Usuario o contraña incorrecta');
+            }else{
+                alert('Bienvenido');
+                $(location).attr('href','public/principal.html');
+            }
         });
         e.preventDefault();
     });

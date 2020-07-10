@@ -89,12 +89,12 @@ ul {
       margin-top: 5%; }
       .login .log__cont form label {
         color: #5a84a2;
-        margin-bottom: 4%;
+        margin-bottom: 3%;
         font-size: var(--form_label_size); }
       .login .log__cont form input {
         width: 100%;
         padding: 8px 0px 5px 20px;
-        margin-bottom: 12%;
+        margin-bottom: 10%;
         color: rgba(90, 132, 162, 0.8);
         border: none;
         border-radius: 10px;
@@ -118,7 +118,7 @@ ul {
         border-radius: 20px;
         color: #5a84a2;
         letter-spacing: 2px;
-        margin-top: 2%;
+        margin-top: 1%;
         margin-bottom: 4%;
         padding: 10px;
         box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
@@ -148,6 +148,9 @@ ul {
     justify-content: center;
     align-items: center;
     border-radius: 50px; }
+    .checkin .checkin__cont #lol {
+      color: #d45a5a;
+      font-size: 18px; }
     .checkin .checkin__cont span {
       text-transform: uppercase;
       color: #5a84a2;

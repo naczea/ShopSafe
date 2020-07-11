@@ -778,79 +778,68 @@ footer {
 
 .navbar2 {
   width: 100%;
-  height: 8vh;
+  height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: flex-end; }
-  .navbar2 a {
-    width: 12%;
+  justify-content: center;
+  margin: auto; }
+  .navbar2 .nav__logo {
+    justify-self: start;
     display: flex;
-    flex-direction: row; }
-    .navbar2 a i {
-      color: #FF7192;
-      font-size: 17px; }
-    .navbar2 a span {
-      margin-right: 3%;
-      margin-left: 5%;
-      color: #FF7192;
-      font-size: 18px;
-      font-weight: bold; }
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .navbar2 .nav__logo img {
+      width: 8%;
+      height: auto;
+      margin-right: 3%; }
+    .navbar2 .nav__logo span {
+      color: #5a84a2;
+      font-size: 28px;
+      font-weight: bolder; }
+  .navbar2 .nav__close {
+    position: absolute;
+    right: 0;
+    width: 12%; }
+    .navbar2 .nav__close a {
+      display: flex;
+      flex-direction: row; }
+      .navbar2 .nav__close a i {
+        color: #FF7192;
+        font-size: 17px; }
+      .navbar2 .nav__close a span {
+        margin-right: 3%;
+        margin-left: 5%;
+        color: #FF7192;
+        font-size: 18px;
+        font-weight: bold; }
 
 #main_principal {
   background-color: #dde1e7; }
 
 .actions {
   width: 100%;
-  height: 92vh; }
+  height: 90vh; }
   .actions .info {
     width: 100%;
     height: 25%;
+    padding-left: 10%;
+    padding-right: 10%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center; }
-    .actions .info .info__logo {
-      width: 18%;
+    .actions .info .info__que {
+      width: 25%;
       height: 100%;
+      background-color: #dde1e7;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       align-items: center; }
-      .actions .info .info__logo .top {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center; }
-        .actions .info .info__logo .top img {
-          width: 16%;
-          height: auto;
-          margin-right: 3%; }
-        .actions .info .info__logo .top span {
-          color: #5a84a2;
-          font-size: 40px;
-          font-weight: bolder; }
-      .actions .info .info__logo .border {
-        width: 80%;
-        border-bottom: 2.5px solid white;
-        margin-top: 4%;
-        margin-bottom: 3%; }
-      .actions .info .info__logo .text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-style: italic;
-        text-transform: uppercase;
-        color: #5a84a2;
-        font-size: 15.5px;
-        font-weight: 500; }
-    .actions .info .info__que {
-      width: 17.5%;
-      height: 100%; }
       .actions .info .info__que .cont__que {
-        width: 100%;
-        height: 95%;
+        width: 95%;
+        height: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -867,11 +856,11 @@ footer {
           text-align: center;
           margin-bottom: 6%; }
         .actions .info .info__que .cont__que p {
-          font-size: 14px;
+          font-size: 13.5px;
           color: #FF7192;
           margin-bottom: 5px; }
     .actions .info .info__personal {
-      width: 25%;
+      width: 35%;
       height: 100%;
       background-color: #dde1e7;
       display: flex;
@@ -923,7 +912,7 @@ footer {
             color: #FF7192;
             align-self: flex-end; }
     .actions .info .info__activities {
-      width: 25%;
+      width: 35%;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -995,7 +984,7 @@ footer {
         border-radius: 40px;
         box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.6), inset 2px 2px 4px rgba(255, 255, 255, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.15); }
         .actions .op .op__shop .cont_shop img {
-          width: 80%;
+          width: 77%;
           height: auto; }
         .actions .op .op__shop .cont_shop span {
           color: #5a84a2;
@@ -1025,7 +1014,7 @@ footer {
         border-radius: 40px;
         box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.6), inset 2px 2px 4px rgba(255, 255, 255, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.15); }
         .actions .op .op__turn .cont__turn img {
-          width: 37%;
+          width: 33%;
           height: auto; }
         .actions .op .op__turn .cont__turn span {
           color: #5a84a2;

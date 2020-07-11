@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Nicolás Correa | naczea">
     <meta name="description" content="ShopSafe - Webpage | Compra o reserva turno seguro desde casa.">
-    <link rel="shortcut icon" href="shopsafe.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/shopsafe.ico" type="image/x-icon">
 
     <!--STYLES-->
     <link rel="stylesheet" href="../assets/css/normalize.css">
@@ -24,54 +24,88 @@
 <body>
     <header id="shome2">
         <nav class="navbar2">
-            <img src="../img/logo.png" alt="logo" class="logoshop">
-            <span>ShopSafe</span>
+            <a href="#">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Cerrar sesión</span>
+            </a>
         </nav>
     </header>
 
-    <main class="actions">
+    <main class="actions" id="main_principal">
         <div class="info">
-            <div class="info__personal">
-                <div class="personal__img">
-                    <img src="../img/user-icon.jpg" alt="users icon">
+            <div class="info__logo">
+                <div class="top">
+                    <img src="../img/logo.png" alt="logo" class="logoshop">
+                    <span>ShopSafe</span>
                 </div>
-                <div class="personal__data">
-                    <i class="fas fa-edit"></i>
-                    <span>DATOS PERSONALES</span>
-                    <ul>
-                        <li>Nombre: Nicolas Correa</li>
-                        <li>Cedula: 1234567890</li>
-                        <li>Telefono: 0987654321</li>
-                        <li>Correo: naczea@outlook.com</li>
-                    </ul>
+                <div class="border"></div>
+                <div class="text">
+                    <p>Cuidemos de los nuestros</p>
+                </div>
+                
+            </div>
+            <div class="info__personal">
+                <div class="cont">
+                    <div class="personal">
+                        <div class="personal__img">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="personal__data">
+                            <span>Datos Personales</span>
+                            <ul>
+                                <li>Nombre: Nicolas Alejandro</li>
+                                <li>Apellido: Correa Zea</li>
+                                <li>Cedula: 1234567890</li>
+                                <li>Telefono: 0987654321</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="user__edit">
+                        <i class="fas fa-edit"></i>
+                    </div>
                 </div>
             </div>
             <div class="info__activities">
-                <div class="activities__nav">
-                    <i class="fas fa-edit"></i>
-                    <span>ACTIVIDAD RECIENTE</span>
+                <div class="cont2">
+                    <div class="activities__img">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="cont__text">
+                        <div class="activities__nav">
+                            <span>Actividad reciente</span>
+                        </div>
+                        <div class="activities">
+                            <span>No tienes turnos pendientes</span>
+                            <span>No tienes compras pendientes</span>
+                        </div>
+                    </div>
+                    <div class="act__edit">
+                        <i class="fas fa-edit"></i>
+                    </div>
                 </div>
-                <div class="activities__turn">
-                    <span>Turnos: No tienes turnos pendientes</span>
-                </div>
-                <div class="activities__shop">
-                    <span>Compras: No tienes compras pendientes</span>
+            </div>
+            <div class="info__que">
+                <div class="cont__que">
+                    <h2>Mas Opciones</h2>
+                    <p>Preguntas frecuentes</p>
+                    <p>Sugerencias y Recomendaciones</p>
+                    <p>Encuestas y formularios</p>
                 </div>
             </div>
         </div>
 
         <div class="op">
             <div class="op__shop">
-                <span>Compra productos</span>
-                <img src="" alt="e-comercer illustration">
-                <a href="#">Comprar</a>
-
+                <div class="cont_shop">
+                    <img src="../img/online.svg" alt="e-comercer illustration">
+                    <span>Comprar productos</span>
+                </div>
             </div>
             <div class="op__turn">
-                <span>Saca un turno</span>
-                <img src="" alt="turns illustartion">
-                <a href="#">Reserva</a>
-
+                <div class="cont__turn">
+                    <img src="../img/turn.svg" alt="turns illustartion">
+                    <span>Sacar un turno</span>
+                </div>
             </div>
         </div>
 

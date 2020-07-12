@@ -44,7 +44,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Nicolás Correa | naczea">
     <meta name="description" content="ShopSafe - Webpage | Compra o reserva turno seguro desde casa.">
-    <link rel="shortcut icon" href="shopsafe.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/shopsafe.ico" type="image/x-icon">
 
     <!--STYLES-->
     <link rel="stylesheet" href="../assets/css/normalize.css">
@@ -58,60 +58,202 @@
 </head>
 
 <body>
+    <div class="ui__turn" id="uiturn">
+        <div class="turn__cont">
+            <div class="cont1">
+                <div class="cont1__nav">
+                    <span>Emision de turnos</span>
+                </div>
+                <div class="cont1__cont">
+                    <div class="cont__info">
+                        <div class="contenedor">
+                            <p><span>Servicio:</span> MERCADO</p>
+                            <p><span>Establecimiento:</span> SUPERMAXI</p>
+                            <img src="../img/database/logo-supermaxi.jpg" alt="">
+                            <p>Supermercado con toda clase de productos, alimentos, hogar,tecnología, ropa y muchas cosas más.</p>
+                            <p><span>Ubicación:</span> Av 1 y calle 1</p>
+                            <p><span>Horarios:</span> 10:00 a 18:00</p>
+                        </div>
+                    </div>
+                    <div class="cont__actions">
+                        <span>AQUI VA LA ELECCION</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <header id="shome2">
         <nav class="navbar2">
-            <img src="../img/logo.png" alt="logo" class="logoshop">
-            <span>ShopSafe</span>
+            <div class="nav__logo">
+                <img src="../img/logo.png" alt="logo" class="logoshop">
+                <span>ShopSafe</span>
+            </div>
+            <div class="nav__close">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar sesión</span>
+                </a>
+            </div>
         </nav>
     </header>
 
-    <main class="actions">
+<!-- **************************INFORMACION ****************************************-->
+    <main class="actions" id="main_principal">
         <div class="info">
             <div class="info__personal">
-                <div class="personal__img">
-                    <img src="../img/user-icon.jpg" alt="users icon">
-                </div>
-                <div class="personal__data">
-                    <i class="fas fa-edit"></i>
-                    <span>DATOS PERSONALES</span>
-                    <ul>
-                        <li>Nombre: <?php echo $name_u; ?></li>
-                        <li>Cedula: <?php echo $ced_u; ?> </li>
-                        <li>Telefono: <?php echo $phone_u; ?> </li>
-                        <li>Correo: <?php echo $mail_u; ?> </li>
-                    </ul>
+                <div class="cont">
+                    <div class="personal">
+                        <div class="personal__img">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="personal__data">
+                            <span>Datos Personales</span>
+                            <ul>
+                                <li>Nombre: <?php echo $name_u; ?></li>
+                                <li>Apellido: <?php echo $last_u; ?></li>
+                                <li>Cedula: <?php echo $phone_u; ?></li>
+                                <li>Telefono: <?php echo $phone_u; ?></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="user__edit">
+                        <a href="#">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="info__activities">
-                <div class="activities__nav">
-                    <i class="fas fa-edit"></i>
-                    <span>ACTIVIDAD RECIENTE</span>
+                <div class="cont2">
+                    <div class="activities__img">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="cont__text">
+                        <div class="activities__nav">
+                            <span>Actividad reciente</span>
+                        </div>
+                        <div class="activities">
+                            <span>No tienes turnos pendientes</span>
+                            <span>No tienes compras pendientes</span>
+                        </div>
+                    </div>
+                    <div class="act__edit">
+                        <a href="#">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="activities__turn">
-                    <span>Turnos: No tienes turnos pendientes</span>
-                </div>
-                <div class="activities__shop">
-                    <span>Compras: No tienes compras pendientes</span>
+            </div>
+            <div class="info__que">
+                <div class="cont__que">
+                    <h2>Mas Opciones</h2>
+                    <a href="#">Preguntas frecuentes</a>
+                    <a href="#">Sugerencias y Recomendaciones</a>
+                    <a href="#">Encuestas y formularios</a>
                 </div>
             </div>
         </div>
 
+<!-- ******************  OPCIONES *************************************** -->
         <div class="op">
+
+<!----------------------SHOP------------SHOP-----------------SHOP--------------------->
+
             <div class="op__shop">
-                <span>Compra productos</span>
-                <img src="" alt="e-comercer illustration">
-                <a href="#">Comprar</a>
+                <div class="cont_shop" id="shopcont__general">
 
+<!--********************** CONTENEDOR 1-->
+                    <div class="cont1" id="shop__cont1" onclick="mostrar('turn__cont2'), ocultar('turn__cont1'), back_color('shopcont__general')">
+                        <a href="#">
+                            <img src="../img/online.svg" alt="e-comercer illustration">
+                        </a>
+                        <span>Comprar productos</span>
+                    </div>
+<!--********************* CONTENEDOR2-->
+                    <div class="cont2" id="shop__cont2">
+                        <img src="../img/online2.svg" alt="e-comercer illustration">
+                        <span>Comprar productos</span>
+                    </div>
+                </div>
             </div>
-            <div class="op__turn">
-                <span>Saca un turno</span>
-                <img src="" alt="turns illustartion">
-                <a href="#">Reserva</a>
 
+<!--------------------------TURNOS ---------------TURNOS---------TURNOS----------------->
+
+            <div class="op__turn">
+                <div class="cont__turn" id="turncont__general">
+
+<!--********************** CONTENEDOR 1-->
+                    <div class="cont1" id="turn__cont1" onclick="mostrar('shop__cont2'), ocultar('shop__cont1'), back_color('turncont__general'), ocultar('turn__cont1'), mostrar('turn__cont3')">
+                        <a href="#">
+                            <img src="../img/turn.svg" alt="turns illustartion">
+                        </a>
+                        <span>Sacar un turno</span>
+                    </div>
+<!--********************* CONTENEDOR2-->
+                    <div class="cont2" id="turn__cont2">
+                        <img src="../img/turn2.svg" alt="turns illustartion">
+                        <span>Sacar un turno</span>
+                    </div>
+<!--********************* CONTENEDOR3-->
+                    <div class="cont3" id="turn__cont3" onclick="ocultar('turn__cont3'), mostrar('turn__cont4')">
+                        <div class="turn__nav">
+                            <span>Seleccione un servicio:</span>
+                        </div>
+                        <div class="turn__op">
+                            <div class="op">
+                                <a href="#">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>Mercado</span>
+                                </a>
+                            </div>
+                            <div class="op">
+                                <a href="#">
+                                    <i class="fas fa-cut"></i>
+                                    <span>Peliqueria</span>
+                                </a>
+                            </div>
+                            <div class="op">
+                                <a href="#">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Restaurante</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+<!--********************* CONTENEDOR4-->
+                    <div class="cont4" id="turn__cont4">
+                        <div class="turn__nav">
+                            <span>Servicio: MERCADO </br> Seleccione un establecimiento:</span>
+                        </div>
+                        <div class="store__op">
+                            <?php
+                                include('database.php');
+                                $query = "SELECT * FROM store WHERE turn_store = true";
+                                $result = $conn->query($query);
+                                if(!$result) {
+                                    die('Query Failed'. mysqli_error($conn));
+                                } 
+                                $id = 0;
+                                while($row = $result->fetch_assoc()) {
+                                    $id = $id + 1;
+                            ?>
+                            <div class="op">
+                                <a href="#<?php echo $id?>" id="<?php echo $id ?>" onclick="mostrar('uiturn')">
+                                    <img src="data:image/jpg;base64,<?php echo base64_encode($row['logo_store']); ?>" alt="">
+                                    <span><?php echo $row['name_store']; ?></span>
+                                </a>
+                            </div>
+                            <?php
+                                }
+                            ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
     </main>
+
+    <!--*************************** FOOTER*******************************************-->
 
     <footer>
         <div class="footer__logo">
@@ -156,6 +298,7 @@
     <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/187afea212.js" crossorigin="anonymous"></script>
+    <script src="../src/app2.js"></script>
     <script src="../src/main.js"></script>
 </body>
 </html>

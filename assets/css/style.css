@@ -855,10 +855,12 @@ footer {
           text-transform: uppercase;
           text-align: center;
           margin-bottom: 6%; }
-        .actions .info .info__que .cont__que p {
+        .actions .info .info__que .cont__que a {
           font-size: 13.5px;
           color: #FF7192;
           margin-bottom: 5px; }
+        .actions .info .info__que .cont__que a:hover {
+          font-weight: 500; }
     .actions .info .info__personal {
       width: 35%;
       height: 100%;
@@ -911,6 +913,8 @@ footer {
           .actions .info .info__personal .cont .user__edit i {
             color: #FF7192;
             align-self: flex-end; }
+          .actions .info .info__personal .cont .user__edit i:hover {
+            font-weight: 500; }
     .actions .info .info__activities {
       width: 35%;
       height: 100%;
@@ -957,6 +961,8 @@ footer {
           .actions .info .info__activities .cont2 .act__edit i {
             color: #FF7192;
             align-self: flex-end; }
+          .actions .info .info__activities .cont2 .act__edit i:hover {
+            font-weight: 500; }
   .actions .op {
     width: 100%;
     height: 75%;
@@ -983,16 +989,52 @@ footer {
         padding: 10px 30px;
         border-radius: 40px;
         box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.6), inset 2px 2px 4px rgba(255, 255, 255, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.15); }
-        .actions .op .op__shop .cont_shop img {
-          width: 77%;
-          height: auto; }
-        .actions .op .op__shop .cont_shop span {
-          color: #5a84a2;
-          font-size: 22.5px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-weight: 600;
-          margin-top: 5%; }
+        .actions .op .op__shop .cont_shop .cont1 {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .actions .op .op__shop .cont_shop .cont1 a {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .actions .op .op__shop .cont_shop .cont1 a img {
+              width: 70%;
+              height: auto;
+              transition: 0.25s; }
+          .actions .op .op__shop .cont_shop .cont1 span {
+            color: #5a84a2;
+            font-size: 22.5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-top: 5%; }
+        .actions .op .op__shop .cont_shop .cont2 {
+          width: 100%;
+          height: 100%;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .actions .op .op__shop .cont_shop .cont2 img {
+            width: 70%;
+            height: auto;
+            transition: 0.25s; }
+          .actions .op .op__shop .cont_shop .cont2 span {
+            color: rgba(90, 132, 162, 0.45);
+            font-size: 22.5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-top: 5%; }
+      .actions .op .op__shop .cont1:hover span {
+        color: #FF7192; }
+      .actions .op .op__shop .cont1:hover a img {
+        width: 75%; }
     .actions .op .op__turn {
       width: 50%;
       height: 100%;
@@ -1013,15 +1055,229 @@ footer {
         padding: 10px 30px;
         border-radius: 40px;
         box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.6), inset 2px 2px 4px rgba(255, 255, 255, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.15); }
-        .actions .op .op__turn .cont__turn img {
-          width: 33%;
-          height: auto; }
-        .actions .op .op__turn .cont__turn span {
-          color: #5a84a2;
-          font-size: 22.5px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-weight: 600;
-          margin-top: 5%; }
+        .actions .op .op__turn .cont__turn .cont1 {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .actions .op .op__turn .cont__turn .cont1 a {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .actions .op .op__turn .cont__turn .cont1 a img {
+              width: 30%;
+              height: auto;
+              transition: 0.25s; }
+          .actions .op .op__turn .cont__turn .cont1 span {
+            color: #5a84a2;
+            font-size: 22.5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-top: 5%; }
+        .actions .op .op__turn .cont__turn .cont2 {
+          width: 100%;
+          height: 100%;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .actions .op .op__turn .cont__turn .cont2 img {
+            width: 30%;
+            height: auto;
+            transition: 0.25s; }
+          .actions .op .op__turn .cont__turn .cont2 span {
+            color: rgba(90, 132, 162, 0.45);
+            font-size: 22.5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-top: 5%; }
+        .actions .op .op__turn .cont__turn .cont3 {
+          width: 100%;
+          height: 100%;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: initial; }
+          .actions .op .op__turn .cont__turn .cont3 .turn__nav {
+            color: #5a84a2;
+            font-size: 20px;
+            margin-bottom: 15%; }
+          .actions .op .op__turn .cont__turn .cont3 .turn__op {
+            width: 100%;
+            display: flex;
+            flex-direction: row; }
+            .actions .op .op__turn .cont__turn .cont3 .turn__op .op {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              background-color: initial; }
+              .actions .op .op__turn .cont__turn .cont3 .turn__op .op a {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: initial; }
+                .actions .op .op__turn .cont__turn .cont3 .turn__op .op a i {
+                  color: #f895ac;
+                  font-size: 100px;
+                  margin-bottom: 10%;
+                  transition: 0.15s; }
+                .actions .op .op__turn .cont__turn .cont3 .turn__op .op a span {
+                  color: #f895ac;
+                  text-transform: uppercase;
+                  font-size: 18px;
+                  font-weight: 600; }
+              .actions .op .op__turn .cont__turn .cont3 .turn__op .op a:hover i {
+                color: #FF7192;
+                font-size: 105px; }
+              .actions .op .op__turn .cont__turn .cont3 .turn__op .op a:hover span {
+                color: #FF7192; }
+        .actions .op .op__turn .cont__turn .cont4 {
+          width: 100%;
+          height: 100%;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: initial; }
+          .actions .op .op__turn .cont__turn .cont4 .turn__nav {
+            color: #5a84a2;
+            font-size: 18px;
+            margin-bottom: 15%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            line-height: 25px; }
+          .actions .op .op__turn .cont__turn .cont4 .store__op {
+            width: 100%;
+            display: flex;
+            flex-direction: row; }
+            .actions .op .op__turn .cont__turn .cont4 .store__op .op {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              background-color: initial; }
+              .actions .op .op__turn .cont__turn .cont4 .store__op .op a {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: initial; }
+                .actions .op .op__turn .cont__turn .cont4 .store__op .op a img {
+                  width: 70%;
+                  height: auto;
+                  margin-bottom: 10%;
+                  transition: 0.15s; }
+                .actions .op .op__turn .cont__turn .cont4 .store__op .op a span {
+                  color: #5a84a2;
+                  font-size: 18px;
+                  font-weight: 500; }
+              .actions .op .op__turn .cont__turn .cont4 .store__op .op a:hover img {
+                width: 72%; }
+              .actions .op .op__turn .cont__turn .cont4 .store__op .op a:hover span {
+                color: #FF7192;
+                font-weight: 600; }
+      .actions .op .op__turn .cont1:hover span {
+        color: #FF7192; }
+      .actions .op .op__turn .cont1:hover a img {
+        width: 34%; }
+
+.ui__turn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0; }
+  .ui__turn .turn__cont {
+    height: 80%;
+    width: 80%;
+    background-color: #dde1e7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px; }
+    .ui__turn .turn__cont .cont1 {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .ui__turn .turn__cont .cont1 .cont1__nav {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FF7192;
+        font-weight: bold;
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px; }
+      .ui__turn .turn__cont .cont1 .cont1__cont {
+        width: 100%;
+        height: 85%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start; }
+        .ui__turn .turn__cont .cont1 .cont1__cont .cont__info {
+          width: 40%;
+          height: 92%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .ui__turn .turn__cont .cont1 .cont1__cont .cont__info .contenedor {
+            width: 85%;
+            height: 95%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: initial;
+            padding: 10px 30px;
+            border-radius: 40px;
+            box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.6), inset 2px 2px 4px rgba(255, 255, 255, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.15); }
+            .ui__turn .turn__cont .cont1 .cont1__cont .cont__info .contenedor p {
+              width: 80%;
+              color: #5a84a2;
+              font-size: 15px;
+              text-align: center;
+              margin-top: 1%;
+              margin-bottom: 1%; }
+              .ui__turn .turn__cont .cont1 .cont1__cont .cont__info .contenedor p span {
+                color: #5a84a2;
+                font-weight: 600;
+                font-size: 17px; }
+            .ui__turn .turn__cont .cont1 .cont1__cont .cont__info .contenedor img {
+              width: 60%;
+              height: auto;
+              margin-top: 5%;
+              margin-bottom: 5%; }
+        .ui__turn .turn__cont .cont1 .cont1__cont .cont__actions {
+          width: 60%;
+          height: 92%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,16 +13,16 @@ CREATE TABLE IF NOT EXISTS users(
 ) 
 
 
-CREATE TABLE IF NOT EXISTS shop(
-	id_shop INT(10) NOT NULL COMMENT 'RUC/ID',
-	name_shop VARCHAR(20) NOT NULL,
-	type_shop INT(1) NOT NULL,
-	adress_shop VARCHAR(100),
-	shop_shop BOOLEAN,
-	turn_shop BOOLEAN,
-	time1_shop 
-	time2_shop
-	PRIMARY KEY (id_shop)
+CREATE TABLE IF NOT EXISTS store(
+	id_store BIGINT(13) NOT NULL COMMENT 'RUC/cedula',
+	name_store VARCHAR(20) NOT NULL,
+	type_store INT(1) NOT NULL COMMENT '1-market/2-hair/3-restaurant',
+	adress_store VARCHAR(100),
+	description_store VARCHAR(100),
+	logo_store BLOB,
+	shop_store BOOLEAN COMMENT 'Apta para turnos',
+	turn_store BOOLEAN COMMENT 'Apta para compras', 
+	PRIMARY KEY (id_store)
 )
 
 

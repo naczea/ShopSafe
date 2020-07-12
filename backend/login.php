@@ -66,13 +66,7 @@
                 </div>
                 <div class="cont1__cont">
                     <div class="cont__info">
-                        <div class="contenedor">
-                            <p><span>Servicio:</span> MERCADO</p>
-                            <p><span>Establecimiento:</span> SUPERMAXI</p>
-                            <img src="../img/database/logo-supermaxi.jpg" alt="">
-                            <p>Supermercado con toda clase de productos, alimentos, hogar,tecnología, ropa y muchas cosas más.</p>
-                            <p><span>Ubicación:</span> Av 1 y calle 1</p>
-                            <p><span>Horarios:</span> 10:00 a 18:00</p>
+                        <div class="contenedor" id="continfo">
                         </div>
                     </div>
                     <div class="cont__actions">
@@ -237,8 +231,9 @@
                                 while($row = $result->fetch_assoc()) {
                                     $id = $id + 1;
                             ?>
+                            <script> var idfunc = <?php echo $id?>; </script>
                             <div class="op">
-                                <a href="#<?php echo $id?>" id="<?php echo $id ?>" onclick="mostrar('uiturn')">
+                                <a href="#" class="<?php echo $row['id_store']; ?>" onclick="mostrar('uiturn'), searchstore(<?php echo $row['id_store']; ?>)">
                                     <img src="data:image/jpg;base64,<?php echo base64_encode($row['logo_store']); ?>" alt="">
                                     <span><?php echo $row['name_store']; ?></span>
                                 </a>

@@ -1,3 +1,308 @@
+.nav__table{
+    width: 100%;
+    height: 7.5%;
+    display: block;
+    position: absolute;
+    margin-left: 47%;
+    margin-top: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    color: $pink1;
+    .contnav{
+        display: flex;
+        color: $pink1;
+        i{
+            margin-right: 10%;
+            font-size: 22.5px;
+            transition: 0.25s;
+        }
+        span{
+            font-size: 20px;
+            margin-right: 2px;
+        }
+    }
+    .contnav:hover{
+        font-weight: 500;
+        i{
+            font-size: 24.5px;
+        }
+    }
+}
+.ui_shop{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    .shop__cont{
+        height: 92.5%;
+        width: 75%;
+        background-color: $white1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 35px;
+        .shop__info{
+            width: 27.5%;
+            height: 100%;
+            border-bottom-left-radius: 30px;
+            border-top-left-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            background-color: $blue4;
+            justify-content: center;
+            align-items: center;
+            .navbar__logo {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                .logoshop {
+                    width: 30px;
+                    height: auto;
+                }
+                h1 {
+                    margin-left: 6px;
+                    color: $white1;
+                    font-size: 25px;
+                }
+            }
+            .datastore{
+                width: 100%;
+                height: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    max-width: 70%!important;
+                }
+            }
+            .menu_products{
+                width: 100%;
+                height: auto;
+                .op_products{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10%;
+                    margin-bottom: 5%;
+                    ul{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        li:first-of-type{
+                            border-top: none;
+                        }
+                        li{
+                            width: 60%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 20px;
+                            a{
+                                width: 95%;
+                                margin-top: 2%;
+                                margin-bottom: 2%;
+                                text-align: center;
+                                color: white;
+                                border-radius: 20px;
+                            }
+                            #carnebtn{
+                                background-color: $pink1;
+                            }
+                        } 
+                        li:hover{
+                            a{
+                                font-size: 21px;
+                                text-shadow: 2px 2px 4px $pink1;
+                            }
+                        }
+
+                    }
+                }
+                .selec_products{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 18px;
+                    .next{
+                        margin-bottom: 2%;
+                        span{
+                            color: darkgray;
+                        }
+                        i{
+                            color: darkgray;
+                            margin-left: 5px;
+                            font-size: 16px;
+                        }
+                    }
+                    .cancel{
+                        span{
+                            color: $pink1;
+                            font-weight: 600;
+                        }
+                        i{
+                            color: $pink1;
+                            margin-left: 5px;
+                            font-size: 16px;
+                        }
+                    }
+                    .cancel:hover{
+                        span{
+                            font-size: 19px;
+                        }
+                    }
+                }
+            }
+        }
+        .shop__table{
+            width: 72.5%;
+            height: 100%;
+            border-bottom-right-radius: 30px;
+            border-top-right-radius: 30px;
+            .totalshop{
+                width: 100%;
+                height: 100%;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                top:0;
+                right: 0;
+                background: #ee9ca7;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+
+            #cont_frutas{
+                display: none;
+            }
+            #cont_granos{
+                display: none;
+            }
+            #cont_lacteos{
+                display: none;
+            }
+            #cont_limpieza{
+                display: none;
+            }
+            .cont__prod{
+                width: 100%;
+                height: 80%;
+                margin: auto;
+                margin-top: 6%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: flex-end;
+
+                .prod{
+                    width: 25%;
+                    height: 280px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 25px;
+                    padding: 5px 5px;
+                    box-shadow: -2px -2px 8px rgba(255, 255, 255, 1), -2px -2px 12px rgba(255, 255, 255, 0.6), inset 2px 2px 4px rgba(255, 255, 255, 1), 2px 2px 8px rgba(0, 0, 0, 0.3);
+                    margin-top: 20px;
+                    margin-left: 1.5%;
+                    margin-right: 1.5%;
+                    img{
+                        margin: 2.5%;
+                        max-width: 100px!important;
+                        height: auto;
+                        max-height: 110px!important;
+                        border-radius: 15px;
+                    }
+                    .prod__title{
+                        text-align: center;
+                        color: $pink1;
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                    .prod__brand{
+                        color: $blue4;
+                    }
+                    .prod__number{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 4%;
+                        margin-bottom: 4%;
+                        input{
+                            width: 40px;
+                            font-size: 15px;
+                            margin-right: 10%;
+                            margin-left: 10%;
+                        }
+                        a{
+                            padding-left: 10px;
+                            padding-right: 10px;
+                            font-size: 17px;
+                            font-weight: 500;
+                            background-color: rgba($pink1, $alpha: 0.8);
+                            border-radius: 10px;
+                            color: white;
+                        }
+                    }
+                    .prod__add{
+                        color: $blue4;
+                        border: 1px solid $blue4;
+                        border-radius: 20px;
+                        padding: 3px 20px;
+                        font-size: 14px;
+                        margin-bottom: 2%;
+                        i{
+                            margin-left: 5px;
+                            font-size: 13px;
+                        }
+                    }
+                    .prod__add:hover{
+                        background-color: $blue4;
+                        color: white;
+                    }
+                    .prod__remove{
+                        display: none;
+                        color: $pink1;
+                        border: 1px solid $pink1;
+                        border-radius: 20px;
+                        padding: 3px 20px;
+                        font-size: 14px;
+                        margin-bottom: 2%;
+                        i{
+                            margin-left: 5px;
+                            font-size: 13px;
+                        }
+                    }
+                    .prod__remove:hover{
+                        background-color: $pink1;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
 .ui__turn {
     display: none;
     flex-direction: column;
@@ -45,13 +350,13 @@
                 justify-content: center;
                 align-items: flex-start;
                 .cont__info{
-                    width: 40%;
+                    width: 55%;
                     height: 92%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     .contenedor{
-                        width: 85%;
+                        width: 90%;
                         height: 95%;
                         display: flex;
                         flex-direction: column;

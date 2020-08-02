@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>ShopSafe | Bienvenido</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Nicolás Correa | naczea">
+    <meta name="description" content="ShopSafe - Webpage | Compra o reserva turno seguro desde casa.">
+    <link rel="shortcut icon" href="../img/shopsafe.ico" type="image/x-icon">
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!--FONT-->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,500,600,700,800&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="../src/jquery.min.js"></script>
+    <script src="../src/moment.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/fullcalendar.min.css">
+    <script src="../src/fullcalendar.min.js"></script>
+    <script src="../src/es.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
+    <!--SCRIPTS-->
+    <script src="https://code.jquery.com/jquery-3.8.2.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="shome2">
+        <nav class="navbar2">
+            <div class="nav__logo">
+                <img src="../img/logo.png" alt="logo" class="logoshop">
+                <span>ShopSafe</span>
+            </div>
+            <div class="nav__close">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar sesión</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+<!-- **************************INFORMACION ****************************************-->
+    <main class="actions" id="main_principal">
+        <div class="info">
+            <div class="info__personal">
+                <div class="cont">
+                    <div class="personal">
+                        <div class="personal__img">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="personal__data">
+                            <span>Información</span>
+                            <ul>
+                                <li>Nombre: Supermaxi</li>
+                                <li>Telefono: 0987654321</li>
+                                <li>Horario: 09:30 - 20:00</li>
+                                <li>ID: 1234567890</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="user__edit">
+                        <a href="#">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="info__activities">
+                <div class="cont2">
+                    <div class="activities__img">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="cont__text">
+                        <div class="activities__nav">
+                            <span>Actividad reciente</span>
+                        </div>
+                        <div class="activities">
+                            <span>TURNOS: 23</span>
+                            <span>RESERVAS: 12</span>
+                        </div>
+                    </div>
+                    <div class="act__edit">
+                    </div>
+                </div>
+            </div>
+            <div class="info__que">
+                <div class="cont__que">
+                    <h2>Mas Opciones</h2>
+                    <a href="#">Preguntas frecuentes</a>
+                    <a href="#">Sugerencias y Recomendaciones</a>
+                    <a href="#">Encuestas y formularios</a>
+                </div>
+            </div>
+        </div>
+
+<!-- ******************  OPCIONES *************************************** -->
+        <div class="op2">
+            <div>
+                <span>TURNOS</span>
+            </div>
+            <div class="calendar__cont">
+                <div class="container">
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+                    <div class="row">
+                    <div class="col"></div>
+                    <div class="col-7"><div id="Web2"></div></div>
+                    <div class="col"></div>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        //$('#Web2').fullCalendar('option', 'height', get_calendar_height());
+
+                        $('#Web2').fullCalendar({
+                            header:{
+                                left:'today,prev,next',
+                                center:'title',
+                                right:'agendaDay,month'
+                            },
+                            //heigth: '100px',
+                            //themeSystem: 'bootstrap',
+                            dayClick:function(date,jsEvent,view){
+                                $('#Agendar').prop("disabled",false);
+                                $('#Modificar').prop("disabled",true);
+                                $('#Eliminar').prop("disabled",true);
+                                limpiarForm();
+                                $('#fecha_ev').val(date.format());
+                                $('#modalEventos').modal();
+                            },
+                            events:'evento.php?accion',
+                            eventClick:function(calEvent,jsEvent,view){
+                                $('#Agendar').prop("disabled",true);
+                                $('#Modificar').prop("disabled",false);
+                                $('#Eliminar').prop("disabled",false);
+                                $('#tituloEvento').html(calEvent.title);
+                                $('#descrip_ev').val(calEvent.descripcion);
+                                $('#titulo_ev').val(calEvent.title);
+                                $('#color_ev').val(calEvent.color);
+                                FechaHora = calEvent.start._i.split(" ");
+                                $('#fecha_ev').val(FechaHora[0]);
+                                $('#hora_ev').val(FechaHora[1]);
+                                $('#modalEventos').modal();
+                            }
+                            //$('#Web2').setOption('height', 700);
+                        });
+
+                    });
+            </script>
+        </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <!--********************FOOTER*******************************************-->
+
+    <footer>
+        <div class="footer__logo">
+            <div class="logo1">
+                <img src="../img/logo.png" alt="logo" class="logoshop">
+                <span>ShopSafe</span>
+            </div>
+            <div class="logo2">
+                <img src="../img/naczea.png" alt="naczea-logo">
+                <span>naczea</span>
+            </div>
+        </div>
+        <div class="footer__terms">
+            <a href="#">¿Quieres publicitar tu negocio?</a>
+            <a href="#">Donaciones a creadores</a>
+            <a href="#">Contácto y Ayuda</a>
+            <a href="#">Términos y Condiciones</a>
+        </div>
+        <div class="footer__datas">
+            <div>
+                <div class="datas__icon">
+                    <i class="fas fa-envelope-square"></i>
+                    <i class="fas fa-phone-square-alt"></i>
+                </div>
+                <div class="datas__txt">
+                    <span>shopsafe_uio@gmail.com</span>
+                    <span>0987635011</span>
+                </div>
+            </div>
+            <span class="datas__copy"> &#169; naczea - 2020 | Some Rights Reserved.</span>
+        </div>
+        <div class="footer__nets">
+            <span>Redes Sociales</span>
+            <div>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/naczea/ShopSafe" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=593987635011" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:shopsafe_uio@gmail.com" target="_blank"><i class="fas fa-envelope" data-aos="zoom-in-right" data-aos-duration="2100"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/187afea212.js" crossorigin="anonymous"></script>
+    <script src="../src/app2.js"></script>
+    <script src="../src/main.js"></script>
+</body>
+</html>

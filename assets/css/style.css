@@ -51,80 +51,265 @@ ul {
   left: 0; }
   .login .log__cont {
     height: auto;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    width: 30%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    width: 55%;
+    height: 80%;
     background-color: #dde1e7;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-radius: 50px; }
-    .login .log__cont span {
-      text-transform: uppercase;
-      color: #5a84a2;
-      letter-spacing: 3px;
-      font-size: 35px;
-      font-weight: 500;
-      margin-bottom: 15px; }
-    .login .log__cont .ch__bord {
-      width: 60%;
-      border-bottom: 2px solid white;
-      margin-top: 10px;
-      margin-bottom: 10px; }
-    .login .log__cont a {
-      color: #5a84a2;
-      font-size: 15px;
-      margin-top: 8px;
-      transition: 0.1s; }
-    .login .log__cont a:hover {
-      font-weight: 500; }
-    .login .log__cont .pass {
-      font-size: 13px;
-      margin-bottom: 5px; }
-    .login .log__cont form {
+    border-radius: 35px; }
+    .login .log__cont .lg_user {
+      height: 100%;
+      width: 58%;
       display: flex;
       flex-direction: column;
-      width: 80%;
-      margin-top: 5%; }
-      .login .log__cont form label {
-        color: #5a84a2;
-        margin-bottom: 3%;
-        font-size: var(--form_label_size); }
-      .login .log__cont form input {
+      justify-content: center;
+      align-items: center;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px; }
+      .login .log__cont .lg_user .navbar__logo {
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%; }
+        .login .log__cont .lg_user .navbar__logo .logoshop {
+          width: 30px;
+          height: auto; }
+        .login .log__cont .lg_user .navbar__logo h1 {
+          margin-left: 6px;
+          color: #dde1e7;
+          font-size: 28px; }
+      .login .log__cont .lg_user .op__store {
+        height: 70%;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .login .log__cont .lg_user .op__store a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .login .log__cont .lg_user .op__store a i {
+            font-size: 100px;
+            color: #f895ac;
+            margin-top: 3%;
+            margin-bottom: 10%;
+            transition: 0.25s; }
+          .login .log__cont .lg_user .op__store a span {
+            font-size: 18px;
+            color: #f895ac;
+            font-weight: bold;
+            margin-top: 5%;
+            transition: 0.25s; }
+        .login .log__cont .lg_user .op__store a:hover i {
+          font-size: 110px; }
+        .login .log__cont .lg_user .op__store a:hover span {
+          font-size: 20px; }
+      .login .log__cont .lg_user .userform {
+        height: 100%;
         width: 100%;
-        padding: 8px 0px 5px 20px;
-        margin-bottom: 10%;
-        color: rgba(90, 132, 162, 0.8);
-        border: none;
-        border-radius: 10px;
-        font-size: var(--form_input_size);
-        font-weight: 400;
-        background-color: #dde1e7;
-        box-shadow: inset -2px -2px 8px white, inset -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15); }
-      .login .log__cont form input:focus {
-        background-color: rgba(174, 215, 245, 0.6); }
-      .login .log__cont form input::-webkit-input-placeholder {
-        color: rgba(90, 132, 162, 0.8); }
-      .login .log__cont form textarea {
-        max-width: 100%;
-        max-height: 100px;
-        min-width: 100%; }
-      .login .log__cont form input[type="submit"] {
-        width: 60%;
-        font-weight: 500;
-        font-size: var(--form_submit_size);
-        align-self: center;
-        border-radius: 20px;
-        color: #5a84a2;
-        letter-spacing: 2px;
-        margin-top: 1%;
-        margin-bottom: 4%;
-        padding: 10px;
-        box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
-        transition: background-color .3s ease-in; }
-      .login .log__cont form input[type="submit"]:hover {
-        color: rgba(255, 113, 146, 0.6); }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .login .log__cont .lg_user .userform span {
+          text-transform: uppercase;
+          color: #4B79A1;
+          letter-spacing: 3px;
+          font-size: 35px;
+          font-weight: 500;
+          margin-bottom: 2%; }
+        .login .log__cont .lg_user .userform i {
+          font-size: 100px;
+          color: #4B79A1;
+          margin-top: 3%;
+          margin-bottom: 5%; }
+        .login .log__cont .lg_user .userform .ch__bord {
+          width: 60%;
+          border-bottom: 2px solid white;
+          margin-top: 2%;
+          margin-bottom: 2%; }
+        .login .log__cont .lg_user .userform a {
+          color: #4B79A1;
+          font-size: 15px;
+          transition: 0.1s;
+          margin-bottom: 1.5%; }
+        .login .log__cont .lg_user .userform a:hover {
+          font-weight: 500; }
+        .login .log__cont .lg_user .userform .pass {
+          font-size: 13px; }
+        .login .log__cont .lg_user .userform form {
+          display: flex;
+          flex-direction: column;
+          width: 80%; }
+          .login .log__cont .lg_user .userform form label {
+            color: #4B79A1;
+            font-size: 15px;
+            margin-bottom: 2%; }
+          .login .log__cont .lg_user .userform form input {
+            align-self: center;
+            font-family: FontAwesome, 'Baloo Chettan 2', sans-serif;
+            width: 70%;
+            padding: 8px 0px 5px 20px;
+            margin-bottom: 5%;
+            color: rgba(75, 121, 161, 0.8);
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 400;
+            background-color: #dde1e7;
+            box-shadow: inset -2px -2px 8px white, inset -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15); }
+          .login .log__cont .lg_user .userform form input:focus {
+            background-color: rgba(174, 215, 245, 0.6); }
+          .login .log__cont .lg_user .userform form input::-webkit-input-placeholder {
+            color: rgba(75, 121, 161, 0.8); }
+          .login .log__cont .lg_user .userform form textarea {
+            max-width: 100%;
+            max-height: 100px;
+            min-width: 100%; }
+          .login .log__cont .lg_user .userform form input[type="submit"] {
+            width: 50%;
+            font-weight: 500;
+            font-size: var(--form_submit_size);
+            align-self: center;
+            border-radius: 20px;
+            color: #4B79A1;
+            letter-spacing: 2px;
+            margin-top: 4%;
+            box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+            transition: background-color .3s ease-in; }
+          .login .log__cont .lg_user .userform form input[type="submit"]:hover {
+            color: #FF7192; }
+    .login .log__cont .lg_store {
+      height: 100%;
+      width: 42%;
+      background: #4B79A1;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .login .log__cont .lg_store .storeform {
+        height: 100%;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .login .log__cont .lg_store .storeform span {
+          text-transform: uppercase;
+          color: #4B79A1;
+          letter-spacing: 3px;
+          font-size: 35px;
+          font-weight: 500;
+          margin-bottom: 2%; }
+        .login .log__cont .lg_store .storeform i {
+          font-size: 100px;
+          color: #4B79A1;
+          margin-top: 3%;
+          margin-bottom: 5%; }
+        .login .log__cont .lg_store .storeform .ch__bord {
+          width: 60%;
+          border-bottom: 2px solid white;
+          margin-top: 2%;
+          margin-bottom: 2%; }
+        .login .log__cont .lg_store .storeform a {
+          color: #4B79A1;
+          font-size: 15px;
+          transition: 0.1s;
+          margin-bottom: 1.5%; }
+        .login .log__cont .lg_store .storeform a:hover {
+          font-weight: 500; }
+        .login .log__cont .lg_store .storeform .pass {
+          font-size: 13px; }
+        .login .log__cont .lg_store .storeform form {
+          display: flex;
+          flex-direction: column;
+          width: 80%; }
+          .login .log__cont .lg_store .storeform form label {
+            color: #4B79A1;
+            font-size: 15px;
+            margin-bottom: 2%; }
+          .login .log__cont .lg_store .storeform form input {
+            align-self: center;
+            font-family: FontAwesome, 'Baloo Chettan 2', sans-serif;
+            width: 70%;
+            padding: 8px 0px 5px 20px;
+            margin-bottom: 5%;
+            color: rgba(75, 121, 161, 0.8);
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 400;
+            background-color: #dde1e7;
+            box-shadow: inset -2px -2px 8px white, inset -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15); }
+          .login .log__cont .lg_store .storeform form input:focus {
+            background-color: rgba(174, 215, 245, 0.6); }
+          .login .log__cont .lg_store .storeform form input::-webkit-input-placeholder {
+            color: rgba(75, 121, 161, 0.8); }
+          .login .log__cont .lg_store .storeform form textarea {
+            max-width: 100%;
+            max-height: 100px;
+            min-width: 100%; }
+          .login .log__cont .lg_store .storeform form input[type="submit"] {
+            width: 50%;
+            font-weight: 500;
+            font-size: var(--form_submit_size);
+            align-self: center;
+            border-radius: 20px;
+            color: #4B79A1;
+            letter-spacing: 2px;
+            margin-top: 4%;
+            box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+            transition: background-color .3s ease-in; }
+          .login .log__cont .lg_store .storeform form input[type="submit"]:hover {
+            color: #FF7192; }
+      .login .log__cont .lg_store .navbar__logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%; }
+        .login .log__cont .lg_store .navbar__logo .logoshop {
+          width: 30px;
+          height: auto; }
+        .login .log__cont .lg_store .navbar__logo h1 {
+          margin-left: 6px;
+          color: #dde1e7;
+          font-size: 28px; }
+      .login .log__cont .lg_store .op__store {
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .login .log__cont .lg_store .op__store a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .login .log__cont .lg_store .op__store a i {
+            font-size: 100px;
+            color: #f895ac;
+            margin-top: 3%;
+            margin-bottom: 10%;
+            transition: 0.25s; }
+          .login .log__cont .lg_store .op__store a span {
+            font-size: 18px;
+            color: #f895ac;
+            font-weight: bold;
+            margin-top: 5%;
+            transition: 0.25s; }
+        .login .log__cont .lg_store .op__store a:hover i {
+          font-size: 110px; }
+        .login .log__cont .lg_store .op__store a:hover span {
+          font-size: 20px; }
 
 .checkin {
   display: none;
@@ -153,14 +338,14 @@ ul {
       font-size: 18px; }
     .checkin .checkin__cont span {
       text-transform: uppercase;
-      color: #5a84a2;
+      color: #4B79A1;
       letter-spacing: 4px;
       font-size: 30px;
       font-weight: 600;
       margin-bottom: 2%;
       padding: 0; }
     .checkin .checkin__cont a {
-      color: #5a84a2;
+      color: #4B79A1;
       font-size: 15px;
       margin-top: 8px;
       transition: 0.1s; }
@@ -181,7 +366,7 @@ ul {
         font-size: 80px;
         color: #5dba5d; }
       .checkin .checkin__cont .ch__coonf span {
-        color: #5a84a2;
+        color: #4B79A1;
         font-size: 25px;
         text-transform: inherit;
         letter-spacing: inherit; }
@@ -191,7 +376,7 @@ ul {
       width: 80%; }
       .checkin .checkin__cont .checkforms label {
         padding-left: 5%;
-        color: #5a84a2;
+        color: #4B79A1;
         margin-bottom: 8px;
         margin-top: 15px;
         font-size: 14px; }
@@ -201,7 +386,7 @@ ul {
         align-self: center;
         width: 95%;
         padding: 8px 0px 5px 20px;
-        color: rgba(90, 132, 162, 0.8);
+        color: rgba(75, 121, 161, 0.8);
         border: none;
         border-radius: 10px;
         font-size: 14px;
@@ -211,7 +396,7 @@ ul {
       .checkin .checkin__cont .checkforms input:focus {
         background-color: rgba(174, 215, 245, 0.6); }
       .checkin .checkin__cont .checkforms input::-webkit-input-placeholder {
-        color: rgba(90, 132, 162, 0.8);
+        color: rgba(75, 121, 161, 0.8);
         font-size: 14px; }
       .checkin .checkin__cont .checkforms textarea {
         max-width: 100%;
@@ -224,7 +409,7 @@ ul {
         align-self: center;
         border-radius: 20px;
         border: none;
-        color: #5a84a2;
+        color: #4B79A1;
         letter-spacing: 2px;
         margin-top: 6%;
         margin-bottom: 4%;
@@ -273,10 +458,11 @@ ul {
       font-size: var(--nav-size);
       font-weight: 400; }
       .navbar .navbar__list li a span {
-        color: rgba(255, 113, 146, 0.85);
-        border: 1px solid;
+        color: rgba(255, 113, 146, 0.9);
+        font-size: 18px;
         border-radius: 20px;
         padding: 3px 14px;
+        font-weight: 500;
         transition: 0.4s; }
       .navbar .navbar__list li a span:hover {
         font-weight: initial;
@@ -353,23 +539,24 @@ ul {
   --logo_img-width: 35px; }
 
 footer {
-  background-color: #aed7f5;
+  background-color: #dde1e7;
   padding: 10px 0;
   overflow: hidden;
-  display: flex;
+  display: flex !important;
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
-  height: auto; }
+  height: auto;
+  border-top: 2px solid white; }
   footer .footer__logo {
     width: 25%;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-right: 2px solid white; }
     footer .footer__logo .logo1 {
-      display: flex;
+      display: flex !important;
       justify-content: center;
       align-items: center;
       padding-bottom: 10px;
@@ -487,7 +674,6 @@ footer {
 .neu3 {
   background-color: inherit;
   padding: 10px 30px;
-  margin-top: 40px;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
@@ -509,14 +695,14 @@ footer {
   margin-top: 40px;
   margin-left: 10px;
   padding: 10px 30px;
-  box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.6), inset 2px 2px 4px rgba(255, 255, 255, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.6), inset 2px 2px 4px white, 2px 2px 8px rgba(0, 0, 0, 0.3);
   transition: background-color .3s ease-in; }
 
 .neub:hover {
   color: rgba(255, 113, 146, 0.6); }
 
 .turn {
-  background-color: rgba(234, 235, 243, 0.95);
+  background-color: rgba(221, 225, 231, 0.95);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -580,7 +766,7 @@ footer {
     padding-left: 10%; }
     .shop .shop__cont h2 {
       color: #4A70D6;
-      font-size: 65px;
+      font-size: 55px;
       margin-bottom: 30px; }
     .shop .shop__cont p {
       color: white;
@@ -608,7 +794,7 @@ footer {
 .others {
   width: 100%;
   height: 100vh;
-  background-color: rgba(234, 235, 243, 0.9);
+  background-color: rgba(221, 225, 231, 0.9);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -639,21 +825,21 @@ footer {
     align-items: center; }
     .others .others__content h2 {
       font-size: 45px;
-      color: #2C4482;
+      color: #4B79A1;
       text-align: center;
       margin-bottom: 20px; }
     .others .others__content ul {
       width: 88%; }
       .others .others__content ul li {
         align-self: flex-start;
-        color: rgba(44, 68, 130, 0.8);
+        color: rgba(75, 121, 161, 0.8);
         padding-top: 10px;
         padding-left: 6%;
         list-style-type: disc;
         font-size: 17px; }
     .others .others__content a {
       letter-spacing: 0;
-      color: #2C4482; }
+      color: #4B79A1; }
     .others .others__content a:hover {
       color: #f895ac; }
 
@@ -669,7 +855,7 @@ footer {
   width: 100%;
   height: auto;
   display: flex;
-  background-color: rgba(74, 112, 214, 0.8); }
+  background-color: rgba(248, 149, 172, 0.85); }
   .contact .contact__form {
     width: 100%;
     padding: 3% 8%;
@@ -794,7 +980,7 @@ footer {
       height: auto;
       margin-right: 3%; }
     .navbar2 .nav__logo span {
-      color: #5a84a2;
+      color: #4B79A1;
       font-size: 28px;
       font-weight: bolder; }
   .navbar2 .nav__close {
@@ -802,20 +988,32 @@ footer {
     right: 0;
     width: 12%; }
     .navbar2 .nav__close a {
-      display: flex;
-      flex-direction: row; }
+      display: inline; }
       .navbar2 .nav__close a i {
         color: #FF7192;
-        font-size: 17px; }
+        font-size: 17px;
+        margin: 0;
+        padding: 0;
+        transition: 0.2s; }
       .navbar2 .nav__close a span {
-        margin-right: 3%;
         margin-left: 5%;
         color: #FF7192;
         font-size: 18px;
+        font-weight: 500;
+        padding: 0;
+        transition: 0.2s; }
+    .navbar2 .nav__close a:hover {
+      text-decoration: none; }
+      .navbar2 .nav__close a:hover i {
+        font-size: 17.5px; }
+      .navbar2 .nav__close a:hover span {
         font-weight: bold; }
 
 #main_principal {
   background-color: #dde1e7; }
+
+a:hover {
+  text-decoration: none !important; }
 
 .actions {
   width: 100%;
@@ -849,7 +1047,7 @@ footer {
         border-radius: 40px;
         box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.6), inset 2px 2px 4px rgba(255, 255, 255, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.15); }
         .actions .info .info__que .cont__que h2 {
-          color: #5a84a2;
+          color: #4B79A1;
           font-size: 18px;
           font-weight: 600;
           text-transform: uppercase;
@@ -860,7 +1058,8 @@ footer {
           color: #FF7192;
           margin-bottom: 5px; }
         .actions .info .info__que .cont__que a:hover {
-          font-weight: 500; }
+          font-weight: 500;
+          text-decoration: none; }
     .actions .info .info__personal {
       width: 35%;
       height: 100%;
@@ -883,26 +1082,28 @@ footer {
         .actions .info .info__personal .cont .personal {
           display: flex;
           flex-direction: row;
+          justify-content: center;
+          align-items: center;
           width: 100%;
           margin-left: 5%; }
           .actions .info .info__personal .cont .personal .personal__img {
-            margin-right: 10%; }
+            margin-right: 8%; }
             .actions .info .info__personal .cont .personal .personal__img i {
-              color: #5a84a2;
-              font-size: 80px; }
+              color: #4B79A1;
+              font-size: 85px; }
           .actions .info .info__personal .cont .personal .personal__data {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center; }
             .actions .info .info__personal .cont .personal .personal__data span {
-              color: #5a84a2;
+              color: #4B79A1;
               font-size: 17px;
               font-weight: 600;
               text-transform: uppercase;
               margin-bottom: 3%; }
             .actions .info .info__personal .cont .personal .personal__data ul li {
-              color: #5a84a2;
+              color: #4B79A1;
               font-size: 13.5px;
               margin-bottom: 1.5px; }
         .actions .info .info__personal .cont .user__edit {
@@ -936,12 +1137,12 @@ footer {
         .actions .info .info__activities .cont2 .activities__img {
           margin-left: 5%; }
           .actions .info .info__activities .cont2 .activities__img i {
-            color: #5a84a2;
+            color: #4B79A1;
             font-size: 80px; }
         .actions .info .info__activities .cont2 .cont__text {
           margin-left: 3%; }
           .actions .info .info__activities .cont2 .cont__text .activities__nav {
-            color: #5a84a2;
+            color: #4B79A1;
             font-size: 18px;
             font-weight: 600;
             text-transform: uppercase;
@@ -949,7 +1150,7 @@ footer {
           .actions .info .info__activities .cont2 .cont__text .activities {
             display: flex;
             flex-direction: column;
-            color: #5a84a2;
+            color: #4B79A1;
             font-size: 14px; }
             .actions .info .info__activities .cont2 .cont__text .activities span {
               margin-bottom: 3px; }
@@ -1007,7 +1208,7 @@ footer {
               height: auto;
               transition: 0.25s; }
           .actions .op .op__shop .cont_shop .cont1 span {
-            color: #5a84a2;
+            color: #4B79A1;
             font-size: 22.5px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -1025,12 +1226,60 @@ footer {
             height: auto;
             transition: 0.25s; }
           .actions .op .op__shop .cont_shop .cont2 span {
-            color: rgba(90, 132, 162, 0.45);
+            color: rgba(75, 121, 161, 0.45);
             font-size: 22.5px;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 600;
             margin-top: 5%; }
+        .actions .op .op__shop .cont_shop .cont3 {
+          width: 100%;
+          height: 100%;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: initial; }
+          .actions .op .op__shop .cont_shop .cont3 .store__nav {
+            color: #4B79A1;
+            font-size: 18px;
+            margin-bottom: 15%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            line-height: 25px; }
+          .actions .op .op__shop .cont_shop .cont3 .store__op {
+            width: 100%;
+            display: flex;
+            flex-direction: row; }
+            .actions .op .op__shop .cont_shop .cont3 .store__op .op {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              background-color: initial; }
+              .actions .op .op__shop .cont_shop .cont3 .store__op .op a {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: initial; }
+                .actions .op .op__shop .cont_shop .cont3 .store__op .op a img {
+                  width: 70%;
+                  height: auto;
+                  margin-bottom: 10%;
+                  transition: 0.15s; }
+                .actions .op .op__shop .cont_shop .cont3 .store__op .op a span {
+                  color: #4B79A1;
+                  font-size: 18px;
+                  font-weight: 500; }
+              .actions .op .op__shop .cont_shop .cont3 .store__op .op a:hover img {
+                width: 72%; }
+              .actions .op .op__shop .cont_shop .cont3 .store__op .op a:hover span {
+                color: #FF7192;
+                font-weight: 600; }
       .actions .op .op__shop .cont1:hover span {
         color: #FF7192; }
       .actions .op .op__shop .cont1:hover a img {
@@ -1073,7 +1322,7 @@ footer {
               height: auto;
               transition: 0.25s; }
           .actions .op .op__turn .cont__turn .cont1 span {
-            color: #5a84a2;
+            color: #4B79A1;
             font-size: 22.5px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -1091,7 +1340,7 @@ footer {
             height: auto;
             transition: 0.25s; }
           .actions .op .op__turn .cont__turn .cont2 span {
-            color: rgba(90, 132, 162, 0.45);
+            color: rgba(75, 121, 161, 0.45);
             font-size: 22.5px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -1106,7 +1355,7 @@ footer {
           align-items: center;
           background-color: initial; }
           .actions .op .op__turn .cont__turn .cont3 .turn__nav {
-            color: #5a84a2;
+            color: #4B79A1;
             font-size: 20px;
             margin-bottom: 15%; }
           .actions .op .op__turn .cont__turn .cont3 .turn__op {
@@ -1151,7 +1400,7 @@ footer {
           align-items: center;
           background-color: initial; }
           .actions .op .op__turn .cont__turn .cont4 .turn__nav {
-            color: #5a84a2;
+            color: #4B79A1;
             font-size: 18px;
             margin-bottom: 15%;
             display: flex;
@@ -1182,7 +1431,7 @@ footer {
                   margin-bottom: 10%;
                   transition: 0.15s; }
                 .actions .op .op__turn .cont__turn .cont4 .store__op .op a span {
-                  color: #5a84a2;
+                  color: #4B79A1;
                   font-size: 18px;
                   font-weight: 500; }
               .actions .op .op__turn .cont__turn .cont4 .store__op .op a:hover img {
@@ -1194,6 +1443,278 @@ footer {
         color: #FF7192; }
       .actions .op .op__turn .cont1:hover a img {
         width: 34%; }
+  .actions .op2 {
+    width: 100%;
+    height: 75%;
+    background-color: #dde1e7;
+    display: flex;
+    flex-direction: row; }
+    .actions .op2 .calendar__cont {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .actions .op2 .calendar__cont .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: aqua;
+        width: 65%;
+        height: 100%; }
+
+.nav__table {
+  width: 100%;
+  height: 7.5%;
+  display: block;
+  position: absolute;
+  margin-left: 47%;
+  margin-top: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  color: #FF7192; }
+  .nav__table .contnav {
+    display: flex;
+    color: #FF7192; }
+    .nav__table .contnav i {
+      margin-right: 10%;
+      font-size: 22.5px;
+      transition: 0.25s; }
+    .nav__table .contnav span {
+      font-size: 20px;
+      margin-right: 2px; }
+  .nav__table .contnav:hover {
+    font-weight: 500; }
+    .nav__table .contnav:hover i {
+      font-size: 24.5px; }
+
+.ui_shop {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0; }
+  .ui_shop .shop__cont {
+    height: 92.5%;
+    width: 75%;
+    background-color: #dde1e7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px; }
+    .ui_shop .shop__cont .shop__info {
+      width: 27.5%;
+      height: 100%;
+      border-bottom-left-radius: 30px;
+      border-top-left-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      background-color: #4B79A1;
+      justify-content: center;
+      align-items: center; }
+      .ui_shop .shop__cont .shop__info .navbar__logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px; }
+        .ui_shop .shop__cont .shop__info .navbar__logo .logoshop {
+          width: 30px;
+          height: auto; }
+        .ui_shop .shop__cont .shop__info .navbar__logo h1 {
+          margin-left: 6px;
+          color: #dde1e7;
+          font-size: 25px; }
+      .ui_shop .shop__cont .shop__info .datastore {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .ui_shop .shop__cont .shop__info .datastore img {
+          max-width: 70% !important; }
+      .ui_shop .shop__cont .shop__info .menu_products {
+        width: 100%;
+        height: auto; }
+        .ui_shop .shop__cont .shop__info .menu_products .op_products {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 10%;
+          margin-bottom: 5%; }
+          .ui_shop .shop__cont .shop__info .menu_products .op_products ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; }
+            .ui_shop .shop__cont .shop__info .menu_products .op_products ul li:first-of-type {
+              border-top: none; }
+            .ui_shop .shop__cont .shop__info .menu_products .op_products ul li {
+              width: 60%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              font-size: 20px; }
+              .ui_shop .shop__cont .shop__info .menu_products .op_products ul li a {
+                width: 95%;
+                margin-top: 2%;
+                margin-bottom: 2%;
+                text-align: center;
+                color: white;
+                border-radius: 20px; }
+              .ui_shop .shop__cont .shop__info .menu_products .op_products ul li #carnebtn {
+                background-color: #FF7192; }
+            .ui_shop .shop__cont .shop__info .menu_products .op_products ul li:hover a {
+              font-size: 21px;
+              text-shadow: 2px 2px 4px #FF7192; }
+        .ui_shop .shop__cont .shop__info .menu_products .selec_products {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px; }
+          .ui_shop .shop__cont .shop__info .menu_products .selec_products .next {
+            margin-bottom: 2%; }
+            .ui_shop .shop__cont .shop__info .menu_products .selec_products .next span {
+              color: darkgray; }
+            .ui_shop .shop__cont .shop__info .menu_products .selec_products .next i {
+              color: darkgray;
+              margin-left: 5px;
+              font-size: 16px; }
+          .ui_shop .shop__cont .shop__info .menu_products .selec_products .cancel span {
+            color: #FF7192;
+            font-weight: 600; }
+          .ui_shop .shop__cont .shop__info .menu_products .selec_products .cancel i {
+            color: #FF7192;
+            margin-left: 5px;
+            font-size: 16px; }
+          .ui_shop .shop__cont .shop__info .menu_products .selec_products .cancel:hover span {
+            font-size: 19px; }
+    .ui_shop .shop__cont .shop__table {
+      width: 72.5%;
+      height: 100%;
+      border-bottom-right-radius: 30px;
+      border-top-right-radius: 30px; }
+      .ui_shop .shop__cont .shop__table .totalshop {
+        width: 100%;
+        height: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        right: 0;
+        background: #ee9ca7;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ffdde1, #ee9ca7);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px; }
+      .ui_shop .shop__cont .shop__table #cont_frutas {
+        display: none; }
+      .ui_shop .shop__cont .shop__table #cont_granos {
+        display: none; }
+      .ui_shop .shop__cont .shop__table #cont_lacteos {
+        display: none; }
+      .ui_shop .shop__cont .shop__table #cont_limpieza {
+        display: none; }
+      .ui_shop .shop__cont .shop__table .cont__prod {
+        width: 100%;
+        height: 80%;
+        margin: auto;
+        margin-top: 6%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: flex-end; }
+        .ui_shop .shop__cont .shop__table .cont__prod .prod {
+          width: 25%;
+          height: 280px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 25px;
+          padding: 5px 5px;
+          box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.6), inset 2px 2px 4px white, 2px 2px 8px rgba(0, 0, 0, 0.3);
+          margin-top: 20px;
+          margin-left: 1.5%;
+          margin-right: 1.5%; }
+          .ui_shop .shop__cont .shop__table .cont__prod .prod img {
+            margin: 2.5%;
+            max-width: 100px !important;
+            height: auto;
+            max-height: 110px !important;
+            border-radius: 15px; }
+          .ui_shop .shop__cont .shop__table .cont__prod .prod .prod__title {
+            text-align: center;
+            color: #FF7192;
+            font-size: 18px;
+            font-weight: 600; }
+          .ui_shop .shop__cont .shop__table .cont__prod .prod .prod__brand {
+            color: #4B79A1; }
+          .ui_shop .shop__cont .shop__table .cont__prod .prod .prod__number {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 4%;
+            margin-bottom: 4%; }
+            .ui_shop .shop__cont .shop__table .cont__prod .prod .prod__number input {
+              width: 40px;
+              font-size: 15px;
+              margin-right: 10%;
+              margin-left: 10%; }
+            .ui_shop .shop__cont .shop__table .cont__prod .prod .prod__number a {
+              padding-left: 10px;
+              padding-right: 10px;
+              font-size: 17px;
+              font-weight: 500;
+              background-color: rgba(255, 113, 146, 0.8);
+              border-radius: 10px;
+              color: white; }
+          .ui_shop .shop__cont .shop__table .cont__prod .prod .prod__add {
+            color: #4B79A1;
+            border: 1px solid #4B79A1;
+            border-radius: 20px;
+            padding: 3px 20px;
+            font-size: 14px;
+            margin-bottom: 2%; }
+            .ui_shop .shop__cont .shop__table .cont__prod .prod .prod__add i {
+              margin-left: 5px;
+              font-size: 13px; }
+          .ui_shop .shop__cont .shop__table .cont__prod .prod .prod__add:hover {
+            background-color: #4B79A1;
+            color: white; }
+          .ui_shop .shop__cont .shop__table .cont__prod .prod .prod__remove {
+            display: none;
+            color: #FF7192;
+            border: 1px solid #FF7192;
+            border-radius: 20px;
+            padding: 3px 20px;
+            font-size: 14px;
+            margin-bottom: 2%; }
+            .ui_shop .shop__cont .shop__table .cont__prod .prod .prod__remove i {
+              margin-left: 5px;
+              font-size: 13px; }
+          .ui_shop .shop__cont .shop__table .cont__prod .prod .prod__remove:hover {
+            background-color: #FF7192;
+            color: white; }
 
 .ui__turn {
   display: none;
@@ -1241,13 +1762,13 @@ footer {
         justify-content: center;
         align-items: flex-start; }
         .ui__turn .turn__cont .cont1 .cont1__cont .cont__info {
-          width: 40%;
+          width: 55%;
           height: 92%;
           display: flex;
           justify-content: center;
           align-items: center; }
           .ui__turn .turn__cont .cont1 .cont1__cont .cont__info .contenedor {
-            width: 85%;
+            width: 90%;
             height: 95%;
             display: flex;
             flex-direction: column;
@@ -1259,13 +1780,13 @@ footer {
             box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.6), inset 2px 2px 4px rgba(255, 255, 255, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.15); }
             .ui__turn .turn__cont .cont1 .cont1__cont .cont__info .contenedor p {
               width: 80%;
-              color: #5a84a2;
+              color: #4B79A1;
               font-size: 15px;
               text-align: center;
               margin-top: 1%;
               margin-bottom: 1%; }
               .ui__turn .turn__cont .cont1 .cont1__cont .cont__info .contenedor p span {
-                color: #5a84a2;
+                color: #4B79A1;
                 font-weight: 600;
                 font-size: 17px; }
             .ui__turn .turn__cont .cont1 .cont1__cont .cont__info .contenedor img {

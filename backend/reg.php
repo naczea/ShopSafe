@@ -1,9 +1,9 @@
 <?php
     include('database.php');
-    
+	
     if(isset($_POST['id_user'])) {
-        
-        $id = $_POST['id_user'];
+		
+		$id = $_POST['id_user'];
         $name = $_POST['name_user'];
         $last = $_POST['last_user'];
         $mail = $_POST['mail_user'];
@@ -11,7 +11,18 @@
         $pass = $_POST['pass_user'];
         $pass_cod = password_hash($pass,PASSWORD_DEFAULT);
         
-        if(strlen($id) != 10 ){
+
+		if(ctype_alpha($name) === false){
+			echo 407;	
+		}else if(ctype_alpha($last) === false){
+			echo 408;
+		}else if(strlen($phone) != 10){
+			echo 409;
+		}else if($pass == "" || strlen($pass) < 8){
+			echo 410;
+		}else if($mail == "" || strpos($mail,"@") === false){
+			echo 411;
+		}else if(strlen($id) != 10 ){
             echo 406;
             //Cedula Invalida
         }else{

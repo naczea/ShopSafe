@@ -14,7 +14,8 @@
             $json[] = array(
                 'name_store' => $row['name_store'],
                 'adress_store' => $row['adress_store'],
-                'type_store' => $row['type_store']
+                'type_store' => $row['type_store'],
+                'logo_store' => base64_encode($row['logo_store'])
             );
         }
         $jsonstring = json_encode($json);

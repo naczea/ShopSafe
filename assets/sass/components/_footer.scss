@@ -12,23 +12,24 @@
 }
 
 footer {
-    background-color: $blue1;
+    background-color: $white1;
     padding: 10px 0;
     overflow: hidden;
-    display: flex;
+    display: flex!important;
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
     height: auto;
+    border-top: 2px solid white;
     .footer__logo {
         width: 25%;
-        display: flex;
+        display: flex!important;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         border-right: 2px solid white;
         .logo1{
-            display: flex;
+            display: flex!important;
             justify-content: center;
             align-items: center;
             padding-bottom: 10px;

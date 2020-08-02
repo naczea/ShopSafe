@@ -24,21 +24,61 @@
 <body>
     <div class="login" id="lg">
         <div class="log__cont">
-            <span>Bienvenido</span>
-            <div class="ch__bord"></div>
-            <form id="loginform" action="backend/login.php" method="POST">
-                <label for="ci">Usuario: </label>
-                <input type="number" id="cilg" name="ci" placeholder="Número de cédula o pasaporte" required>
-
-                <label for="pass">Contraseña:</label>
-                <input type="password" id="passlg" name="numberf" placeholder="Mínimo 8 caracteres" required>
-
-                <input type="submit" class="neu3" value="ENTRAR" id="btnSendlg" name="sendf">
-            </form>
-            <a href="#" class="pass">¿Olvidaste la contraseña?</a>
-            <div class="ch__bord"></div>
-            <a href="#" onclick="mostrar('ch'), ocultar('lg')">Registrarse</a>
-            <a href="#" onclick="ocultar('lg')">Cerrar</a>
+            <div class="lg_store" id="lg_store">
+                <div class="storeform" id="storeform">
+                    <span>Bienvenido</span>
+                    <div class="ch__bord"></div>
+                    <i class="fas fa-store"></i>
+                    <form id="loginform" action="backend/login.php" method="POST">
+                        <input type="number" id="cilg" name="ci" placeholder="&#xf2bb;   ID de la tienda" required>
+        
+                        <input type="password" id="passlg" name="numberf" placeholder="&#xf084;   Ingrese su contraseña" required>
+        
+                        <input type="submit" class="neu3" value="ENTRAR" id="btnSendlg" name="sendf">
+                    </form>
+                    <a href="#" class="pass">¿Olvidaste la contraseña?</a>
+                    <div class="ch__bord"></div>
+                    <a href="#" onclick="ocultar('lg')">Cerrar</a>
+                </div>
+                <div class="navbar__logo" id="nav__store__form">
+                    <img src="img/logo.png" alt="logo" class="logoshop">
+                    <h1>ShopSafe</h1>
+                </div>
+                <div class="op__store" id="op__store__form">
+                    <a href="#" onclick="changelg(true)">
+                        <i class="fas fa-store"></i>
+                        <span>Administrador</span>
+                    </a>
+                </div>
+            </div>
+            <div class="lg_user" id="lg_user">
+                <div class="userform" id="userform">
+                    <span>Bienvenido</span>
+                    <div class="ch__bord"></div>
+                    <i class="fas fa-user-friends"></i>
+                    <form id="loginform" action="backend/login.php" method="POST">
+                        <input type="number" id="cilg" name="ci" placeholder="&#xf2bb;   Cédula o pasaporte" required>
+        
+                        <input type="password" id="passlg" name="numberf" placeholder="&#xf084;   Ingrese su contraseña" required>
+        
+                        <input type="submit" class="neu3" value="ENTRAR" id="btnSendlg" name="sendf">
+                    </form>
+                    <a href="#" class="pass">¿Olvidaste la contraseña?</a>
+                    <div class="ch__bord"></div>
+                    <a href="#" onclick="mostrar('ch'), ocultar('lg')">Registrarse</a>
+                    <a href="#" onclick="ocultar('lg')">Cerrar</a>
+                </div>
+                <div class="navbar__logo" id="nav__user__form">
+                    <img src="img/logo.png" alt="logo" class="logoshop">
+                    <h1>ShopSafe</h1>
+                </div>
+                <div class="op__store" id="op__user__form">
+                    <a href="#"onclick="changelg(false)">
+                        <i class="fas fa-user-friends"></i>
+                        <span>Usuario</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="checkin" id="ch">

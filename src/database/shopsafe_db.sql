@@ -27,13 +27,14 @@ CREATE TABLE IF NOT EXISTS store(
 
 
 CREATE TABLE IF NOT EXISTS turn(
-	id_turn INT(10) NOT NULL,
-	id_user INT(10) NOT NULL, 
-	id_shop INT(10) NOT NULL,
-	date_turn
-	time_turn
-	state_turn BOOLEAN, 
-	wait_turn INT(2),
+	id_turn BIGINT NOT NULL,
+	id_user BIGINT(10) NOT NULL,
+	id_store BIGINT(10) NOT NULL, 
+	title VARCHAR (254),
+	descripcion TEXT, 
+	start DATETIME,
+	end DATETIME, 
+	color VARCHAR (254),
+	texColor VARCHAR (254),
 	PRIMARY KEY (id_turn)
-	FOREIGN KEY (id_user, id_shop)
 )

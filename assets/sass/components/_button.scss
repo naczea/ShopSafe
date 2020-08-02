@@ -37,7 +37,6 @@
 .neu3 {
     background-color: inherit;
     padding: 10px 30px;
-    margin-top: 40px;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 500;
@@ -61,7 +60,7 @@
     margin-top: 40px;
     margin-left: 10px;
     padding: 10px 30px;
-    box-shadow: -2px -2px 8px rgba(255, 255, 255, 1), -2px -2px 12px rgba(255, 255, 255, 0.6), inset 2px 2px 4px rgba(255, 255, 255, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: -2px -2px 8px rgba(255, 255, 255, 1), -2px -2px 12px rgba(255, 255, 255, 0.6), inset 2px 2px 4px rgba(255, 255, 255, 1), 2px 2px 8px rgba(0, 0, 0, 0.3);
     transition: background-color .3s ease-in;
 }
 

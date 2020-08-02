@@ -1,4 +1,7 @@
+var ids = null;
+var ids2 = null;
 function searchstore(id){
+    ids = id; 
     console.log(id);
     $.ajax({
         url: '../backend/getstore.php',
@@ -21,11 +24,31 @@ function searchstore(id){
                 }
                 template += `
                 <p><span>Servicio:</span> ${storetype}</p>
+                <img src="data:image/jpg;base64,${data.logo_store}" alt="">
                 <p><span>Establecimiento:</span> ${data.name_store}</p>
                 <p><span>Ubicación:</span> ${data.adress_store}</p>
-                <p><span>Horarios:</span> 10:00 a 18:00</p>` 
+                <p><span>Horarios:</span> 10:00 a 18:00</p>`
             });
             $('#continfo').html(template);
+        }
+    })
+}
+
+function searchstore2(id){
+    console.log(id);
+    $.ajax({
+        url: '../backend/getstore.php',
+        type: 'POST',
+        data: { id },
+        success: function(response) {
+            console.log(response);
+            let data = JSON.parse(response);
+            let template = '';
+            data.forEach(data => {
+                template += `
+                <img src="data:image/jpg;base64,${data.logo_store}" alt="">`
+            });
+            $('#datastore').html(template);
         }
     })
 }

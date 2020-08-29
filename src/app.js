@@ -29,7 +29,10 @@ $(document).ready(function() {
 			}else if (data == 411){
 				$('#checkform').trigger('reset');
                 $('#lol').html("Email Inválido");
-			}else{
+			}else if(data == 412){
+                $('#checkform').trigger('reset');
+                $('#lol').html("Cedula ya registrada");
+            }else{
                 $('#lol').hide();
                 $('#checkform').trigger('reset');
                 $('#checkform').css('display','none');

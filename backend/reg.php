@@ -47,10 +47,17 @@
                 $total = 10 - $total%10;
             }
             if($total === intval(substr($id,$longitud,$longitud))){
-                $query="INSERT INTO users VALUES ($id,'$name','$last','$mail',$phone,'$pass_cod',true)";
-                $result=mysqli_query($conn,$query);
-                echo 405;
-                //Cedula valida
+                $revisar = "SELECT * FROM users WHERE id_user=$id";
+                $query2 = mysqli_query($conn,$revisar);
+                $show = $query2->fetch_assoc();
+                if($id==$show['id_user']){
+                    echo 412;
+                }else{
+                    $query="INSERT INTO users VALUES ($id,'$name','$last','$mail',$phone,'$pass_cod',true)";
+                    $result=mysqli_query($conn,$query);
+                    echo 405;
+                    //Cedula valida
+                }
             }else{
                 echo 406;
                 //Cedula invalida

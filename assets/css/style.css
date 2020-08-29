@@ -1728,7 +1728,7 @@ a:hover {
   top: 0;
   left: 0; }
   .ui__turn .turn__cont {
-    height: 80%;
+    height: 90%;
     width: 80%;
     background-color: #dde1e7;
     display: flex;
@@ -1761,14 +1761,79 @@ a:hover {
         flex-direction: row;
         justify-content: center;
         align-items: flex-start; }
+        .ui__turn .turn__cont .cont1 .cont1__cont .container {
+          width: 50%;
+          height: 92%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start; }
+          .ui__turn .turn__cont .cont1 .cont1__cont .container #Web {
+            width: 400px !important;
+            background-color: rgba(75, 121, 161, 0.5);
+            margin: 0; }
+          .ui__turn .turn__cont .cont1 .cont1__cont .container .botons {
+            width: 100%;
+            margin-top: 4.5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; }
+            .ui__turn .turn__cont .cont1 .cont1__cont .container .botons .prod__close {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #FF7192;
+              border: 1px solid #FF7192;
+              border-radius: 20px;
+              padding: 3px 20px;
+              margin-left: 15px;
+              font-size: 16px;
+              margin-bottom: 2%; }
+              .ui__turn .turn__cont .cont1 .cont1__cont .container .botons .prod__close i {
+                margin-left: 5px;
+                font-size: 13px; }
+            .ui__turn .turn__cont .cont1 .cont1__cont .container .botons .prod__close:hover {
+              background-color: #FF7192;
+              color: white; }
+            .ui__turn .turn__cont .cont1 .cont1__cont .container .botons .prod__conf {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #4B79A1;
+              border: 1px solid #4B79A1;
+              border-radius: 20px;
+              padding: 3px 20px;
+              font-size: 16px;
+              margin-bottom: 2%; }
+              .ui__turn .turn__cont .cont1 .cont1__cont .container .botons .prod__conf i {
+                margin-left: 5px;
+                font-size: 13px; }
+            .ui__turn .turn__cont .cont1 .cont1__cont .container .botons .prod__conf:hover {
+              background-color: #4B79A1;
+              color: white; }
+            .ui__turn .turn__cont .cont1 .cont1__cont .container .botons .prod__conf2 {
+              display: none;
+              justify-content: center;
+              align-items: center;
+              color: #FF7192;
+              border-radius: 20px;
+              padding: 3px 20px;
+              font-size: 16px;
+              margin-bottom: 2%;
+              background-color: rgba(0, 128, 0, 0.5);
+              color: white; }
+              .ui__turn .turn__cont .cont1 .cont1__cont .container .botons .prod__conf2 i {
+                margin-left: 5px;
+                font-size: 13px; }
         .ui__turn .turn__cont .cont1 .cont1__cont .cont__info {
-          width: 55%;
+          width: 50%;
           height: 92%;
           display: flex;
           justify-content: center;
           align-items: center; }
           .ui__turn .turn__cont .cont1 .cont1__cont .cont__info .contenedor {
-            width: 90%;
+            width: 75%;
             height: 95%;
             display: flex;
             flex-direction: column;

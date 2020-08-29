@@ -315,7 +315,7 @@
     top: 0;
     left: 0;
     .turn__cont {
-        height: 80%;
+        height: 90%;
         width: 80%;
         background-color: $white1;
         display: flex;
@@ -349,14 +349,93 @@
                 flex-direction: row;
                 justify-content: center;
                 align-items: flex-start;
+                .container{
+                    width: 50%;
+                    height: 92%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+
+                    #Web{
+                        width: 400px!important;
+                        background-color: rgba($blue4, $alpha: 0.5);
+                        margin: 0;
+                    }
+                    .botons{
+                        width: 100%;
+                        margin-top: 4.5%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        .prod__close{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: $pink1;
+                            border: 1px solid $pink1;
+                            border-radius: 20px;
+                            padding: 3px 20px;
+                            margin-left: 15px;
+                            font-size: 16px;
+                            margin-bottom: 2%;
+                            i{
+                                margin-left: 5px;
+                                font-size: 13px;
+                            }
+                        }
+                        .prod__close:hover{
+                            background-color: $pink1;
+                            color: white;
+                        }
+                        .prod__conf{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: $blue4;
+                            border: 1px solid $blue4;
+                            border-radius: 20px;
+                            padding: 3px 20px;
+                            font-size: 16px;
+                            margin-bottom: 2%;
+                            i{
+                                margin-left: 5px;
+                                font-size: 13px;
+                            }
+                        }
+                        .prod__conf:hover{
+                            background-color: $blue4;
+                            color: white;
+                        }
+                        .prod__conf2{
+                            display: none;
+                            justify-content: center;
+                            align-items: center;
+                            color: $pink1;
+                            //border: 1px solid $pink1;
+                            border-radius: 20px;
+                            padding: 3px 20px;
+                            font-size: 16px;
+                            margin-bottom: 2%;
+                            background-color:rgba(green, $alpha: 0.5);
+                            color: white;
+                            i{
+                                margin-left: 5px;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                }
                 .cont__info{
-                    width: 55%;
+                    width: 50%;
                     height: 92%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     .contenedor{
-                        width: 90%;
+                        width: 75%;
                         height: 95%;
                         display: flex;
                         flex-direction: column;

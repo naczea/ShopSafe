@@ -67,7 +67,7 @@
                             <span>Continuar</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
-                        <a href="#" class="cancel">
+                        <a href="#" class="cancel" onclick="ocultar('uishop'), mostrar('turn__cont1'), mostrar('shop__cont1'), ocultar('turn__cont2'), ocultar('shop__cont2'), ocultar('shop__cont3')">
                             <span>Cerrar</span>
                             <i class="fas fa-times"></i>
                         </a>
@@ -83,7 +83,7 @@
                         </a>
                 </div>
                 <div class="totalshop" id="shoptotal">
-                    <h1>totalshop</h1>
+                    <h1>Venta confirmada</h1>
                 </div>
                 <!--CONTENEDOR CARNES-->
                 <div class="cont__prod" id="cont_carnes">
@@ -439,7 +439,8 @@
                 </div>
             </div>
         </div>
-    <div class="ui__turn" id="uiturn">
+
+        <div class="ui__turn" id="uiturn">
         <div class="turn__cont">
             <div class="cont1">
                 <div class="cont1__nav">
@@ -447,16 +448,24 @@
                 </div>
                 <div class="cont1__cont">
                     <div class="cont__info">
-                        <div id="continfo" class="contenedor">
+                        <div class="contenedor" id="continfo">
+                            <!--INFO DEL STORE-->
                         </div>
                     </div>
-                        <div class="container">
-                                    <div class="row">
-                                    <div class="col"></div>
-                                    <div class="col-7"><div id="Web"></div></div>
-                                    <div class="col"></div>
-                                    </div>
+                    <div class="container">
+                        <div class="row">
+                        <div class="col"></div>
+                        <div class="col-7"><div id="Web"></div></div>
+                        <div class="col"></div>
+                        <div class="botons">
+                            <a href="#" class="prod__conf" id="esp1" onclick="ocultar('esp1'),mostrar('esp2')">Confirmar<i class="fas fa-search"></i></a>
+                            <span></span>
+                            <a href="#" class="prod__conf2" id="esp2" onclick="showcart('c12','c11'), addcart(false)">Guardado<i class="fas fa-check-circle"></i></a>
+                            <a href="#" class="prod__close" id="c12" onclick="ocultar('uiturn'), mostrar('turn__cont1'), mostrar('shop__cont1'), ocultar('turn__cont2'), ocultar('turn__cont2'), ocultar('turn__cont4')">Salir<i class="fas fa-times-circle"></i></a>
                         </div>
+                    </div>
+                </div>
+
                         <script>
                                 $(document).ready(function(){
                                     $('#Web').fullCalendar({
@@ -480,6 +489,7 @@
                                             $('#Eliminar').prop("disabled",false);
                                             $('#tituloEvento').html(calEvent.title);
                                             $('#descrip_ev').val(calEvent.descripcion);
+                                            $('#id_turn').val(calEvent.id_turn);
                                             $('#titulo_ev').val(calEvent.title);
                                             $('#color_ev').val(calEvent.color);
                                             FechaHora = calEvent.start._i.split(" ");
@@ -506,16 +516,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label>ID compra </label>
-                            <input type="text" id="id_turn" name="idTurn" class="form-control">
-                        </div>
-                    </div>
 
                     <label>Fecha: </label> 
                     <input type="text" id="fecha_ev" name="fechaEvento"> <br/>
-                    
+                   
                     <div class="form-row">
                         <div class="form-group col-md-7">
                             <label>Titulo:</label> 
@@ -549,21 +553,22 @@
         var id_c="<?php echo $cedula; ?>";
         var auxiliar;
         $('#Agendar').click(function(){
-            alert(ids);
             RecolectarDatos(); 
             NuevoEvento['id_c']=id_c;
             NuevoEvento['id_s']=ids;
-            alert("Turno añadido");
             EnviarInfo('agregar',NuevoEvento);
         });
         $('#Modificar').click(function(){
             RecolectarDatos(); 
-
+            NuevoEvento['id_c']=id_c;
+            NuevoEvento['id_s']=ids;
             EnviarInfo('modificar',NuevoEvento);
             
         });
         $('#Eliminar').click(function(){
             RecolectarDatos(); 
+            NuevoEvento['id_c']=id_c;
+            NuevoEvento['id_s']=ids;
             EnviarInfo('eliminar',NuevoEvento);
             
         });
@@ -585,8 +590,49 @@
                 data:objEvento,
                 success:function(msg){
                     if(msg){
-                        $('#Web').fullCalendar('refetchEvents');
-                        $('#modalEventos').modal('toggle');
+                        //alert(msg);
+                        if(msg == 1){
+                            alert("Fecha pasada vuelva a ingresar");
+                        }else{
+                            if(msg == 2){
+                                $('#Web').fullCalendar('refetchEvents');
+                                $('#modalEventos').modal('toggle');
+                                alert("Turno ingresado correctamente");
+                            }else{
+                                if(msg == 3){
+                                    alert("No es su evento");
+                                }else{
+                                    if(msg == 4){
+                                        $('#Web').fullCalendar('refetchEvents');
+                                        $('#modalEventos').modal('toggle');
+                                        alert("Su turno a sido borrado");
+                                    }else{
+                                        if(msg == 5){
+                                            $('#Web').fullCalendar('refetchEvents');
+                                            $('#modalEventos').modal('toggle');
+                                            alert("Su turno a sido actualizado");
+                                        }else{
+                                            if(msg == 6){
+                                                alert("Este no es su turno");
+                                            }else{
+                                                if(msg == 7){
+                                                    alert("Fuera de horario de la tienda");
+                                                }else{
+                                                    if(msg == 8){
+                                                        alert("Turnos llenos, escoja otra hora (1 hora mas tarde)");
+                                                    }else{
+                                                        if(msg==9){
+                                                            alert("Su turno es con otra tienda");
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
                     }else{
                         alert("ERROR");
                     }
@@ -604,8 +650,9 @@
             
         }
     </script>
-
-<!-- **************************INICIO ****************************************-->
+    
+    
+    <!-- **************************INICIO ****************************************-->
 
     <header id="shome2">
         <nav class="navbar2">
@@ -688,7 +735,7 @@
                 <div class="cont_shop" id="shopcont__general">
 
 <!--********************** CONTENEDOR 1-->
-                    <div class="cont1" id="shop__cont1" onclick="mostrar('turn__cont2'), ocultar('turn__cont1'), back_color('shopcont__general'), mostrar('shop__cont3'), ocultar('shop__cont1')">
+                    <div class="cont1" id="shop__cont1" onclick="mostrar('turn__cont2'), ocultar('turn__cont1'), mostrar('shop__cont3'), ocultar('shop__cont1')">
                         <a href="#">
                             <img src="../img/online.svg" alt="e-comercer illustration">
                         </a>

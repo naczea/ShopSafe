@@ -719,7 +719,7 @@
 
     <div class="formui" id="formui">
         <div class="formui__cont">
-            <span>Encuesta de calidad</span>
+            <span>Encuesta de Calidad</span>
             <div class="ch__bord"></div>
             <div id="lol"><p></p></div>
             <div class="ch__coonf" id="ch__confirm2">

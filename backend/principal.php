@@ -44,7 +44,7 @@
 </head>
 
 <body>
-<div class="ui_shop" id="uishop">
+    <div class="ui_shop" id="uishop">
         <div class="shop__cont">
             <div class="shop__info">
                 <div class="navbar__logo">
@@ -440,7 +440,7 @@
             </div>
         </div>
 
-        <div class="ui__turn" id="uiturn">
+    <div class="ui__turn" id="uiturn">
         <div class="turn__cont">
             <div class="cont1">
                 <div class="cont1__nav">
@@ -457,11 +457,8 @@
                         <div class="col"></div>
                         <div class="col-7"><div id="Web"></div></div>
                         <div class="col"></div>
-                        <div class="botons">
-                            <a href="#" class="prod__conf" id="esp1" onclick="ocultar('esp1'),mostrar('esp2')">Confirmar<i class="fas fa-search"></i></a>
-                            <span></span>
-                            <a href="#" class="prod__conf2" id="esp2" onclick="showcart('c12','c11'), addcart(false)">Guardado<i class="fas fa-check-circle"></i></a>
-                            <a href="#" class="prod__close" id="c12" onclick="ocultar('uiturn'), mostrar('turn__cont1'), mostrar('shop__cont1'), ocultar('turn__cont2'), ocultar('turn__cont2'), ocultar('turn__cont4')">Salir<i class="fas fa-times-circle"></i></a>
+                        <div class="botons">    
+                            <a href="#" class="prod__close" id="c12" onclick="ocultar('uiturn'), mostrar('turn__cont1'), mostrar('shop__cont1'), ocultar('turn__cont2'), ocultar('turn__cont2'), ocultar('turn__cont4')">Regresar<i class="fas fa-times-circle"></i></a>
                         </div>
                     </div>
                 </div>
@@ -651,6 +648,89 @@
         }
     </script>
     
+    <!-- ----------------------EDIT PERSONALES-->
+
+    <div class="peredit" id="peredit">
+        <div class="peredit__cont">
+            <span>Editar datos personales</span>
+            <div class="ch__bord"></div>
+            <div id="lol"><p></p></div>
+            <div class="ch__coonf" id="ch__confirm2">
+                <i class="far fa-check-circle"></i></br>
+                <span>Cambios guardados</span>
+            </div>
+            <form id="editdatap" class="checkforms">
+                <label for="email">Mail:</label>
+                <input type="text" id="emailedit" name="mailf" placeholder="<?php echo $correo; ?>" required>
+
+                <label for="number">Celular:</label>
+                <input type="number" id="numberedit" name="numberf" placeholder="<?php echo $telefono; ?>" required>
+
+                <input type="submit" class="neu3" value="Guardar Cambios" id="btnSendch" name="sendf">
+                <input type="button" class="neu3 neuesp" value="Eliminar cuenta" id="btndropmain" name="sendf">
+                <div class="dropop" id="drop">
+                    <p>¿Desea eliminar su cuenta y todos sus turnos?</p>
+                    <div class="dropbtn">
+                        <a href="#" id="dropconfirm">Confirmar</a>
+                        <a href="#" id="droprt">Regresar</a>
+                    </div>
+                </div>
+            </form>
+            <div class="ch__bord"></div>
+            <a href="#" onclick="ocultar('peredit')">Cerrar</a>
+        </div>
+        
+    </div>
+
+    <!-- ----------------------ACTIVIDAD RECIENTE-->
+
+    <div class="activity" id="activityt">
+        <div class="activityt__cont">
+            <span>Actividad Reciente</span>
+            <div class="ch__bord"></div>
+            <div id="lol"><p></p></div>
+            <div class="ch__coonf" id="ch__confirm2">
+                <i class="far fa-check-circle"></i></br>
+                <span>Cambios guardados</span>
+            </div>
+            <div class="ch__bord"></div>
+            <a href="#" onclick="ocultar('activityt')">Cerrar</a>
+        </div>
+        
+    </div>
+    <!-- ----------------------SUGENERENCIAS-->
+
+    <div class="sugui" id="sugui">
+        <div class="sugui__cont">
+            <span>Buzón de Sugerencias</span>
+            <div class="ch__bord"></div>
+            <div id="lol"><p></p></div>
+            <div class="ch__coonf" id="ch__confirm2">
+                <i class="far fa-check-circle"></i></br>
+                <span>Cambios guardados</span>
+            </div>
+            <div class="ch__bord"></div>
+            <a href="#" onclick="ocultar('sugui')">Cerrar</a>
+        </div>
+        
+    </div>
+
+    <!-- ----------------------ENCUESTA-->
+
+    <div class="formui" id="formui">
+        <div class="formui__cont">
+            <span>Encuesta de calidad</span>
+            <div class="ch__bord"></div>
+            <div id="lol"><p></p></div>
+            <div class="ch__coonf" id="ch__confirm2">
+                <i class="far fa-check-circle"></i></br>
+                <span>Cambios guardados</span>
+            </div>
+            <div class="ch__bord"></div>
+            <a href="#" onclick="ocultar('formui')">Cerrar</a>
+        </div>
+        
+    </div>
     
     <!-- **************************INICIO ****************************************-->
 
@@ -683,13 +763,13 @@
                             <ul>
                                 <li>Nombre: <?php echo $nombre; ?></li>
                                 <li>Apellido: <?php echo $apellido; ?></li>
-                                <li>Cedula: <?php echo $cedula; ?></li>
+                                <li id="idpost">Cedula: <?php echo $cedula; ?></li>
                                 <li>Telefono: <?php echo $telefono; ?></li>
                             </ul>
                         </div>
                     </div>
                     <div class="user__edit">
-                        <a href="#">
+                        <a href="#" id="p123">
                             <i class="fas fa-edit"></i>
                         </a>
                     </div>
@@ -706,12 +786,11 @@
                         </div>
                         <div class="activities">
                             <span>No tienes turnos pendientes</span>
-                            <span>No tienes compras pendientes</span>
                         </div>
                     </div>
                     <div class="act__edit">
-                        <a href="#">
-                            <i class="fas fa-edit"></i>
+                        <a href="#" id="p456">
+                            <i class="fas fa-search"></i>
                         </a>
                     </div>
                 </div>
@@ -719,9 +798,8 @@
             <div class="info__que">
                 <div class="cont__que">
                     <h2>Mas Opciones</h2>
-                    <a href="#">Preguntas frecuentes</a>
-                    <a href="#">Sugerencias y Recomendaciones</a>
-                    <a href="#">Encuestas y formularios</a>
+                    <a href="#" id="p789">Sugerencias y Recomendaciones</a>
+                    <a href="#" id="p101">Encuestas y formularios</a>
                 </div>
             </div>
         </div>
@@ -798,17 +876,19 @@
                             <span>Seleccione un servicio:</span>
                         </div>
                         <div class="turn__op">
-                            <div class="op">
-                                <a href="#">
+                            <div class="op2">
+                                <div>
                                     <i class="fas fa-shopping-cart"></i>
                                     <span>Mercado</span>
-                                </a>
+                                    <p>(Próximamente)</p>
+                                </div>
                             </div>
-                            <div class="op">
-                                <a href="#">
+                            <div class="op2">
+                                <div>
                                     <i class="fas fa-cut"></i>
                                     <span>Peluqueria</span>
-                                </a>
+                                    <p>(Próximamente)</p>
+                                </div>
                             </div>
                             <div class="op">
                                 <a href="#">
@@ -837,6 +917,7 @@
                                 <a href="#" onclick="mostrar('uiturn'), ocultar('checkout'), searchstore(<?php echo $row['id_store']; ?>)">
                                     <img src="data:image/jpg;base64,<?php echo base64_encode($row['logo_store']); ?>">
                                     <span><?php echo $row['name_store']; ?></span>
+                                    <span>Sector: Centro de Conocoto</span>
                                 </a>
                             </div>
                             <?php
@@ -863,10 +944,10 @@
             </div>
         </div>
         <div class="footer__terms">
-            <a href="#">¿Quieres publicitar tu negocio?</a>
-            <a href="#">Donaciones a creadores</a>
-            <a href="#">Contácto y Ayuda</a>
-            <a href="#">Términos y Condiciones</a>
+            <span>¿Quieres publicitar tu negocio?</span>
+            <span>Donaciones a creadores</span>
+            <span>Contácto y Ayuda</span>
+            <span>Términos y Condiciones</span>
         </div>
         <div class="footer__datas">
             <div>
@@ -882,9 +963,8 @@
             <span class="datas__copy"> &#169; naczea - 2020 | Some Rights Reserved.</span>
         </div>
         <div class="footer__nets">
-            <span>Redes Sociales</span>
+            <span>CONTACTO</span>
             <div>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://github.com/naczea/ShopSafe" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://api.whatsapp.com/send?phone=593987635011" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 <a href="mailto:shopsafe_uio@gmail.com" target="_blank"><i class="fas fa-envelope" data-aos="zoom-in-right" data-aos-duration="2100"></i></a>
@@ -894,6 +974,7 @@
     <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/187afea212.js" crossorigin="anonymous"></script>
+    <script src="../src/app.js"></script>
     <script src="../src/app2.js"></script>
     <script src="../src/main.js"></script>
     

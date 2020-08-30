@@ -186,7 +186,7 @@ a:hover{
                         align-self: flex-end;
                     }
                     i:hover{
-                        font-weight: 500;
+                        font-size: 18px;
                     }
                 }
             }
@@ -248,7 +248,7 @@ a:hover{
                         align-self: flex-end;
                     }
                     i:hover{
-                        font-weight: 500;
+                        font-size: 18px;
                     }
                 }
                 
@@ -263,13 +263,15 @@ a:hover{
         background-color: $white1;
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
 
         // ***************************  SHOP
         .op__shop{
             width: 50%;
             height: 100%;
             background-color: initial;
-            display: flex;
+            display: none;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -513,8 +515,48 @@ a:hover{
                                 align-items: center;
                                 background-color: initial;
                                 i{
-                                    color: $pink2;
+                                    color: $pink1;
                                     font-size: 100px;
+                                    margin-bottom: 10%;
+                                    transition: 0.15s;
+                                }
+                                span{
+                                    color: $pink1;
+                                    text-transform: uppercase;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                }
+
+                                p{
+                                    color: $blue4;
+                                    font-size: 18px;
+                                    font-weight: 400;
+                                }
+                            }
+                            a:hover{
+                                i{
+                                    font-size: 105px;
+                                }
+                            }
+                        }
+
+                        .op2{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: initial;
+                            div{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: initial;
+                                i{
+                                    color: $pink2;
+                                    font-size: 95px;
                                     margin-bottom: 10%;
                                     transition: 0.15s;
                                 }
@@ -524,16 +566,14 @@ a:hover{
                                     font-size: 18px;
                                     font-weight: 600;
                                 }
-                            }
-                            a:hover{
-                                i{
-                                    color: $pink1;
-                                    font-size: 105px;
-                                }
-                                span{
-                                    color: $pink1;
+
+                                p{
+                                    color: $blue4;
+                                    font-size: 15px;
+                                    font-weight: 400;
                                 }
                             }
+
                         }
                     }
                 }
@@ -574,21 +614,21 @@ a:hover{
                                 align-items: center;
                                 background-color: initial;
                                 img{
-                                    width: 70%;
+                                    width: 30%!important;
+                                    max-width: 35%!important;                                    
                                     height: auto;
-                                    margin-bottom: 10%;
+                                    max-height: 60%!important;
+                                    margin-bottom: 5%;
                                     transition: 0.15s;
+                                    border-radius: 10px;
                                 }
                                 span{
                                     color: $blue4;
-                                    font-size: 18px;
+                                    font-size: 16px;
                                     font-weight: 500;
                                 }
                             }
                             a:hover{
-                                img{
-                                    width: 72%;
-                                }
                                 span{
                                     color: $pink1;
                                     font-weight: 600;

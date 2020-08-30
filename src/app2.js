@@ -2,13 +2,11 @@ var ids = null;
 var ids2 = null;
 function searchstore(id){
     ids = id; 
-    console.log(id);
     $.ajax({
         url: '../backend/getstore.php',
         type: 'POST',
         data: { id },
         success: function(response) {
-            console.log(response);
             let data = JSON.parse(response);
             let template = '';
             let storetype = '';

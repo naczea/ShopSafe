@@ -19,7 +19,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
-    height: auto;
+    height: 15vh!important;
     border-top: 2px solid white;
     .footer__logo {
         width: 25%;
@@ -70,7 +70,13 @@ footer {
         justify-content: center;
         align-items: center;
         border-right: 2px solid white;
-        a{
+        p{
+            font-size: 13px;
+            color: $blue2;
+            padding-bottom: 5px;
+        }
+
+        span{
             font-size: 13px;
             color: $blue2;
             padding-bottom: 5px;

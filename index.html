@@ -128,7 +128,6 @@
                 <ul>
                     <li><a href="#shome">Inicio</a></li>
                     <li><a href="#sshop">Información</a></li>
-                    <li><a href="#scontact">Contacto</a></li>
                     <li><a href="#" onclick="mostrar('lg')"><span>Iniciar Sesión</span></a></li>
                 </ul>
             </div>
@@ -163,9 +162,6 @@
                 <img src="img/illus1.svg" alt="shop illustration" class="illus">
             </div>
             <div class="cont__nets">
-                <div class="nets__insta">
-                    <a href="#" target="_blank"><i class="fab fa-instagram neu2"></i></a>
-                </div>
                 <div class="nets__git">
                     <a href="https://github.com/naczea/ShopSafe" target="_blank"><i class="fab fa-github neu2"></i></a>
                 </div>
@@ -181,7 +177,7 @@
     </header>
 
     <main>
-        <section class="MTURN">
+        <section class="MTURN" id="mturn">
             <div class="turn">
                 <div class="turn__illus">
                     <img src="img/illus2.svg" alt="turn-illustration">
@@ -205,7 +201,7 @@
                             </li>
                         </ul>
                     </div>
-                    <a href="#" class="neub" onclick="mostrar('lg')">Sacar turno</a>
+                    <a href="#mturn" class="neub" onclick="mostrar('lg')">Sacar turno</a>
                 </div>
             </div>
         </section>
@@ -224,14 +220,14 @@
                         <li>Establece una fecha y hora de entrega</li>
                         <li>Pasa a recoger tu canasta ya lista.</li>
                     </ol>
-                    <a href="#" class="neu3" onclick="mostrar('lg')">Comprar</a>
+                    <a href="#sshop" class="neu3" onclick="mostrar('lg')">Comprar</a>
                 </div>
                 <div class="shop__illus">
                     <img src="img/illus3.svg" alt="e-comerce illustration">
                 </div>
             </div>
         </section>
-        <section class="others">
+        <section class="others" id="others">
             <div class="others__illus1">
                 <img src="img/restautant.svg" alt="restaurant illustration">
             </div>
@@ -243,29 +239,10 @@
                     <li>Sacando un turno promueves el distanciamiento social y proteges a todos.</li>
                     <li>Reserva en peluquerías y restaurantes viculados</li>
                 </ul>
-                <a href="#" class="neub" onclick="mostrar('lg')">Unirte a ShopSafe</a>
+                <a href="#others" class="neub" onclick="mostrar('lg')">Unirte a ShopSafe</a>
             </div>
             <div class="others__illus2">
                 <img src="img/hair.svg" alt="hairdressing illustration">
-            </div>
-        </section>
-        <section class="contact" id="scontact">
-            <div class="contact__form">
-                <h2>CONTACTO</h2>
-                <form method="POST" data-netlify="true">
-                    <label for="name">Nombre: </label>
-                    <input type="text" id="name" name="namef" placeholder="Ingrese su nombre" required>
-
-                    <label for="affair">Asunto:</label>
-                    <input type="text" id="affair" name="affairf" placeholder="¿De qué trata?" required>
-
-                    <label for="email">Mail:</label>
-                    <input type="text" id="email" name="mailf" placeholder="Ingrese su correo" required>
-
-                    <label for="mesaje">Mensaje:</label>
-                    <textarea name="mensaje" id="mesaje" name="messagef" required rows="10"></textarea>
-                    <input type="submit" value="ENVIAR" id="btnSend" name="sendf">
-                </form>
             </div>
         </section>
     </main>
@@ -281,10 +258,10 @@
             </div>
         </div>
         <div class="footer__terms">
-            <a href="#">¿Quieres publicitar tu negocio?</a>
-            <a href="#">Donaciones a creadores</a>
-            <a href="#">Contácto y Ayuda</a>
-            <a href="#">Términos y Condiciones</a>
+            <p>¿Quieres publicitar tu negocio?</p>
+            <p>Donaciones a creadores</p>
+            <p>Contácto y Ayuda</p>
+            <p>Términos y Condiciones</p>
         </div>
         <div class="footer__datas">
             <div>
@@ -300,9 +277,8 @@
             <span class="datas__copy"> &#169; naczea - 2020 | Some Rights Reserved.</span>
         </div>
         <div class="footer__nets">
-            <span>Redes Sociales</span>
+            <span>CONTACTO</span>
             <div>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://github.com/naczea/ShopSafe" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://api.whatsapp.com/send?phone=593987635011" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 <a href="mailto:shopsafe_uio@gmail.com" target="_blank"><i class="fas fa-envelope" data-aos="zoom-in-right" data-aos-duration="2100"></i></a>

@@ -84,5 +84,46 @@ function showprod(id1,id2,id3,id4,id5,id6,id7,id8,id9,id10){
     document.getElementById(id10).style.backgroundColor = 'inherit';
 }
 
+// CERRAR SESION
+
+document.getElementById('checkout').addEventListener('click', function(){
+    window.location.href = '../index.html';
+});
+
+// EDITAR DATOS PERSONALES
+
+document.getElementById('p123').addEventListener('click', function(){
+    mostrar('peredit');
+    ocultar('checkout');
+});
+
+document.getElementById('p456').addEventListener('click', function(){
+    mostrar('activityt');
+    ocultar('checkout');
+});
+
+document.getElementById('p789').addEventListener('click', function(){
+    mostrar('sugui');
+    ocultar('checkout');
+});
+
+document.getElementById('p101').addEventListener('click', function(){
+    mostrar('formui');
+    ocultar('checkout');
+});
 
 
+document.getElementById('btndropmain').addEventListener('click', function(){
+    mostrar('drop');
+});
+
+document.getElementById('droprt').addEventListener('click', function(){
+    ocultar('drop');
+});
+
+
+// ELIMINAR CUENTA
+
+document.getElementById('dropconfirm').addEventListener('click', function(){
+    window.location.href = '../index.html';
+});

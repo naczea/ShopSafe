@@ -546,7 +546,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
-  height: auto;
+  height: 15vh !important;
   border-top: 2px solid white; }
   footer .footer__logo {
     width: 25%;
@@ -589,7 +589,11 @@ footer {
     justify-content: center;
     align-items: center;
     border-right: 2px solid white; }
-    footer .footer__terms a {
+    footer .footer__terms p {
+      font-size: 13px;
+      color: #4A70D6;
+      padding-bottom: 5px; }
+    footer .footer__terms span {
       font-size: 13px;
       color: #4A70D6;
       padding-bottom: 5px; }
@@ -793,7 +797,7 @@ footer {
 
 .others {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background-color: rgba(221, 225, 231, 0.9);
   display: flex;
   flex-direction: row;
@@ -1115,7 +1119,7 @@ a:hover {
             color: #FF7192;
             align-self: flex-end; }
           .actions .info .info__personal .cont .user__edit i:hover {
-            font-weight: 500; }
+            font-size: 18px; }
     .actions .info .info__activities {
       width: 35%;
       height: 100%;
@@ -1163,18 +1167,20 @@ a:hover {
             color: #FF7192;
             align-self: flex-end; }
           .actions .info .info__activities .cont2 .act__edit i:hover {
-            font-weight: 500; }
+            font-size: 18px; }
   .actions .op {
     width: 100%;
     height: 75%;
     background-color: #dde1e7;
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
     .actions .op .op__shop {
       width: 50%;
       height: 100%;
       background-color: initial;
-      display: flex;
+      display: none;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
@@ -1377,20 +1383,49 @@ a:hover {
                 align-items: center;
                 background-color: initial; }
                 .actions .op .op__turn .cont__turn .cont3 .turn__op .op a i {
-                  color: #f895ac;
+                  color: #FF7192;
                   font-size: 100px;
                   margin-bottom: 10%;
                   transition: 0.15s; }
                 .actions .op .op__turn .cont__turn .cont3 .turn__op .op a span {
+                  color: #FF7192;
+                  text-transform: uppercase;
+                  font-size: 18px;
+                  font-weight: 600; }
+                .actions .op .op__turn .cont__turn .cont3 .turn__op .op a p {
+                  color: #4B79A1;
+                  font-size: 18px;
+                  font-weight: 400; }
+              .actions .op .op__turn .cont__turn .cont3 .turn__op .op a:hover i {
+                font-size: 105px; }
+            .actions .op .op__turn .cont__turn .cont3 .turn__op .op2 {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              background-color: initial; }
+              .actions .op .op__turn .cont__turn .cont3 .turn__op .op2 div {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: initial; }
+                .actions .op .op__turn .cont__turn .cont3 .turn__op .op2 div i {
+                  color: #f895ac;
+                  font-size: 95px;
+                  margin-bottom: 10%;
+                  transition: 0.15s; }
+                .actions .op .op__turn .cont__turn .cont3 .turn__op .op2 div span {
                   color: #f895ac;
                   text-transform: uppercase;
                   font-size: 18px;
                   font-weight: 600; }
-              .actions .op .op__turn .cont__turn .cont3 .turn__op .op a:hover i {
-                color: #FF7192;
-                font-size: 105px; }
-              .actions .op .op__turn .cont__turn .cont3 .turn__op .op a:hover span {
-                color: #FF7192; }
+                .actions .op .op__turn .cont__turn .cont3 .turn__op .op2 div p {
+                  color: #4B79A1;
+                  font-size: 15px;
+                  font-weight: 400; }
         .actions .op .op__turn .cont__turn .cont4 {
           width: 100%;
           height: 100%;
@@ -1426,16 +1461,17 @@ a:hover {
                 align-items: center;
                 background-color: initial; }
                 .actions .op .op__turn .cont__turn .cont4 .store__op .op a img {
-                  width: 70%;
+                  width: 30% !important;
+                  max-width: 35% !important;
                   height: auto;
-                  margin-bottom: 10%;
-                  transition: 0.15s; }
+                  max-height: 60% !important;
+                  margin-bottom: 5%;
+                  transition: 0.15s;
+                  border-radius: 10px; }
                 .actions .op .op__turn .cont__turn .cont4 .store__op .op a span {
                   color: #4B79A1;
-                  font-size: 18px;
+                  font-size: 16px;
                   font-weight: 500; }
-              .actions .op .op__turn .cont__turn .cont4 .store__op .op a:hover img {
-                width: 72%; }
               .actions .op .op__turn .cont__turn .cont4 .store__op .op a:hover span {
                 color: #FF7192;
                 font-weight: 600; }
@@ -1865,5 +1901,339 @@ a:hover {
           display: flex;
           justify-content: center;
           align-items: center; }
+
+#peredit {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0; }
+  #peredit .peredit__cont {
+    height: auto;
+    width: 30%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    background-color: #dde1e7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px; }
+    #peredit .peredit__cont #lol {
+      color: #d45a5a;
+      font-size: 18px; }
+    #peredit .peredit__cont span {
+      text-transform: uppercase;
+      color: #4B79A1;
+      letter-spacing: 4px;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 2%;
+      padding: 0;
+      text-align: center; }
+    #peredit .peredit__cont a {
+      color: #4B79A1;
+      font-size: 15px;
+      margin-top: 8px;
+      transition: 0.1s; }
+    #peredit .peredit__cont a:hover {
+      font-weight: 500; }
+    #peredit .peredit__cont .ch__bord {
+      width: 60%;
+      border-bottom: 2px solid white;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    #peredit .peredit__cont .ch__coonf {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8%; }
+      #peredit .peredit__cont .ch__coonf i {
+        font-size: 80px;
+        color: #5dba5d; }
+      #peredit .peredit__cont .ch__coonf span {
+        color: #4B79A1;
+        font-size: 25px;
+        text-transform: inherit;
+        letter-spacing: inherit; }
+    #peredit .peredit__cont .checkforms {
+      display: flex;
+      flex-direction: column;
+      width: 80%; }
+      #peredit .peredit__cont .checkforms .dropop {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #4B79A1;
+        font-size: 15px; }
+        #peredit .peredit__cont .checkforms .dropop .dropbtn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row; }
+          #peredit .peredit__cont .checkforms .dropop .dropbtn a {
+            border: 1px solid #4B79A1;
+            border-radius: 30px;
+            color: #4B79A1;
+            padding: 8px 18px;
+            margin-left: 10px; }
+          #peredit .peredit__cont .checkforms .dropop .dropbtn a:hover {
+            border: 1px solid #FF7192;
+            color: #FF7192;
+            background-color: rgba(255, 113, 146, 0.2); }
+      #peredit .peredit__cont .checkforms .neuesp {
+        background-color: rgba(255, 113, 146, 0.2) !important;
+        color: rgba(255, 113, 146, 0.8) !important; }
+      #peredit .peredit__cont .checkforms .neuesp:hover {
+        background-color: rgba(255, 113, 146, 0.8) !important;
+        color: #dde1e7 !important; }
+      #peredit .peredit__cont .checkforms label {
+        padding-left: 5%;
+        color: #4B79A1;
+        margin-bottom: 8px;
+        margin-top: 15px;
+        font-size: 14px; }
+      #peredit .peredit__cont .checkforms input[type="text"],
+      #peredit .peredit__cont .checkforms input[type="number"],
+      #peredit .peredit__cont .checkforms input[type="password"] {
+        align-self: center;
+        width: 95%;
+        padding: 8px 0px 5px 20px;
+        color: rgba(75, 121, 161, 0.8);
+        border: none;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        background-color: #dde1e7;
+        box-shadow: inset -2px -2px 8px white, inset -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15); }
+      #peredit .peredit__cont .checkforms input:focus {
+        background-color: rgba(174, 215, 245, 0.6); }
+      #peredit .peredit__cont .checkforms input::-webkit-input-placeholder {
+        color: rgba(75, 121, 161, 0.8);
+        font-size: 14px; }
+      #peredit .peredit__cont .checkforms textarea {
+        max-width: 100%;
+        max-height: 100px;
+        min-width: 100%; }
+      #peredit .peredit__cont .checkforms input[type="submit"] {
+        width: 60%;
+        font-weight: 500;
+        font-size: 15px;
+        align-self: center;
+        border-radius: 20px;
+        border: none;
+        color: #4B79A1 !important;
+        letter-spacing: 2px;
+        margin-top: 6%;
+        margin-bottom: 4%;
+        padding: 10px;
+        box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+        transition: background-color .3s ease-in; }
+      #peredit .peredit__cont .checkforms input[type="button"] {
+        width: 60%;
+        font-weight: 500;
+        font-size: 15px;
+        align-self: center;
+        border-radius: 20px;
+        border: none;
+        color: #4B79A1 !important;
+        letter-spacing: 2px;
+        margin-top: 6%;
+        margin-bottom: 4%;
+        padding: 10px;
+        box-shadow: -2px -2px 8px white, -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+        transition: background-color .3s ease-in; }
+      #peredit .peredit__cont .checkforms input[type="submit"]:hover {
+        color: rgba(255, 113, 146, 0.6) !important; }
+
+#activityt {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0; }
+  #activityt .activityt__cont {
+    height: auto;
+    width: 30%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    background-color: #dde1e7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px; }
+    #activityt .activityt__cont #lol {
+      color: #d45a5a;
+      font-size: 18px; }
+    #activityt .activityt__cont span {
+      text-transform: uppercase;
+      color: #4B79A1;
+      letter-spacing: 4px;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 2%;
+      padding: 0;
+      text-align: center; }
+    #activityt .activityt__cont a {
+      color: #4B79A1;
+      font-size: 15px;
+      margin-top: 8px;
+      transition: 0.1s; }
+    #activityt .activityt__cont a:hover {
+      font-weight: 500; }
+    #activityt .activityt__cont .ch__bord {
+      width: 60%;
+      border-bottom: 2px solid white;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    #activityt .activityt__cont .ch__coonf {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8%; }
+      #activityt .activityt__cont .ch__coonf i {
+        font-size: 80px;
+        color: #5dba5d; }
+      #activityt .activityt__cont .ch__coonf span {
+        color: #4B79A1;
+        font-size: 25px;
+        text-transform: inherit;
+        letter-spacing: inherit; }
+
+#sugui {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0; }
+  #sugui .sugui__cont {
+    height: auto;
+    width: 30%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    background-color: #dde1e7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px; }
+    #sugui .sugui__cont #lol {
+      color: #d45a5a;
+      font-size: 18px; }
+    #sugui .sugui__cont span {
+      text-transform: uppercase;
+      color: #4B79A1;
+      letter-spacing: 4px;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 2%;
+      padding: 0;
+      text-align: center; }
+    #sugui .sugui__cont a {
+      color: #4B79A1;
+      font-size: 15px;
+      margin-top: 8px;
+      transition: 0.1s; }
+    #sugui .sugui__cont a:hover {
+      font-weight: 500; }
+    #sugui .sugui__cont .ch__bord {
+      width: 60%;
+      border-bottom: 2px solid white;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    #sugui .sugui__cont .ch__coonf {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8%; }
+      #sugui .sugui__cont .ch__coonf i {
+        font-size: 80px;
+        color: #5dba5d; }
+      #sugui .sugui__cont .ch__coonf span {
+        color: #4B79A1;
+        font-size: 25px;
+        text-transform: inherit;
+        letter-spacing: inherit; }
+
+#formui {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0; }
+  #formui .formui__cont {
+    height: auto;
+    width: 30%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    background-color: #dde1e7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px; }
+    #formui .formui__cont #lol {
+      color: #d45a5a;
+      font-size: 18px; }
+    #formui .formui__cont span {
+      text-transform: uppercase;
+      color: #4B79A1;
+      letter-spacing: 4px;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 2%;
+      padding: 0;
+      text-align: center; }
+    #formui .formui__cont a {
+      color: #4B79A1;
+      font-size: 15px;
+      margin-top: 8px;
+      transition: 0.1s; }
+    #formui .formui__cont a:hover {
+      font-weight: 500; }
+    #formui .formui__cont .ch__bord {
+      width: 60%;
+      border-bottom: 2px solid white;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    #formui .formui__cont .ch__coonf {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8%; }
+      #formui .formui__cont .ch__coonf i {
+        font-size: 80px;
+        color: #5dba5d; }
+      #formui .formui__cont .ch__coonf span {
+        color: #4B79A1;
+        font-size: 25px;
+        text-transform: inherit;
+        letter-spacing: inherit; }
 
 /*# sourceMappingURL=style.css.map */

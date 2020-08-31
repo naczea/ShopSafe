@@ -297,7 +297,7 @@ $aforo = $_SESSION['aforo'];
                 <span>ShopSafe</span>
             </div>
             <div class="nav__close">
-                <a href="#" id="checkout2">
+                <a href="#" id="checkout2" onclick="nueva3()">
                     <i class="fas fa-sign-out-alt"></i>
                     <span>Cerrar sesión</span>
                 </a>

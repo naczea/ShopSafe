@@ -90,6 +90,7 @@ document.getElementById('checkout').addEventListener('click', function(){
     window.location.href = '../index.html';
 });
 
+
 // EDITAR DATOS PERSONALES
 
 document.getElementById('p123').addEventListener('click', function(){
@@ -134,4 +135,8 @@ document.getElementById('dropconfirm').addEventListener('click', function(){
 function nueva2(){
     document.getElementById('passlg').value= "";
     document.getElementById('passlg').placeholder = "Respuesta de recuperación";
+}
+
+function nueva3(){
+    window.location.href = '../index.html';
 }

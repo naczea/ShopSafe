@@ -1,14 +1,15 @@
 <?php
-    include('database.php');
-    //include('evento.php');
-    //include('login.php');
-    session_name('calendario');
-    session_start();
-    $nombre = $_SESSION['nombre'];
-    $apellido = $_SESSION['apellido'];
-    $cedula = $_SESSION['cedula'];
-    $correo = $_SESSION['mail'];
-    $telefono = $_SESSION['telefono'];
+include('database.php');
+//include('evento.php');
+//include('login.php');
+session_name('calendario2');
+session_start();
+$id = $_SESSION['id'];
+$nombre = $_SESSION['nombre'];
+$direccion = $_SESSION['dir'];
+$correo = $_SESSION['mail'];
+$horario = $_SESSION['horario'];
+$aforo = $_SESSION['aforo'];
 ?>
 
 <!DOCTYPE html>
@@ -47,64 +48,7 @@
 
     <div class="ui__turn" id="uiturn">
         <div class="turn__cont">
-            <div class="cont1">
-                <div class="cont1__nav">
-                    <span>Emision de turnos</span>
-                </div>
-                <div class="cont1__cont">
-                    <div class="cont__info">
-                        <div class="contenedor" id="continfo">
-                            <!--INFO DEL STORE-->
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                        <div class="col"></div>
-                        <div class="col-7"><div id="Web"></div></div>
-                        <div class="col"></div>
-                        <div class="botons">    
-                            <a href="#" class="prod__close" id="c12" onclick="ocultar('uiturn'), mostrar('turn__cont1'), mostrar('shop__cont1'), ocultar('turn__cont2'), ocultar('turn__cont2'), ocultar('turn__cont4')">Regresar<i class="fas fa-times-circle"></i></a>
-                        </div>
-                    </div>
-                </div>
 
-                        <script>
-                                $(document).ready(function(){
-                                    $('#Web').fullCalendar({
-                                        header:{
-                                            left:'today,prev,next',
-                                            center:'title',
-                                            right:'agendaDay,month'
-                                        },
-                                        dayClick:function(date,jsEvent,view){
-                                            $('#Agendar').prop("disabled",false);
-                                            $('#Modificar').prop("disabled",true);
-                                            $('#Eliminar').prop("disabled",true);
-                                            limpiarForm();
-                                            $('#fecha_ev').val(date.format());
-                                            $('#modalEventos').modal();
-                                        },
-                                        events:'evento.php?accion',
-                                        eventClick:function(calEvent,jsEvent,view){
-                                            $('#Agendar').prop("disabled",true);
-                                            $('#Modificar').prop("disabled",false);
-                                            $('#Eliminar').prop("disabled",false);
-                                            $('#tituloEvento').html(calEvent.title);
-                                            $('#descrip_ev').val(calEvent.descripcion);
-                                            $('#id_turn').val(calEvent.id_turn);
-                                            $('#titulo_ev').val(calEvent.title);
-                                            $('#color_ev').val(calEvent.color);
-                                            FechaHora = calEvent.start._i.split(" ");
-                                            $('#fecha_ev').val(FechaHora[0]);
-                                            $('#hora_ev').val(FechaHora[1]);
-                                            $('#modalEventos').modal();
-                                        }
-                                        
-                                    });
-                                });
-                        </script>
-                </div>
-            </div>
         </div>
     </div>
     <!-- Modal -->
@@ -120,35 +64,24 @@
                 <div class="modal-body">
 
                     <label>Fecha: </label> 
-                    <input type="text" id="fecha_ev" name="fechaEvento"> <br/>
-                   
+                    <input type="text" id="fecha_ev" name="fechaEvento" readonly> <br/>
                     <div class="form-row">
                         <div class="form-group col-md-7">
                             <label>Titulo:</label> 
-                            <input type="text" id="titulo_ev" name="tituloEvento" class="form-control" placeholder="Titulo de la cita">
+                            <input type="text" id="titulo_ev" name="tituloEvento" class="form-control" placeholder="Titulo de la cita" readonly>
                         </div>
                         <div class="form-group col-md-4">
                             <label>Hora: </label> 
-                            <input type="text" id="hora_ev" name="horaEvento" class="form-control" placeholder="hh:mm:ss"> <br/>
+                            <input type="time" id="hora_ev" name="horaEvento" class="form-control" placeholder="hh:mm:ss" readonly> <br/>
                         </div>
                     </div>
-                    <div class="form-group col-md-10">
-                        <label>Descripcion: </label> 
-                        <textarea id="descrip_ev" name="descripEvento" rows="3" class="form-control"></textarea> 
-                    </div>
-                    <label>Color: </label> 
-                    <input type="color" value="#ff0000" id="color_ev" name="colorEvento"> 
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" id="Agendar">Agendar</button>
-                    <button type="button" class="btn btn-success" id="Modificar">Modificar</button>
-                    <button type="button" class="btn btn-danger" id="Eliminar">Borrar</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--
     <script>
         var NuevoEvento;
         var comprobacion = false;
@@ -178,11 +111,11 @@
             NuevoEvento = {
                 idc:$('#id_turn').val(),
                 title:$('#titulo_ev').val(),
-                start:$('#fecha_ev').val()+" "+$('#hora_ev').val(),
-                color:$('#color_ev').val(),
-                descripcion:$('#descrip_ev').val(),
+                start:$('#fecha_ev').val()+" "+$('#hora_ev').val()+":00",
+                color:"008F39",
+                descripcion:"Descripcion",
                 textColor:"#FFFFFF",
-                end:$('#fecha_ev').val()+" "+$('#hora_ev').val()
+                end:$('#fecha_ev').val()+" "+$('#hora_ev').val()+":00"
             }; 
         }
         function EnviarInfo(accion,objEvento){
@@ -191,39 +124,41 @@
                 url:'evento.php?accion='+accion,
                 data:objEvento,
                 success:function(msg){
-                    if(msg){
+                    var cadena = msg;
+                    var div = cadena.split(" ");
+                    if(div[0]){
                         //alert(msg);
-                        if(msg == 1){
+                        if(div[0] == 1){
                             alert("Fecha pasada vuelva a ingresar");
                         }else{
-                            if(msg == 2){
+                            if(div[0] == 2){
                                 $('#Web').fullCalendar('refetchEvents');
                                 $('#modalEventos').modal('toggle');
-                                alert("Turno ingresado correctamente");
+                                alert("Turno ingresado correctamente. Su codigo de turno es: "+div[1]);
                             }else{
-                                if(msg == 3){
+                                if(div[0] == 3){
                                     alert("No es su evento");
                                 }else{
-                                    if(msg == 4){
+                                    if(div[0] == 4){
                                         $('#Web').fullCalendar('refetchEvents');
                                         $('#modalEventos').modal('toggle');
                                         alert("Su turno a sido borrado");
                                     }else{
-                                        if(msg == 5){
+                                        if(div[0] == 5){
                                             $('#Web').fullCalendar('refetchEvents');
                                             $('#modalEventos').modal('toggle');
                                             alert("Su turno a sido actualizado");
                                         }else{
-                                            if(msg == 6){
+                                            if(div[0] == 6){
                                                 alert("Este no es su turno");
                                             }else{
-                                                if(msg == 7){
+                                                if(div[0] == 7){
                                                     alert("Fuera de horario de la tienda");
                                                 }else{
-                                                    if(msg == 8){
+                                                    if(div[0] == 8){
                                                         alert("Turnos llenos, escoja otra hora (1 hora mas tarde)");
                                                     }else{
-                                                        if(msg==9){
+                                                        if(div[0] == 9){
                                                             alert("Su turno es con otra tienda");
                                                         }
                                                     }
@@ -252,7 +187,7 @@
             
         }
     </script>
-    
+    -->
     <!-- ----------------------EDIT PERSONALES-->
 
     <div class="peredit" id="peredit">
@@ -264,7 +199,11 @@
                 <i class="far fa-check-circle"></i></br>
                 <span>Cambios guardados</span>
             </div>
-            <form id="editdatap" class="checkforms">
+            <form id="checkform" class="checkforms">
+
+                <label for="number">Cedula: </label>
+                <input type="number" id="cededit" name="cedrf" placeholder="<?php echo $cedula ?>" required>
+
                 <label for="email">Mail:</label>
                 <input type="text" id="emailedit" name="mailf" placeholder="<?php echo $correo; ?>" required>
 
@@ -282,57 +221,69 @@
                 </div>
             </form>
             <div class="ch__bord"></div>
-            <a href="#" onclick="ocultar('peredit')">Cerrar</a>
+            <a href="#" onclick="ocultar('peredit'), mostrar('checkout')">Cerrar</a>
         </div>
         
     </div>
 
-    <!-- ----------------------ACTIVIDAD RECIENTE-->
+    <script>
+        var id_c="<?php echo $cedula; ?>";
+        $('#dropconfirm').click(function(){
+            //alert(<?php echo $cedula; ?>);
+            RecolectarDatos2();
+            NuevoEvento['id_c']=id_c;
+            EnviarInfo2(NuevoEvento);
+        });
 
-    <div class="activity" id="activityt">
-        <div class="activityt__cont">
-            <span>Actividad Reciente</span>
-            <div class="ch__bord"></div>
-            <div id="lol"><p></p></div>
-            <div class="ch__coonf" id="ch__confirm2">
-                <i class="far fa-check-circle"></i></br>
-                <span>Cambios guardados</span>
-            </div>
-            <div class="ch__bord"></div>
-            <a href="#" onclick="ocultar('activityt')">Cerrar</a>
-        </div>
-        
-    </div>
+        function RecolectarDatos2(){
+            NuevoEvento = {
+                }; 
+        }
+
+        function EnviarInfo2(objEvento){
+            $.ajax({
+                type:'POST',
+                url:'eliminaruser.php',
+                data:objEvento,
+                success:function(msg){
+                    if(msg == 1){
+                        alert("Su usuario ha sido eliminado.");
+                    }else{
+                        alert("Error al eliminar su usuario.");
+                    }
+                },
+                error:function(){
+                    alert("Hay un error");
+                }
+            })
+        }
+    </script>
     <!-- ----------------------SUGENERENCIAS-->
 
-    <div class="sugui" id="sugui">
+    <div class="sugui" id="sugui2">
         <div class="sugui__cont">
             <span>Buzón de Sugerencias</span>
             <div class="ch__bord"></div>
-            <div id="lol"><p></p></div>
-            <div class="ch__coonf" id="ch__confirm2">
-                <i class="far fa-check-circle"></i></br>
-                <span>Cambios guardados</span>
+            <div class="cont__sugui">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdliPzEPJrE_hrS3JCSkOhU7PUuJ0Qtj8mykaxdX3p-CR1wew/viewform?embedded=true" width="640" height="402" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
             </div>
             <div class="ch__bord"></div>
-            <a href="#" onclick="ocultar('sugui')">Cerrar</a>
+            <a href="#" onclick="ocultar('sugui2'), mostrar('checkout2'), mostrar('Web')">Cerrar</a>
         </div>
         
     </div>
 
     <!-- ----------------------ENCUESTA-->
 
-    <div class="formui" id="formui">
+    <div class="formui" id="formui2">
         <div class="formui__cont">
-            <span>Encuesta de calidad</span>
+            <span>Encuesta de Calidad</span>
             <div class="ch__bord"></div>
-            <div id="lol"><p></p></div>
-            <div class="ch__coonf" id="ch__confirm2">
-                <i class="far fa-check-circle"></i></br>
-                <span>Cambios guardados</span>
+            <div class="cont__formui">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSegNvkFG79DudjLbGfo9eJJxz6nvSTNfbrIPuaZ3UbCi5-SWA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
             </div>
             <div class="ch__bord"></div>
-            <a href="#" onclick="ocultar('formui')">Cerrar</a>
+            <a href="#" onclick="ocultar('formui2'), mostrar('checkout2'), mostrar('Web')">Cerrar</a>
         </div>
         
     </div>
@@ -346,7 +297,7 @@
                 <span>ShopSafe</span>
             </div>
             <div class="nav__close">
-                <a href="#" id="checkout">
+                <a href="#" id="checkout2">
                     <i class="fas fa-sign-out-alt"></i>
                     <span>Cerrar sesión</span>
                 </a>
@@ -356,7 +307,7 @@
 
 <!-- **************************INFORMACION ****************************************-->
     <main class="actions" id="main_principal">
-        <div class="info">
+        <div class="info2">
             <div class="info__personal">
                 <div class="cont">
                     <div class="personal">
@@ -364,46 +315,21 @@
                             <i class="fas fa-store"></i>
                         </div>
                         <div class="personal__data">
-                            <span>Datos Personales</span>
+                            <span>Información</span>
                             <ul>
-                                <li>Establecimiento: <?php echo $nombre; ?></li>
-                                <li id="idpost">RUC: <?php echo $cedula; ?></li>
-                                <li>Telefono: <?php echo $telefono; ?></li>
+                                <li>Local: <?php echo $nombre; ?></li>
+                                <li>RUC: <?php echo $id; ?></li>
+                                <li>Mail: <?php echo $correo; ?></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="user__edit">
-                        <a href="#" id="p123">
-                            <i class="fas fa-edit"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="info__activities">
-                <div class="cont2">
-                    <div class="activities__img">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <div class="cont__text">
-                        <div class="activities__nav">
-                            <span>Actividad reciente</span>
-                        </div>
-                        <div class="activities">
-                            <span>No tiene turnos pendientes</span>
-                        </div>
-                    </div>
-                    <div class="act__edit">
-                        <a href="#" id="p456">
-                            <i class="fas fa-search"></i>
-                        </a>
                     </div>
                 </div>
             </div>
             <div class="info__que">
                 <div class="cont__que">
                     <h2>Mas Opciones</h2>
-                    <a href="#" id="p789">Sugerencias y Recomendaciones</a>
-                    <a href="#" id="p101">Encuestas y formularios</a>
+                    <a href="#" id="p102" onclick="mostrar('sugui2'), ocultar('checkout2'), ocultar('Web')">Sugerencias y Recomendaciones</a>
+                    <a href="#" id="p103" onclick="mostrar('formui2'), ocultar('checkout2'), ocultar('Web')">Encuestas y formularios</a>
                 </div>
             </div>
         </div>
@@ -411,77 +337,61 @@
 <!-- ******************  OPCIONES *************************************** -->
         <div class="op">
 
-
 <!--------------------------TURNOS ---------------TURNOS---------TURNOS----------------->
 
-            <div class="op__turn">
+            <div class="op__turn2">
                 <div class="cont__turn" id="turncont__general">
 
 <!--********************** CONTENEDOR 1-->
-                    <div class="cont1" id="turn__cont1" onclick="mostrar('shop__cont2'), ocultar('shop__cont1'), back_color('turncont__general'), ocultar('turn__cont1'), mostrar('turn__cont3')">
-                        <a href="#">
-                            <img src="../img/turn.svg" alt="turns illustartion">
-                        </a>
-                        <span>Sacar un turno</span>
-                    </div>
-<!--********************* CONTENEDOR2-->
-                    <div class="cont2" id="turn__cont2">
-                        <img src="../img/turn2.svg" alt="turns illustartion">
-                        <span>Sacar un turno</span>
-                    </div>
-<!--********************* CONTENEDOR3-->
-                    <div class="cont3" id="turn__cont3" onclick="ocultar('turn__cont3'), mostrar('turn__cont4')">
-                        <div class="turn__nav">
-                            <span>Seleccione un servicio:</span>
-                        </div>
-                        <div class="turn__op">
-                            <div class="op2">
-                                <div>
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span>Mercado</span>
-                                    <p>(Próximamente)</p>
+                    <div class="cont1" id="turn__cont1">
+                        <div class="cont1">
+                            <div class="cont1__cont">
+                                <div class="container">
+                                    <div class="row">
+                                    <div class="col"></div>
+                                    <div class="col-7"><div id="Web"></div></div>
+                                    <div class="col"></div>
+                                    <div class="botons">    
                                 </div>
                             </div>
-                            <div class="op2">
-                                <div>
-                                    <i class="fas fa-cut"></i>
-                                    <span>Peluqueria</span>
-                                    <p>(Próximamente)</p>
-                                </div>
-                            </div>
-                            <div class="op">
-                                <a href="#">
-                                    <i class="fas fa-utensils"></i>
-                                    <span>Restaurante</span>
-                                </a>
-                            </div>
                         </div>
-                    </div>
-<!--********************* CONTENEDOR4-->
-                    <div class="cont4" id="turn__cont4">
-                        <div class="turn__nav">
-                            <span>Servicio: MERCADO </br> Seleccione un establecimiento:</span>
-                        </div>
-                        <div class="store__op">
-                            <?php
-                                include('database.php');
-                                $query = "SELECT * FROM store WHERE turn_store = true";
-                                $result = $conn->query($query);
-                                if(!$result) {
-                                    die('Query Failed'. mysqli_error($conn));
-                                } 
-                                while($row = $result->fetch_assoc()) {
-                            ?>
-                            <div class="op">
-                                <a href="#" onclick="mostrar('uiturn'), ocultar('checkout'), searchstore(<?php echo $row['id_store']; ?>)">
-                                    <img src="data:image/jpg;base64,<?php echo base64_encode($row['logo_store']); ?>">
-                                    <span><?php echo $row['name_store']; ?></span>
-                                    <span>Sector: Centro de Conocoto</span>
-                                </a>
-                            </div>
-                            <?php
-                                }
-                            ?>
+
+                        <script>
+                                $(document).ready(function(){
+                                    $('#Web').fullCalendar({
+                                        header:{
+                                            left:'today,prev,next',
+                                            center:'title',
+                                            right:'agendaDay,month'
+                                        },
+                                        dayClick:function(date,jsEvent,view){
+                                            $('#Agendar').prop("disabled",false);
+                                            $('#Modificar').prop("disabled",true);
+                                            $('#Eliminar').prop("disabled",true);
+                                            limpiarForm();
+                                            $('#fecha_ev').val(date.format());
+                                            $('#modalEventos').modal();
+                                        },
+                                        events:'evento.php?accion',
+                                        eventClick:function(calEvent,jsEvent,view){
+                                            $('#Agendar').prop("disabled",true);
+                                            $('#Modificar').prop("disabled",false);
+                                            $('#Eliminar').prop("disabled",false);
+                                            $('#tituloEvento').html(calEvent.title);
+                                            //$('#descrip_ev').val(calEvent.descripcion);
+                                            $('#id_turn').val(calEvent.id_turn);
+                                            $('#titulo_ev').val(calEvent.title);
+                                            //$('#color_ev').val(calEvent.color);
+                                            FechaHora = calEvent.start._i.split(" ");
+                                            $('#fecha_ev').val(FechaHora[0]);
+                                            $('#hora_ev').val(FechaHora[1]);
+                                            $('#modalEventos').modal();
+                                        }
+                                        
+                                    });
+                                });
+                        </script>
+                </div>
                         </div>
                     </div>
                 </div>
@@ -533,7 +443,7 @@
     <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/187afea212.js" crossorigin="anonymous"></script>
-    <script src="../src/app.js"></script>
+    <script src="../src/app3.js"></script>
     <script src="../src/app2.js"></script>
     <script src="../src/main.js"></script>
     

@@ -673,7 +673,7 @@
     left: 0;
     .activityt__cont {
         height: auto;
-        width: 30%;
+        width: 70%;
         padding-top: 2%;
         padding-bottom: 1%;
         background-color: $white1;
@@ -803,6 +803,148 @@
 }
 
 #formui {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    .formui__cont {
+        height: auto;
+        width: 60%;
+        padding-top: 2%;
+        padding-bottom: 1%;
+        background-color: $white1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        #lol{
+            color: rgb(212, 90, 90);
+            font-size: 18px;
+        }
+        span {
+            text-transform: uppercase;
+            color: $blue4;
+            letter-spacing: 4px;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 2%;
+            padding: 0;
+            text-align: center;;
+        }
+        a {
+            color: $blue4;
+            font-size: 15px;
+            margin-top: 8px;
+            transition: 0.1s;
+        }
+        a:hover {
+            font-weight: 500;
+        }
+        .ch__bord {
+            width: 60%;
+            border-bottom: 2px solid white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .ch__coonf{
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 8%;
+            i{
+                font-size: 80px;
+                color: rgb(93, 186, 93);
+            }
+            span{
+                color:$blue4;
+                font-size: 25px;
+                text-transform: inherit;
+                letter-spacing: inherit;
+            }
+        }
+    }
+}
+
+#sugui2 {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    .sugui__cont {
+        height: auto;
+        width: 50%;
+        padding-top: 2%;
+        padding-bottom: 1%;
+        background-color: $white1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        #lol{
+            color: rgb(212, 90, 90);
+            font-size: 18px;
+        }
+        span {
+            text-transform: uppercase;
+            color: $blue4;
+            letter-spacing: 4px;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 2%;
+            padding: 0;
+            text-align: center;;
+        }
+        a {
+            color: $blue4;
+            font-size: 15px;
+            margin-top: 8px;
+            transition: 0.1s;
+        }
+        a:hover {
+            font-weight: 500;
+        }
+        .ch__bord {
+            width: 60%;
+            border-bottom: 2px solid white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .ch__coonf{
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 8%;
+            i{
+                font-size: 80px;
+                color: rgb(93, 186, 93);
+            }
+            span{
+                color:$blue4;
+                font-size: 25px;
+                text-transform: inherit;
+                letter-spacing: inherit;
+            }
+        }
+    }
+}
+
+#formui2 {
     display: none;
     flex-direction: column;
     justify-content: center;

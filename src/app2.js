@@ -23,9 +23,10 @@ function searchstore(id){
                 template += `
                 <p><span>Servicio:</span> ${storetype}</p>
                 <img src="data:image/jpg;base64,${data.logo_store}" alt="">
+                <p><span>Sector:</span> Centro de Conocoto</p>
                 <p><span>Establecimiento:</span> ${data.name_store}</p>
                 <p><span>Ubicación:</span> ${data.adress_store}</p>
-                <p><span>Horarios:</span> 10:00 a 18:00</p>`
+                <p><span>Horarios:</span> ${data.horario_store}</p>`
             });
             $('#continfo').html(template);
         }

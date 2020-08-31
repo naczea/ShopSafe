@@ -9,6 +9,25 @@
     $cedula = $_SESSION['cedula'];
     $correo = $_SESSION['mail'];
     $telefono = $_SESSION['telefono'];
+
+    $sql = "SELECT * FROM turn WHERE id_user=$cedula";
+    $result = mysqli_query($conn,$sql);
+    $show = $result ->fetch_assoc();
+    if($result ->num_rows === 0){
+        $mensaje = "Usted no tiene turnos agendados";
+    }else{
+        $filas  =mysqli_num_rows($result)-1;
+        $sql2 = "SELECT * FROM turn WHERE id_user=$cedula LIMIT $filas,1";
+        $result2 = mysqli_query($conn,$sql2);
+        //$filas = mysqli_num_rows($result2);
+        $show = $result2 ->fetch_assoc();
+        $store_name = $show['id_store'];
+        $sql3 = "SELECT * FROM store WHERE id_store=$store_name";
+        $result3 = mysqli_query($conn,$sql3);
+        $show2 = $result3 ->fetch_assoc();
+        //echo $show['id_store'];
+        $mensaje = $show2['name_store']." ".$show['start'];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -523,7 +542,7 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label>Hora: </label> 
-                            <input type="text" id="hora_ev" name="horaEvento" class="form-control" placeholder="hh:mm:ss"> <br/>
+                            <input type="time" id="hora_ev" name="horaEvento" class="form-control" placeholder="hh:mm:ss"> <br/>
                         </div>
                     </div>
 
@@ -685,17 +704,17 @@
         var id_c="<?php echo $cedula; ?>";
         $('#dropconfirm').click(function(){
             //alert(<?php echo $cedula; ?>);
-            RecolectarDatos();
+            RecolectarDatos2();
             NuevoEvento['id_c']=id_c;
-            EnviarInfo(NuevoEvento);
+            EnviarInfo2(NuevoEvento);
         });
 
-        function RecolectarDatos(){
+        function RecolectarDatos2(){
             NuevoEvento = {
                 }; 
         }
 
-        function EnviarInfo(objEvento){
+        function EnviarInfo2(objEvento){
             $.ajax({
                 type:'POST',
                 url:'eliminaruser.php',
@@ -837,7 +856,7 @@
                             <span>Actividad reciente</span>
                         </div>
                         <div class="activities">
-                            <span>No tienes turnos pendientes</span>
+                            <span><?php echo $mensaje?></span>
                         </div>
                     </div>
                     <div class="act__edit">
@@ -1026,7 +1045,7 @@
     <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/187afea212.js" crossorigin="anonymous"></script>
-    <script src="../src/app.js"></script>
+    <script src="../src/app3.js"></script>
     <script src="../src/app2.js"></script>
     <script src="../src/main.js"></script>
     

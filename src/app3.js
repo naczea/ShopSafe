@@ -12,8 +12,8 @@ $(document).ready(function() {
                 $('#lol').html("Fallo en modificación");
             }else{
                 $('#lol').hide();
-                $('#editdatap').trigger('reset');
-                $('#editdatap').css('display','none');
+                $('#checkform').trigger('reset');
+                $('#checkform').css('display','none');
                 $('#ch__confirm2').css('display','flex');
                 $('#ch_confirm2').html(data);
             }

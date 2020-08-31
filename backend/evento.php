@@ -99,7 +99,7 @@
                                         "texColor" =>$_POST['textColor']
                                     ));
                                     //echo $filas;
-                                    echo 2;
+                                    echo "2"." ".$union1;
                                 }
                             }else{
                                 echo 8;

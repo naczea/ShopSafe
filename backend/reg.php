@@ -10,6 +10,8 @@
         $phone = $_POST['phone_user'];
         $pass = $_POST['pass_user'];
         $pass_cod = password_hash($pass,PASSWORD_DEFAULT);
+        $pass2 = $_POST['pass2_user'];
+        $pass2_cod = password_hash($pass2,PASSWORD_DEFAULT);
         
 
 		if(ctype_alpha($name) === false){
@@ -47,17 +49,11 @@
                 $total = 10 - $total%10;
             }
             if($total === intval(substr($id,$longitud,$longitud))){
-                $revisar = "SELECT * FROM users WHERE id_user=$id";
-                $query2 = mysqli_query($conn,$revisar);
-                $show = $query2->fetch_assoc();
-                if($id==$show['id_user']){
-                    echo 412;
-                }else{
-                    $query="INSERT INTO users VALUES ($id,'$name','$last','$mail',$phone,'$pass_cod',true)";
-                    $result=mysqli_query($conn,$query);
-                    echo 405;
-                    //Cedula valida
-                }
+                $query="INSERT INTO users VALUES ($id,'$name','$last','$mail',$phone,'$pass_cod','$pass2_cod',true)";
+                $result=mysqli_query($conn,$query);
+                //echo $pass2;
+                echo 405;
+                //Cedula valida
             }else{
                 echo 406;
                 //Cedula invalida

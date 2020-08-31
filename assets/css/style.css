@@ -2127,7 +2127,7 @@ a:hover {
   left: 0; }
   #sugui .sugui__cont {
     height: auto;
-    width: 30%;
+    width: 50%;
     padding-top: 2%;
     padding-bottom: 1%;
     background-color: #dde1e7;
@@ -2188,7 +2188,7 @@ a:hover {
   left: 0; }
   #formui .formui__cont {
     height: auto;
-    width: 30%;
+    width: 60%;
     padding-top: 2%;
     padding-bottom: 1%;
     background-color: #dde1e7;

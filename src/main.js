@@ -127,3 +127,11 @@ document.getElementById('droprt').addEventListener('click', function(){
 document.getElementById('dropconfirm').addEventListener('click', function(){
     window.location.href = '../index.html';
 });
+
+
+//OLVIDASTE LA CONTRA
+
+function nueva2(){
+    document.getElementById('passlg').value= "";
+    document.getElementById('passlg').placeholder = "Respuesta de recuperación";
+}

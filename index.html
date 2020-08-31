@@ -30,9 +30,9 @@
                     <div class="ch__bord"></div>
                     <i class="fas fa-store"></i>
                     <form id="loginform" action="backend/login.php" method="POST">
-                        <input type="number" id="cilg" name="ci" placeholder="&#xf2bb;   ID de la tienda" required>
+                        <input type="number" id="cilg2" name="ci" placeholder="&#xf2bb;   ID de la tienda" required>
         
-                        <input type="password" id="passlg" name="numberf" placeholder="&#xf084;   Ingrese su contraseña" required>
+                        <input type="password" id="passlg2" name="numberf" placeholder="&#xf084;   Ingrese su contraseña" required>
         
                         <input type="submit" class="neu3" value="ENTRAR" id="btnSendlg" name="sendf">
                     </form>
@@ -63,7 +63,7 @@
         
                         <input type="submit" class="neu3" value="ENTRAR" id="btnSendlg" name="sendf">
                     </form>
-                    <a href="#" class="pass">¿Olvidaste la contraseña?</a>
+                    <a href="#" class="pass"  onclick="nueva2()">¿Olvidaste la contraseña?</a>
                     <div class="ch__bord"></div>
                     <a href="#" onclick="mostrar('ch'), ocultar('lg')">Registrarse</a>
                     <a href="#" onclick="ocultar('lg')">Cerrar</a>
@@ -109,6 +109,10 @@
 
                 <label for="pass">Contraseña:</label>
                 <input type="password" id="passch" name="passwf" placeholder="Mínimo 8 caracteres" required>
+
+                <label for="pass2">Recuperacion: Nombre Mascota</label>
+                <input type="password" id="pass2ch" name="pass2wf" placeholder="Ingrese el Nombre" required>
+
                 <input type="submit" class="neu3" value="REGISTRARSE" id="btnSendch" name="sendf">
             </form>
             <div class="ch__bord"></div>

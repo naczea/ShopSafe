@@ -23,8 +23,15 @@
         </script>';
     }else{
         $passcod = $show['pass_user'];
+
+        $passcod2 = $show['pass2_user'];
+        
         $verf = password_verify($pass,$passcod);
-        if($verf){
+        $verf2 = password_verify($pass,$passcod2);
+
+        //--------------------------------------------------------------------------------------------------------
+
+        if($verf || $verf2){
             $_SESSION['nombre'] = $show['name_user'];
             $nombre = $show['name_user'];
             $_SESSION['apellido'] = $show['last_user'];

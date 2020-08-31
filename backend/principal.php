@@ -458,7 +458,7 @@
                         <div class="col-7"><div id="Web"></div></div>
                         <div class="col"></div>
                         <div class="botons">    
-                            <a href="#" class="prod__close" id="c12" onclick="ocultar('uiturn'), mostrar('turn__cont1'), mostrar('shop__cont1'), ocultar('turn__cont2'), ocultar('turn__cont2'), ocultar('turn__cont4')">Regresar<i class="fas fa-times-circle"></i></a>
+                            <a href="#" class="prod__close" id="c12" onclick="ocultar('uiturn'), mostrar('turn__cont1'), mostrar('shop__cont1'), ocultar('turn__cont2'), ocultar('turn__cont2'), ocultar('turn__cont4'), mostrar('checkout')">Regresar<i class="fas fa-times-circle"></i></a>
                         </div>
                     </div>
                 </div>
@@ -485,10 +485,10 @@
                                             $('#Modificar').prop("disabled",false);
                                             $('#Eliminar').prop("disabled",false);
                                             $('#tituloEvento').html(calEvent.title);
-                                            $('#descrip_ev').val(calEvent.descripcion);
+                                            //$('#descrip_ev').val(calEvent.descripcion);
                                             $('#id_turn').val(calEvent.id_turn);
                                             $('#titulo_ev').val(calEvent.title);
-                                            $('#color_ev').val(calEvent.color);
+                                            //$('#color_ev').val(calEvent.color);
                                             FechaHora = calEvent.start._i.split(" ");
                                             $('#fecha_ev').val(FechaHora[0]);
                                             $('#hora_ev').val(FechaHora[1]);
@@ -516,7 +516,6 @@
 
                     <label>Fecha: </label> 
                     <input type="text" id="fecha_ev" name="fechaEvento"> <br/>
-                   
                     <div class="form-row">
                         <div class="form-group col-md-7">
                             <label>Titulo:</label> 
@@ -527,12 +526,6 @@
                             <input type="text" id="hora_ev" name="horaEvento" class="form-control" placeholder="hh:mm:ss"> <br/>
                         </div>
                     </div>
-                    <div class="form-group col-md-10">
-                        <label>Descripcion: </label> 
-                        <textarea id="descrip_ev" name="descripEvento" rows="3" class="form-control"></textarea> 
-                    </div>
-                    <label>Color: </label> 
-                    <input type="color" value="#ff0000" id="color_ev" name="colorEvento"> 
 
                 </div>
                 <div class="modal-footer">
@@ -573,11 +566,11 @@
             NuevoEvento = {
                 idc:$('#id_turn').val(),
                 title:$('#titulo_ev').val(),
-                start:$('#fecha_ev').val()+" "+$('#hora_ev').val(),
-                color:$('#color_ev').val(),
-                descripcion:$('#descrip_ev').val(),
+                start:$('#fecha_ev').val()+" "+$('#hora_ev').val()+":00",
+                color:"008F39",
+                descripcion:"Descripcion",
                 textColor:"#FFFFFF",
-                end:$('#fecha_ev').val()+" "+$('#hora_ev').val()
+                end:$('#fecha_ev').val()+" "+$('#hora_ev').val()+":00"
             }; 
         }
         function EnviarInfo(accion,objEvento){
@@ -586,39 +579,41 @@
                 url:'evento.php?accion='+accion,
                 data:objEvento,
                 success:function(msg){
-                    if(msg){
+                    var cadena = msg;
+                    var div = cadena.split(" ");
+                    if(div[0]){
                         //alert(msg);
-                        if(msg == 1){
+                        if(div[0] == 1){
                             alert("Fecha pasada vuelva a ingresar");
                         }else{
-                            if(msg == 2){
+                            if(div[0] == 2){
                                 $('#Web').fullCalendar('refetchEvents');
                                 $('#modalEventos').modal('toggle');
-                                alert("Turno ingresado correctamente");
+                                alert("Turno ingresado correctamente. Su codigo de turno es: "+div[1]);
                             }else{
-                                if(msg == 3){
+                                if(div[0] == 3){
                                     alert("No es su evento");
                                 }else{
-                                    if(msg == 4){
+                                    if(div[0] == 4){
                                         $('#Web').fullCalendar('refetchEvents');
                                         $('#modalEventos').modal('toggle');
                                         alert("Su turno a sido borrado");
                                     }else{
-                                        if(msg == 5){
+                                        if(div[0] == 5){
                                             $('#Web').fullCalendar('refetchEvents');
                                             $('#modalEventos').modal('toggle');
                                             alert("Su turno a sido actualizado");
                                         }else{
-                                            if(msg == 6){
+                                            if(div[0] == 6){
                                                 alert("Este no es su turno");
                                             }else{
-                                                if(msg == 7){
+                                                if(div[0] == 7){
                                                     alert("Fuera de horario de la tienda");
                                                 }else{
-                                                    if(msg == 8){
+                                                    if(div[0] == 8){
                                                         alert("Turnos llenos, escoja otra hora (1 hora mas tarde)");
                                                     }else{
-                                                        if(msg==9){
+                                                        if(div[0] == 9){
                                                             alert("Su turno es con otra tienda");
                                                         }
                                                     }
@@ -659,7 +654,11 @@
                 <i class="far fa-check-circle"></i></br>
                 <span>Cambios guardados</span>
             </div>
-            <form id="editdatap" class="checkforms">
+            <form id="checkform" class="checkforms">
+
+                <label for="number">Cedula: </label>
+                <input type="number" id="cededit" name="cedrf" placeholder="<?php echo $cedula ?>" required>
+
                 <label for="email">Mail:</label>
                 <input type="text" id="emailedit" name="mailf" placeholder="<?php echo $correo; ?>" required>
 
@@ -677,18 +676,75 @@
                 </div>
             </form>
             <div class="ch__bord"></div>
-            <a href="#" onclick="ocultar('peredit')">Cerrar</a>
+            <a href="#" onclick="ocultar('peredit'), mostrar('checkout')">Cerrar</a>
         </div>
         
     </div>
 
-    <!-- ----------------------ACTIVIDAD RECIENTE-->
+    <script>
+        var id_c="<?php echo $cedula; ?>";
+        $('#dropconfirm').click(function(){
+            //alert(<?php echo $cedula; ?>);
+            RecolectarDatos();
+            NuevoEvento['id_c']=id_c;
+            EnviarInfo(NuevoEvento);
+        });
 
+        function RecolectarDatos(){
+            NuevoEvento = {
+                }; 
+        }
+
+        function EnviarInfo(objEvento){
+            $.ajax({
+                type:'POST',
+                url:'eliminaruser.php',
+                data:objEvento,
+                success:function(msg){
+                    if(msg == 1){
+                        alert("Su usuario ha sido eliminado.");
+                    }else{
+                        alert("Error al eliminar su usuario.");
+                    }
+                },
+                error:function(){
+                    alert("Hay un error");
+                }
+            })
+        }
+    </script>
+
+    <!-- ----------------------ACTIVIDAD RECIENTE-->
     <div class="activity" id="activityt">
         <div class="activityt__cont">
             <span>Actividad Reciente</span>
             <div class="ch__bord"></div>
-            <div id="lol"><p></p></div>
+            <div id="lol">
+            <table>
+            <tr>
+                <td>Cedula</td>
+                <td>Turno</td>
+                <td>Tienda</td>
+                <td>Titulo</td>
+                <td>Fecha</td>
+            </tr>
+            <?php 
+                $query = "SELECT * FROM turn WHERE id_user = $cedula";
+                $result = mysqli_query($conn,$query);
+                while($mostrar = mysqli_fetch_array($result)){
+            ?>
+            <tr>
+                <td>|<?php echo $mostrar['id_user'] ?>|</td>
+                <td>|<?php echo $mostrar['id_turn'] ?>|</td>
+                <td>|<?php echo $mostrar['id_store'] ?>|</td>
+                <td>|<?php echo $mostrar['title'] ?>|</td>
+                <td>|<?php echo $mostrar['start'] ?>|</td>
+            </tr>
+            <?php
+                }
+            ?>
+            </table>
+                            </div>
             <div class="ch__coonf" id="ch__confirm2">
                 <i class="far fa-check-circle"></i></br>
                 <span>Cambios guardados</span>
@@ -704,13 +760,11 @@
         <div class="sugui__cont">
             <span>Buzón de Sugerencias</span>
             <div class="ch__bord"></div>
-            <div id="lol"><p></p></div>
-            <div class="ch__coonf" id="ch__confirm2">
-                <i class="far fa-check-circle"></i></br>
-                <span>Cambios guardados</span>
+            <div class="cont__sugui">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdliPzEPJrE_hrS3JCSkOhU7PUuJ0Qtj8mykaxdX3p-CR1wew/viewform?embedded=true" width="640" height="402" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
             </div>
             <div class="ch__bord"></div>
-            <a href="#" onclick="ocultar('sugui')">Cerrar</a>
+            <a href="#" onclick="ocultar('sugui'), mostrar('checkout')">Cerrar</a>
         </div>
         
     </div>
@@ -721,13 +775,11 @@
         <div class="formui__cont">
             <span>Encuesta de Calidad</span>
             <div class="ch__bord"></div>
-            <div id="lol"><p></p></div>
-            <div class="ch__coonf" id="ch__confirm2">
-                <i class="far fa-check-circle"></i></br>
-                <span>Cambios guardados</span>
+            <div class="cont__formui">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSegNvkFG79DudjLbGfo9eJJxz6nvSTNfbrIPuaZ3UbCi5-SWA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
             </div>
             <div class="ch__bord"></div>
-            <a href="#" onclick="ocultar('formui')">Cerrar</a>
+            <a href="#" onclick="ocultar('formui'), mostrar('checkout')">Cerrar</a>
         </div>
         
     </div>
